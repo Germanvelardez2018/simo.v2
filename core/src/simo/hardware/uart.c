@@ -1,6 +1,6 @@
 /**
  * @file uart.c
- * @author your name (you@domain.com)
+ * @author German Velardez (gvelardez@inti.gob.ar)
  * @brief 
  * @version 0.1
  * @date 2021-11-15
@@ -9,13 +9,14 @@
  * 
  */
 
-#include "simo/harware/uart.h"
 
+//!Libreria simo
+#include "simo/hardware/uart.h"
 
-#include "hardware/uart.h"  //! Libreria del fabricante
+//!librerias del fabricante
+#include "hardware/uart.h"
+#include "hardware/irq.h"
 #include "hardware/gpio.h"
-
-
 
 //definiciones asociadas al hardware espeficico asociado
 
@@ -208,8 +209,37 @@ uint32_t simo_uart_read_buffer(uart_t uart ,uint8_t* buffer,uint32_t len_buffer,
 
 
 
-void simo_set_rx_interrupccion(uart_t uart,uart_irq_callback_t function_handler);
+void simo_set_rx_interrupccion(uart_t uart,uart_irq_callback_t function_handler)
+{
+
+    uart_inst_t* u = _get_uart(uart);
+    //deshabilitamos el FIFO's
+    uart_set_fifo_enabled(u,false);
+
+
+    int UART_IRQ = u == uart0 ? UART0_IRQ : UART1_IRQ;
+    
+    irq_set_exclusive_handler(UART_IRQ,function_handler); 
+
+    irq_set_enabled(UART_IRQ, true);
+    
+
+    //Configuro la FIFO para rx
+    uart_set_irq_enables(u,true,false);        
+
+    //habilitamos nuevamente el fifo
+    uart_set_fifo_enabled(u,true);
+
+}
 
 
 
-char simo_uart_get_char(uart_t* uart);
+char simo_uart_get_char(uart_t uart)
+{
+   uart_inst_t* u = _get_uart(uart);
+   char c = uart_getc(u);
+   return c;
+}
+    
+
+
