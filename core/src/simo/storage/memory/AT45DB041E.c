@@ -105,7 +105,7 @@ static  uint8_t erase_cmd[ERASE_SECUENCE_LEN] = {ERASE_SECUENCE};
 /**
  *  Memoria utilizada: at45db041E
  * PAGINAS: 2048        DIRECCION DE 11 BITS
- * BLOQUES: 256         DIRECCUIN DE 8 BITS
+ * BLOQUES: 256         DIRECCION DE 8 BITS
  * SECTORES: 8          
  * 
  * Se pueden usar paginas de 264bytes o de 256bytes. 

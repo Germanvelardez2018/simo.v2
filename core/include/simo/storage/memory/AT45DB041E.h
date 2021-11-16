@@ -68,6 +68,20 @@ bool simo_AT45DB041E_init(AT45DB041E_t* mem);
 
 
 
+
+
+
+/**
+ * @brief Borrar memoria completa. Tambien es posible borrar por sectores
+ * 
+ * @param mem  objeto memoria a borrar
+ * @return ** void 
+ */
+void simo_AT45DB041E_full_erase(AT45DB041E_t* mem);
+
+
+
+
 /**
  * @brief  Guardar datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina
  * 

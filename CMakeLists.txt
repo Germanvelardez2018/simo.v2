@@ -12,7 +12,8 @@ add_executable(simo
 	core/src/main.c
 	core/src/simo/hardware/uart.c
 	core/src/simo/hardware/spi.c
-	core/src/simo/storage/AT45DB041E.c
+	core/src/simo/storage/memory/AT45DB041E.c
+	core/src/simo/storage/memory_store.c
 
 )
 
