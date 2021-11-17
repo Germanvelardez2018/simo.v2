@@ -1,4 +1,4 @@
 /build
-#/Documentation
+/Documentation
 /FreeRTOS-Kernel
 /.vscode
