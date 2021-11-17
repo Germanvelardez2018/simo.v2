@@ -1,4 +1,4 @@
-Sistema de almacenamiento de datos del SIMO: memory_store.h
+### Sistema de almacenamiento de datos del SIMO: memory_store.h
 
 
 
@@ -9,6 +9,7 @@ Sistema de almacenamiento de datos del SIMO: memory_store.h
  
  ##### Formato de datos almacenados
  ##### |CHAR_INIT_SIMO| TAMANIO DEL STRING|STRING|
+ ###### Datasheet: [Link](https://github.com/Germanvelardez2018/simo.v2/blob/master/core/include/simo/storage/Datasheets/AT45DB041E.pdf)
  
 Estan diseñados para almacenar datos en formato char* de 254 bytes de longitud maxima.
 Utilizan un formato de 2 bytes iniciales que le permite a las funciones de lectura saber si un datos es valido y cuantos bytes reales ocupa.
