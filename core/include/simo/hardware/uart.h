@@ -1,7 +1,7 @@
 /**
  * @file uart.h
  * @author German Velardez (gvelardez@inti.gob.ar)
- * @brief  Capa de abstraccion para manejar el harware uart del micro RP2040 (Raspberry PI PICO)
+ * @brief  Header de capa para manejor del hardware UART (NIVEL 0)
  * @version 0.1
  * @date 2021-11-15
  * 

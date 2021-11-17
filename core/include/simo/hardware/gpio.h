@@ -1,7 +1,7 @@
 /**
  * @file gpio.h
  * @author German Velardez (gvelardez@inti.gob.ar)
- * @brief  Capa de hardware para manejor de puerto GPIO del micro
+ * @brief  Header de capa para manejor del hardware gpio (NIVEL 0)
  * @version 0.1
  * @date 2021-11-17
  * 
@@ -19,7 +19,7 @@
     #include <stdint.h>
     #include <stdbool.h>
 
-    #include "hardware/gpio.h"
+    #include "hardware/gpio.h"  //! Libreria del fabricante
 
 
 

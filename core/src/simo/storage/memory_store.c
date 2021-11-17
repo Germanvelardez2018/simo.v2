@@ -1,7 +1,7 @@
 /**
  * @file memory_store.c
  * @author German Velardez (gvelardez@inti.gob.ar)
- * @brief 
+ * @brief  Implementacion de driver para el manejor del almacenamiento externo (NIVEL 1).Depende de SIMO SPI
  * @version 0.1
  * @date 2021-11-16
  * 

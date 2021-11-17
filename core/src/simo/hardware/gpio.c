@@ -1,7 +1,7 @@
 /**
  * @file gpio.c
  * @author German Velardez (gvelardez@inti.gob.ar)
- * @brief  Capa de hardware para manejor de puerto GPIO del micro
+ * @brief  Implementacion de capa para manejor del hardware gpio (NIVEL 0)
  * @version 0.1
  * @date 2021-11-17
  * 

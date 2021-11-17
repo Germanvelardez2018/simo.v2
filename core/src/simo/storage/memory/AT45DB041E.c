@@ -1,7 +1,7 @@
 /**
  * @file AT45DB041E.c
  * @author Velardez German (gvelardez@inti.gob.ar)
- * @brief 
+ * @brief  Driver para el manejo basico de memoria AT45DB041E. No utilizar de manera directa. Usar con memory_store
  * @version 0.1
  * @date 2021-11-15
  * 

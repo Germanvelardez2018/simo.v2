@@ -1,7 +1,7 @@
 /**
  * @file main.c
  * @author German Velardez (germanvelardez@gmail.com)
- * @brief 
+ * @brief  Aplicacion SIMO v2
  * @version 0.1
  * @date 2021-11-08
  * 
@@ -16,7 +16,7 @@
 
 #include "simo/hardware/uart.h"
 #include "simo/storage/memory_store.h"
-#include "simo/storage/memory/AT45DB041E.h"
+
 #include <string.h>
 #include <stdio.h>
 

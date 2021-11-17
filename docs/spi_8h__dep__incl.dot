@@ -3,16 +3,14 @@ digraph "core/include/simo/hardware/spi.h"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="core/include/simo/hardware\l/spi.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="core/include/simo/hardware\l/spi.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Header de capa para manejo del hardware SPI (NIVEL 0)"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="core/include/simo/storage\l/memory/AT45DB041E.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_a_t45_d_b041_e_8h.html",tooltip="Driver para manejar la memoria flash AT45DB041E. No usar de manera directa en aplicacion."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="core/src/main.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8c.html",tooltip=" "];
+  Node3 [label="core/src/simo/storage\l/memory/AT45DB041E.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_a_t45_d_b041_e_8c.html",tooltip="Driver para el manejo basico de memoria AT45DB041E. No utilizar de manera directa...."];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="core/src/simo/storage\l/memory/AT45DB041E.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_a_t45_d_b041_e_8c.html",tooltip=" "];
-  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="core/src/simo/storage\l/memory_store.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory__store_8c.html",tooltip=" "];
-  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="core/src/simo/hardware\l/spi.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$spi_8c.html",tooltip=" "];
+  Node4 [label="core/src/simo/storage\l/memory_store.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory__store_8c.html",tooltip="Implementacion de driver para el manejor del almacenamiento externo (NIVEL 1).Depende de SIMO SPI."];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="core/src/simo/hardware\l/spi.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$spi_8c.html",tooltip="Implementacion de capa para manejor del hardware SPI (NIVEL 0)"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

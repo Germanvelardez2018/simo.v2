@@ -1,7 +1,7 @@
 /**
  * @file spi.c
  * @author German Velardez (gvelardez@inti.gob.ar)
- * @brief 
+ * @brief  Implementacion de capa para manejor del hardware SPI (NIVEL 0)
  * @version 0.1
  * @date 2021-11-15
  * 
