@@ -1,0 +1,9 @@
+digraph "core/include/simo/harware" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_eb293059644a82a490cf75e36ed4597e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="simo" fontname="Helvetica", fontsize="10", URL="dir_eb293059644a82a490cf75e36ed4597e.html"]
+  dir_eafc25feddbbb222ea04d368fc472e44 [shape=box, label="harware", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_eafc25feddbbb222ea04d368fc472e44.html"];
+  }
+}

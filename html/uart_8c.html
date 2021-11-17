@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SIMO: Referencia del Archivo core/src/simo/hardware/uart.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SIMO
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de monitoreo remoto basado en Rapsberry PI PICO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_c4acac0979fb7e09bcb67a660e699ac3.html">simo</a></li><li class="navelem"><a class="el" href="dir_6d88a1801a5915da0665f21e766a543a.html">hardware</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo uart.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="uart_8h_source.html">simo/hardware/uart.h</a>&quot;</code><br />
+<code>#include &quot;hardware/irq.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="gpio_8h_source.html">hardware/gpio.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para uart.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="uart_8c__incl.png" border="0" usemap="#core_2src_2simo_2hardware_2uart_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a5cfd70d28dfc2a75815e31f512ea56ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a5cfd70d28dfc2a75815e31f512ea56ad">N_UART</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a5cfd70d28dfc2a75815e31f512ea56ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libreria simo.  <a href="uart_8c.html#a5cfd70d28dfc2a75815e31f512ea56ad">Más...</a><br /></td></tr>
+<tr class="separator:a5cfd70d28dfc2a75815e31f512ea56ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a389199858d939896f636e564c21af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a19a389199858d939896f636e564c21af">UART_DEFAULT</a>&#160;&#160;&#160;uart0</td></tr>
+<tr class="separator:a19a389199858d939896f636e564c21af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0508661f121639ffdee7de2353a0def2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a0508661f121639ffdee7de2353a0def2">UART0</a>&#160;&#160;&#160;uart0</td></tr>
+<tr class="memdesc:a0508661f121639ffdee7de2353a0def2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pines asociados.  <a href="uart_8c.html#a0508661f121639ffdee7de2353a0def2">Más...</a><br /></td></tr>
+<tr class="separator:a0508661f121639ffdee7de2353a0def2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a573eb024fbcf113feed4ce51dd3f64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a0a573eb024fbcf113feed4ce51dd3f64">UART0_TX</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a0a573eb024fbcf113feed4ce51dd3f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e776259c346b71606231a18f2703f0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a8e776259c346b71606231a18f2703f0d">UART0_TX_OPTIONAL</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:a8e776259c346b71606231a18f2703f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9deeb1486fb1892e37b175810d23f1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#ae9deeb1486fb1892e37b175810d23f1d">UART0_RX</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ae9deeb1486fb1892e37b175810d23f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e15756395ab3c26bbb8828b06538740"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a1e15756395ab3c26bbb8828b06538740">UART0_RX_OPTIONAL</a>&#160;&#160;&#160;13</td></tr>
+<tr class="separator:a1e15756395ab3c26bbb8828b06538740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d69bf04d07af4fbbab5a8bd291f65ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a8d69bf04d07af4fbbab5a8bd291f65ff">UART1</a>&#160;&#160;&#160;uart1</td></tr>
+<tr class="separator:a8d69bf04d07af4fbbab5a8bd291f65ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9dbdd1c135a1428009938fd7875ab56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#ae9dbdd1c135a1428009938fd7875ab56">UART1_TX</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ae9dbdd1c135a1428009938fd7875ab56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cde67695294daf8a0862e8cb9c6c808"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a4cde67695294daf8a0862e8cb9c6c808">UART1_TX_OPTIONAL</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a4cde67695294daf8a0862e8cb9c6c808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228447e1762b2ecba0d05f609356bf2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a228447e1762b2ecba0d05f609356bf2f">UART1_RX</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a228447e1762b2ecba0d05f609356bf2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae39534ad3b39398dc5e50db866bb4a74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#ae39534ad3b39398dc5e50db866bb4a74">UART1_RX_OPTIONAL</a>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:ae39534ad3b39398dc5e50db866bb4a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a395458fb0c7ec814df777adb6cf766e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a395458fb0c7ec814df777adb6cf766e1">N_BAUDRATES</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a395458fb0c7ec814df777adb6cf766e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Baudrare validos para la aplicacion.  <a href="uart_8c.html#a395458fb0c7ec814df777adb6cf766e1">Más...</a><br /></td></tr>
+<tr class="separator:a395458fb0c7ec814df777adb6cf766e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a7e1b40195edf9967651736ed4ede65f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a7e1b40195edf9967651736ed4ede65f8">simo_uart_init</a> (<a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart, uint32_t baudrate)</td></tr>
+<tr class="memdesc:a7e1b40195edf9967651736ed4ede65f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puntero a funcion de interrupcion.  <a href="uart_8c.html#a7e1b40195edf9967651736ed4ede65f8">Más...</a><br /></td></tr>
+<tr class="separator:a7e1b40195edf9967651736ed4ede65f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88c80a14b3885e59c7c3c5acff1eaf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#ab88c80a14b3885e59c7c3c5acff1eaf7">simo_uart_deinit</a> (<a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart)</td></tr>
+<tr class="memdesc:ab88c80a14b3885e59c7c3c5acff1eaf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desconfigura el harware seleccionado.  <a href="uart_8c.html#ab88c80a14b3885e59c7c3c5acff1eaf7">Más...</a><br /></td></tr>
+<tr class="separator:ab88c80a14b3885e59c7c3c5acff1eaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b26fe4ac19c3b461312b0a036a7be36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a1b26fe4ac19c3b461312b0a036a7be36">simo_uart_is_enabled</a> (<a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart)</td></tr>
+<tr class="memdesc:a1b26fe4ac19c3b461312b0a036a7be36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta si el puerto uart seleccionado puede enviar datos.  <a href="uart_8c.html#a1b26fe4ac19c3b461312b0a036a7be36">Más...</a><br /></td></tr>
+<tr class="separator:a1b26fe4ac19c3b461312b0a036a7be36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2e451b076f57bb732239837559a944"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#aec2e451b076f57bb732239837559a944">simo_uart_read_available</a> (<a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart, uint32_t timeout_us)</td></tr>
+<tr class="memdesc:aec2e451b076f57bb732239837559a944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultar si el puerto uart seleccionado puede leer datos.  <a href="uart_8c.html#aec2e451b076f57bb732239837559a944">Más...</a><br /></td></tr>
+<tr class="separator:aec2e451b076f57bb732239837559a944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d000147e9a0b17f110aef7c8c2fd416"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a1d000147e9a0b17f110aef7c8c2fd416">simo_uart_write_buffer</a> (<a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart, uint8_t *buffer, uint32_t len_buffer)</td></tr>
+<tr class="memdesc:a1d000147e9a0b17f110aef7c8c2fd416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envio un buffer mediante el uart selecionado.  <a href="uart_8c.html#a1d000147e9a0b17f110aef7c8c2fd416">Más...</a><br /></td></tr>
+<tr class="separator:a1d000147e9a0b17f110aef7c8c2fd416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78baf3871be64c303176b5c2f9ba9a9b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a78baf3871be64c303176b5c2f9ba9a9b">simo_uart_read_buffer</a> (<a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart, uint8_t *buffer, uint32_t len_buffer, uint_fast32_t timeout_us)</td></tr>
+<tr class="separator:a78baf3871be64c303176b5c2f9ba9a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f10b4ab82f77eda8d936cdec685312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#ac8f10b4ab82f77eda8d936cdec685312">simo_set_rx_interrupccion</a> (<a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart, <a class="el" href="uart_8h.html#a357c3a7a86c430cc9bdf1ab327738af4">uart_irq_callback_t</a> function_handler)</td></tr>
+<tr class="separator:ac8f10b4ab82f77eda8d936cdec685312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8636993ae976e03edd18fb2dacaf9e19"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uart_8c.html#a8636993ae976e03edd18fb2dacaf9e19">simo_uart_get_char</a> (<a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart)</td></tr>
+<tr class="separator:a8636993ae976e03edd18fb2dacaf9e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>German Velardez (<a href="#" onclick="location.href='mai'+'lto:'+'gve'+'la'+'rde'+'z@'+'int'+'i.'+'gob'+'.a'+'r'; return false;">gvela<span style="display: none;">.nosp@m.</span>rdez<span style="display: none;">.nosp@m.</span>@inti<span style="display: none;">.nosp@m.</span>.gob<span style="display: none;">.nosp@m.</span>.ar</a>) </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2021-11-15</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a395458fb0c7ec814df777adb6cf766e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a395458fb0c7ec814df777adb6cf766e1">&#9670;&nbsp;</a></span>N_BAUDRATES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N_BAUDRATES&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Baudrare validos para la aplicacion. </p>
+
+</div>
+</div>
+<a id="a5cfd70d28dfc2a75815e31f512ea56ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cfd70d28dfc2a75815e31f512ea56ad">&#9670;&nbsp;</a></span>N_UART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N_UART&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libreria simo. </p>
+<p>librerias del fabricante </p>
+
+</div>
+</div>
+<a id="a0508661f121639ffdee7de2353a0def2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0508661f121639ffdee7de2353a0def2">&#9670;&nbsp;</a></span>UART0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART0&#160;&#160;&#160;uart0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pines asociados. </p>
+<p>UART0 GPIOS: TX: 1, RX: 2 opcionalmente TX: 12, RX:13 </p>
+
+</div>
+</div>
+<a id="ae9deeb1486fb1892e37b175810d23f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9deeb1486fb1892e37b175810d23f1d">&#9670;&nbsp;</a></span>UART0_RX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART0_RX&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e15756395ab3c26bbb8828b06538740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e15756395ab3c26bbb8828b06538740">&#9670;&nbsp;</a></span>UART0_RX_OPTIONAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART0_RX_OPTIONAL&#160;&#160;&#160;13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a573eb024fbcf113feed4ce51dd3f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a573eb024fbcf113feed4ce51dd3f64">&#9670;&nbsp;</a></span>UART0_TX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART0_TX&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e776259c346b71606231a18f2703f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e776259c346b71606231a18f2703f0d">&#9670;&nbsp;</a></span>UART0_TX_OPTIONAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART0_TX_OPTIONAL&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d69bf04d07af4fbbab5a8bd291f65ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d69bf04d07af4fbbab5a8bd291f65ff">&#9670;&nbsp;</a></span>UART1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART1&#160;&#160;&#160;uart1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ul>
+<li>UART0 GPIOS: TX: 4, RX: 5 opcionalmente TX: 8, RX: 9 </li>
+</ul>
+
+</div>
+</div>
+<a id="a228447e1762b2ecba0d05f609356bf2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228447e1762b2ecba0d05f609356bf2f">&#9670;&nbsp;</a></span>UART1_RX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART1_RX&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae39534ad3b39398dc5e50db866bb4a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39534ad3b39398dc5e50db866bb4a74">&#9670;&nbsp;</a></span>UART1_RX_OPTIONAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART1_RX_OPTIONAL&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9dbdd1c135a1428009938fd7875ab56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9dbdd1c135a1428009938fd7875ab56">&#9670;&nbsp;</a></span>UART1_TX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART1_TX&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cde67695294daf8a0862e8cb9c6c808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cde67695294daf8a0862e8cb9c6c808">&#9670;&nbsp;</a></span>UART1_TX_OPTIONAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART1_TX_OPTIONAL&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19a389199858d939896f636e564c21af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a389199858d939896f636e564c21af">&#9670;&nbsp;</a></span>UART_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_DEFAULT&#160;&#160;&#160;uart0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="ac8f10b4ab82f77eda8d936cdec685312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f10b4ab82f77eda8d936cdec685312">&#9670;&nbsp;</a></span>simo_set_rx_interrupccion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_set_rx_interrupccion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>&#160;</td>
+          <td class="paramname"><em>uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#a357c3a7a86c430cc9bdf1ab327738af4">uart_irq_callback_t</a>&#160;</td>
+          <td class="paramname"><em>function_handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart</td><td>puerto uart seleccionado </td></tr>
+    <tr><td class="paramname">function_handler</td><td>function para el manejo de la interrupcion </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+
+</div>
+</div>
+<a id="ab88c80a14b3885e59c7c3c5acff1eaf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab88c80a14b3885e59c7c3c5acff1eaf7">&#9670;&nbsp;</a></span>simo_uart_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_uart_deinit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>&#160;</td>
+          <td class="paramname"><em>uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desconfigura el harware seleccionado. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart</td><td>interfaza selecionada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+
+</div>
+</div>
+<a id="a8636993ae976e03edd18fb2dacaf9e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8636993ae976e03edd18fb2dacaf9e19">&#9670;&nbsp;</a></span>simo_uart_get_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char simo_uart_get_char </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>&#160;</td>
+          <td class="paramname"><em>uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart</td><td>puerot uart seleccionado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** char </dd></dl>
+
+</div>
+</div>
+<a id="a7e1b40195edf9967651736ed4ede65f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e1b40195edf9967651736ed4ede65f8">&#9670;&nbsp;</a></span>simo_uart_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_uart_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>&#160;</td>
+          <td class="paramname"><em>uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>baudrate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Puntero a funcion de interrupcion. </p>
+<p>Inicio el harware uart selecionado</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_t</td><td>interfaz seleccionada </td></tr>
+    <tr><td class="paramname">baudrate</td><td>baudrate seleccionado</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+
+</div>
+</div>
+<a id="a1b26fe4ac19c3b461312b0a036a7be36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b26fe4ac19c3b461312b0a036a7be36">&#9670;&nbsp;</a></span>simo_uart_is_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool simo_uart_is_enabled </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>&#160;</td>
+          <td class="paramname"><em>uart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Consulta si el puerto uart seleccionado puede enviar datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart</td><td>puerto seleccionado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="aec2e451b076f57bb732239837559a944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2e451b076f57bb732239837559a944">&#9670;&nbsp;</a></span>simo_uart_read_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool simo_uart_read_available </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>&#160;</td>
+          <td class="paramname"><em>uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Consultar si el puerto uart seleccionado puede leer datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart</td><td>puerto seleccioando </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a78baf3871be64c303176b5c2f9ba9a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78baf3871be64c303176b5c2f9ba9a9b">&#9670;&nbsp;</a></span>simo_uart_read_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t simo_uart_read_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>len_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint_fast32_t&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>buffer donde se almacenan los elementos leidos por el uart </td></tr>
+    <tr><td class="paramname">len_buffer</td><td>tamanio del buffer. </td></tr>
+    <tr><td class="paramname">timeout</td><td>tiempo maximo en us. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** uint32_t cantidad de elementos leios </dd></dl>
+
+</div>
+</div>
+<a id="a1d000147e9a0b17f110aef7c8c2fd416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d000147e9a0b17f110aef7c8c2fd416">&#9670;&nbsp;</a></span>simo_uart_write_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_uart_write_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>&#160;</td>
+          <td class="paramname"><em>uart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>len_buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envio un buffer mediante el uart selecionado. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>buffer a enviar </td></tr>
+    <tr><td class="paramname">len_buffer</td><td>tamanio de buffer a enviar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

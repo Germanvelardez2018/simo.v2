@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SIMO: Fichero Fuente core/include/simo/hardware/uart.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SIMO
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de monitoreo remoto basado en Rapsberry PI PICO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_24d671cfcbc5d5238a6bd565a49d198f.html">include</a></li><li class="navelem"><a class="el" href="dir_eb293059644a82a490cf75e36ed4597e.html">simo</a></li><li class="navelem"><a class="el" href="dir_2fbf62330853db8854ddd88dde5ea014.html">hardware</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">uart.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="uart_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef  _SIMO_HARDWARE_UART_</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">  #define _SIMO_HARDWARE_UART_</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">  #include &quot;<a class="code" href="core_8h.html">simo/core.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">  #include &quot;<a class="code" href="config_8h.html">simo/config.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">  #include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">   23</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90a5a9602cabc1973c34632bd8e0cdc59f0">   25</a></span>&#160;        <a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90a5a9602cabc1973c34632bd8e0cdc59f0">SIMO_UART0</a>, </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90a90a4b946ef10115edac5e57e082e7f4f">   27</a></span>&#160;        <a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90a90a4b946ef10115edac5e57e082e7f4f">SIMO_UART1</a> </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    } <a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="uart_8h.html#a357c3a7a86c430cc9bdf1ab327738af4">   31</a></span>&#160;    <span class="keyword">typedef</span> void (*<a class="code" href="uart_8h.html#a357c3a7a86c430cc9bdf1ab327738af4">uart_irq_callback_t</a>)(void);    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="uart_8h.html#a7e1b40195edf9967651736ed4ede65f8">simo_uart_init</a>(<a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart, uint32_t baudrate);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="uart_8h.html#ab88c80a14b3885e59c7c3c5acff1eaf7">simo_uart_deinit</a>(<a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="uart_8h.html#a1b26fe4ac19c3b461312b0a036a7be36">simo_uart_is_enabled</a>(<a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="uart_8h.html#a800526517246735f7f933aea5e875a8c">simo_uart_read_available</a>(<a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart,uint32_t timeout);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="uart_8h.html#a1d000147e9a0b17f110aef7c8c2fd416">simo_uart_write_buffer</a>(<a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart, uint8_t* buffer, uint32_t len_buffer);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  uint32_t <a class="code" href="uart_8h.html#a21ab915f642c3421c75df860f62434f9">simo_uart_read_buffer</a>(<a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a>,uint8_t* buffer,uint32_t len_buffer,uint_fast32_t timeout );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="uart_8h.html#ac8f10b4ab82f77eda8d936cdec685312">simo_set_rx_interrupccion</a>(<a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart,<a class="code" href="uart_8h.html#a357c3a7a86c430cc9bdf1ab327738af4">uart_irq_callback_t</a> function_handler);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="uart_8h.html#a8636993ae976e03edd18fb2dacaf9e19">simo_uart_get_char</a>(<a class="code" href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a> uart);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="auart_8h_html_a1d000147e9a0b17f110aef7c8c2fd416"><div class="ttname"><a href="uart_8h.html#a1d000147e9a0b17f110aef7c8c2fd416">simo_uart_write_buffer</a></div><div class="ttdeci">void simo_uart_write_buffer(uart_t uart, uint8_t *buffer, uint32_t len_buffer)</div><div class="ttdoc">Envio un buffer mediante el uart selecionado.</div><div class="ttdef"><b>Definition:</b> uart.c:189</div></div>
+<div class="ttc" id="auart_8h_html_ac667bf51474e96f174f2b6568b166c90"><div class="ttname"><a href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90">uart_t</a></div><div class="ttdeci">uart_t</div><div class="ttdoc">Enumeracion de las interfaces uart disponibles en el micro.</div><div class="ttdef"><b>Definition:</b> uart.h:23</div></div>
+<div class="ttc" id="auart_8h_html_a1b26fe4ac19c3b461312b0a036a7be36"><div class="ttname"><a href="uart_8h.html#a1b26fe4ac19c3b461312b0a036a7be36">simo_uart_is_enabled</a></div><div class="ttdeci">bool simo_uart_is_enabled(uart_t uart)</div><div class="ttdoc">Consulta si el puerto uart seleccionado puede enviar datos.</div><div class="ttdef"><b>Definition:</b> uart.c:168</div></div>
+<div class="ttc" id="auart_8h_html_a7e1b40195edf9967651736ed4ede65f8"><div class="ttname"><a href="uart_8h.html#a7e1b40195edf9967651736ed4ede65f8">simo_uart_init</a></div><div class="ttdeci">void simo_uart_init(uart_t uart, uint32_t baudrate)</div><div class="ttdoc">Puntero a funcion de interrupcion.</div><div class="ttdef"><b>Definition:</b> uart.c:148</div></div>
+<div class="ttc" id="auart_8h_html_ab88c80a14b3885e59c7c3c5acff1eaf7"><div class="ttname"><a href="uart_8h.html#ab88c80a14b3885e59c7c3c5acff1eaf7">simo_uart_deinit</a></div><div class="ttdeci">void simo_uart_deinit(uart_t uart)</div><div class="ttdoc">Desconfigura el harware seleccionado.</div><div class="ttdef"><b>Definition:</b> uart.c:159</div></div>
+<div class="ttc" id="auart_8h_html_ac8f10b4ab82f77eda8d936cdec685312"><div class="ttname"><a href="uart_8h.html#ac8f10b4ab82f77eda8d936cdec685312">simo_set_rx_interrupccion</a></div><div class="ttdeci">void simo_set_rx_interrupccion(uart_t uart, uart_irq_callback_t function_handler)</div><div class="ttdef"><b>Definition:</b> uart.c:212</div></div>
+<div class="ttc" id="auart_8h_html_a8636993ae976e03edd18fb2dacaf9e19"><div class="ttname"><a href="uart_8h.html#a8636993ae976e03edd18fb2dacaf9e19">simo_uart_get_char</a></div><div class="ttdeci">char simo_uart_get_char(uart_t uart)</div><div class="ttdef"><b>Definition:</b> uart.c:237</div></div>
+<div class="ttc" id="auart_8h_html_a357c3a7a86c430cc9bdf1ab327738af4"><div class="ttname"><a href="uart_8h.html#a357c3a7a86c430cc9bdf1ab327738af4">uart_irq_callback_t</a></div><div class="ttdeci">void(* uart_irq_callback_t)(void)</div><div class="ttdef"><b>Definition:</b> uart.h:31</div></div>
+<div class="ttc" id="auart_8h_html_ac667bf51474e96f174f2b6568b166c90a90a4b946ef10115edac5e57e082e7f4f"><div class="ttname"><a href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90a90a4b946ef10115edac5e57e082e7f4f">SIMO_UART1</a></div><div class="ttdeci">@ SIMO_UART1</div><div class="ttdoc">Interfaz uart1 en rp2040.</div><div class="ttdef"><b>Definition:</b> uart.h:27</div></div>
+<div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">Core de la aplicacion. En este archivo van elementos indispensables para la aplicacion....</div></div>
+<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">Archivo con configuraciones y definiciones. Se incluye en la mayoria de los modulos.</div></div>
+<div class="ttc" id="auart_8h_html_a21ab915f642c3421c75df860f62434f9"><div class="ttname"><a href="uart_8h.html#a21ab915f642c3421c75df860f62434f9">simo_uart_read_buffer</a></div><div class="ttdeci">uint32_t simo_uart_read_buffer(uart_t, uint8_t *buffer, uint32_t len_buffer, uint_fast32_t timeout)</div><div class="ttdef"><b>Definition:</b> uart.c:197</div></div>
+<div class="ttc" id="auart_8h_html_a800526517246735f7f933aea5e875a8c"><div class="ttname"><a href="uart_8h.html#a800526517246735f7f933aea5e875a8c">simo_uart_read_available</a></div><div class="ttdeci">bool simo_uart_read_available(uart_t uart, uint32_t timeout)</div><div class="ttdoc">Consultar si el puerto uart seleccionado puede leer datos.</div><div class="ttdef"><b>Definition:</b> uart.c:179</div></div>
+<div class="ttc" id="auart_8h_html_ac667bf51474e96f174f2b6568b166c90a5a9602cabc1973c34632bd8e0cdc59f0"><div class="ttname"><a href="uart_8h.html#ac667bf51474e96f174f2b6568b166c90a5a9602cabc1973c34632bd8e0cdc59f0">SIMO_UART0</a></div><div class="ttdeci">@ SIMO_UART0</div><div class="ttdoc">Interfaz uart0 en rp2040.</div><div class="ttdef"><b>Definition:</b> uart.h:25</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

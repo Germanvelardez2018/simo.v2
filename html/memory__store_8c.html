@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SIMO: Referencia del Archivo core/src/simo/storage/memory_store.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SIMO
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de monitoreo remoto basado en Rapsberry PI PICO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_c4acac0979fb7e09bcb67a660e699ac3.html">simo</a></li><li class="navelem"><a class="el" href="dir_2c8bc93ff3a5e0101bc097bb9a4d49bf.html">storage</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo memory_store.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="memory__store_8h_source.html">simo/storage/memory_store.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_a_t45_d_b041_e_8h_source.html">simo/storage/memory/AT45DB041E.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="spi_8h_source.html">simo/hardware/spi.h</a>&quot;</code><br />
+<code>#include &quot;pico/time.h&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para memory_store.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory__store_8c__incl.png" border="0" usemap="#core_2src_2simo_2storage_2memory__store_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ae9f8d1ca57a71e5e4a1b9b6dc96c0d0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#ae9f8d1ca57a71e5e4a1b9b6dc96c0d0b">N_PAGES</a>&#160;&#160;&#160;2048</td></tr>
+<tr class="separator:ae9f8d1ca57a71e5e4a1b9b6dc96c0d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72adc862c84ef019effe055d5f12d9c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a72adc862c84ef019effe055d5f12d9c6">SIZE_PAGE</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a72adc862c84ef019effe055d5f12d9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667de334dc226f003857f60202986e9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a667de334dc226f003857f60202986e9f">ADDRES_COUNTER</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a667de334dc226f003857f60202986e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11faa4c105a137b8edaa096de5063835"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a11faa4c105a137b8edaa096de5063835">DATA_OFFSET</a>&#160;&#160;&#160;48</td></tr>
+<tr class="separator:a11faa4c105a137b8edaa096de5063835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf06a3762adb0aa04b8a5f8f016ca5e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#aaf06a3762adb0aa04b8a5f8f016ca5e9">MAX_DATA</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="separator:aaf06a3762adb0aa04b8a5f8f016ca5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc654d9e3f96615e2a679b52da30e54c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#adc654d9e3f96615e2a679b52da30e54c">CHAR_INIT_SIMO</a>&#160;&#160;&#160;0x11</td></tr>
+<tr class="separator:adc654d9e3f96615e2a679b52da30e54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bedc3a2739e909a4ca588c90bfaccf9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a0bedc3a2739e909a4ca588c90bfaccf9">MAX_LEN_STRING</a>&#160;&#160;&#160;254</td></tr>
+<tr class="separator:a0bedc3a2739e909a4ca588c90bfaccf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad88337515c2026d6092a631d48c5779"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#aad88337515c2026d6092a631d48c5779">SPI_APP</a>&#160;&#160;&#160;<a class="el" href="spi_8h.html#a4c4c3893bd4169998937dd7199875d64a439265cd63aa4351fa0b5c70f4abaf2c">SIMO_SPI1</a></td></tr>
+<tr class="separator:aad88337515c2026d6092a631d48c5779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfcf05153ddbd63d5aff5d018867cc19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#abfcf05153ddbd63d5aff5d018867cc19">CS_PIN</a>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:abfcf05153ddbd63d5aff5d018867cc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1d2f563a903ad958394f5c5d9e2d54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#abc1d2f563a903ad958394f5c5d9e2d54">MEMORY_APP_BAUDRATE_FAST</a>&#160;&#160;&#160;(50*100000)</td></tr>
+<tr class="separator:abc1d2f563a903ad958394f5c5d9e2d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d9fb8d0e133144e921f1cd25c45e62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a30d9fb8d0e133144e921f1cd25c45e62">MEMORY_APP_BAUDRATE_LOW</a>&#160;&#160;&#160;(5*100000)</td></tr>
+<tr class="separator:a30d9fb8d0e133144e921f1cd25c45e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d39fb8b25bd725dc8532df6ac8c0c20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a0d39fb8b25bd725dc8532df6ac8c0c20">FREQ_APP</a>&#160;&#160;&#160;<a class="el" href="memory__store_8c.html#abc1d2f563a903ad958394f5c5d9e2d54">MEMORY_APP_BAUDRATE_FAST</a></td></tr>
+<tr class="separator:a0d39fb8b25bd725dc8532df6ac8c0c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a6a24f219ebd053b2a578fd6b76e9660e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a6a24f219ebd053b2a578fd6b76e9660e">simo_memory_store_init</a> (void)</td></tr>
+<tr class="memdesc:a6a24f219ebd053b2a578fd6b76e9660e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicio la memoria.  <a href="memory__store_8c.html#a6a24f219ebd053b2a578fd6b76e9660e">Más...</a><br /></td></tr>
+<tr class="separator:a6a24f219ebd053b2a578fd6b76e9660e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964446e563ed31ea272138578a394af2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a964446e563ed31ea272138578a394af2">simo_memory_store_deinit</a> (void)</td></tr>
+<tr class="memdesc:a964446e563ed31ea272138578a394af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Termino la memoria.  <a href="memory__store_8c.html#a964446e563ed31ea272138578a394af2">Más...</a><br /></td></tr>
+<tr class="separator:a964446e563ed31ea272138578a394af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf7af373ce46234eb6e198b1cf67926"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#abcf7af373ce46234eb6e198b1cf67926">simo_memory_store_add_page</a> (char *data, uint8_t len)</td></tr>
+<tr class="memdesc:abcf7af373ce46234eb6e198b1cf67926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agrego datos en la memoria. Los datos se agregan a partir de la posicion OFFSETDATA.  <a href="memory__store_8c.html#abcf7af373ce46234eb6e198b1cf67926">Más...</a><br /></td></tr>
+<tr class="separator:abcf7af373ce46234eb6e198b1cf67926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b17a95537506727de07ffda7fd3616"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a11b17a95537506727de07ffda7fd3616">simo_memory_store_read_page</a> (uint8_t *buffer, uint8_t len, uint16_t index)</td></tr>
+<tr class="memdesc:a11b17a95537506727de07ffda7fd3616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indico la pagina en la que quiero leer datos. Retorna true si esa pagina tiene datos validos.  <a href="memory__store_8c.html#a11b17a95537506727de07ffda7fd3616">Más...</a><br /></td></tr>
+<tr class="separator:a11b17a95537506727de07ffda7fd3616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ac668802fc25b81c1867329271451f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a86ac668802fc25b81c1867329271451f">simo_memory_store_full_clear</a> ()</td></tr>
+<tr class="memdesc:a86ac668802fc25b81c1867329271451f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la secuenca de borrado de la memoria completa.  <a href="memory__store_8c.html#a86ac668802fc25b81c1867329271451f">Más...</a><br /></td></tr>
+<tr class="separator:a86ac668802fc25b81c1867329271451f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25be9c04b3d88e26e241db214c5490d0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a25be9c04b3d88e26e241db214c5490d0">simo_memory_read_all</a> (<a class="el" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a> print)</td></tr>
+<tr class="memdesc:a25be9c04b3d88e26e241db214c5490d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt.  <a href="memory__store_8c.html#a25be9c04b3d88e26e241db214c5490d0">Más...</a><br /></td></tr>
+<tr class="separator:a25be9c04b3d88e26e241db214c5490d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188f5520ed029607100a205e8ab6afb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a188f5520ed029607100a205e8ab6afb9">simo_memory_clear_counter</a> ()</td></tr>
+<tr class="separator:a188f5520ed029607100a205e8ab6afb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>German Velardez (<a href="#" onclick="location.href='mai'+'lto:'+'gve'+'la'+'rde'+'z@'+'int'+'i.'+'gob'+'.a'+'r'; return false;">gvela<span style="display: none;">.nosp@m.</span>rdez<span style="display: none;">.nosp@m.</span>@inti<span style="display: none;">.nosp@m.</span>.gob<span style="display: none;">.nosp@m.</span>.ar</a>) </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2021-11-16</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a667de334dc226f003857f60202986e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667de334dc226f003857f60202986e9f">&#9670;&nbsp;</a></span>ADDRES_COUNTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADDRES_COUNTER&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc654d9e3f96615e2a679b52da30e54c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc654d9e3f96615e2a679b52da30e54c">&#9670;&nbsp;</a></span>CHAR_INIT_SIMO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHAR_INIT_SIMO&#160;&#160;&#160;0x11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfcf05153ddbd63d5aff5d018867cc19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfcf05153ddbd63d5aff5d018867cc19">&#9670;&nbsp;</a></span>CS_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CS_PIN&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11faa4c105a137b8edaa096de5063835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11faa4c105a137b8edaa096de5063835">&#9670;&nbsp;</a></span>DATA_OFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DATA_OFFSET&#160;&#160;&#160;48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d39fb8b25bd725dc8532df6ac8c0c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d39fb8b25bd725dc8532df6ac8c0c20">&#9670;&nbsp;</a></span>FREQ_APP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FREQ_APP&#160;&#160;&#160;<a class="el" href="memory__store_8c.html#abc1d2f563a903ad958394f5c5d9e2d54">MEMORY_APP_BAUDRATE_FAST</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf06a3762adb0aa04b8a5f8f016ca5e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf06a3762adb0aa04b8a5f8f016ca5e9">&#9670;&nbsp;</a></span>MAX_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_DATA&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bedc3a2739e909a4ca588c90bfaccf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bedc3a2739e909a4ca588c90bfaccf9">&#9670;&nbsp;</a></span>MAX_LEN_STRING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_LEN_STRING&#160;&#160;&#160;254</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc1d2f563a903ad958394f5c5d9e2d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1d2f563a903ad958394f5c5d9e2d54">&#9670;&nbsp;</a></span>MEMORY_APP_BAUDRATE_FAST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MEMORY_APP_BAUDRATE_FAST&#160;&#160;&#160;(50*100000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30d9fb8d0e133144e921f1cd25c45e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d9fb8d0e133144e921f1cd25c45e62">&#9670;&nbsp;</a></span>MEMORY_APP_BAUDRATE_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MEMORY_APP_BAUDRATE_LOW&#160;&#160;&#160;(5*100000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9f8d1ca57a71e5e4a1b9b6dc96c0d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9f8d1ca57a71e5e4a1b9b6dc96c0d0b">&#9670;&nbsp;</a></span>N_PAGES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N_PAGES&#160;&#160;&#160;2048</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72adc862c84ef019effe055d5f12d9c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72adc862c84ef019effe055d5f12d9c6">&#9670;&nbsp;</a></span>SIZE_PAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SIZE_PAGE&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad88337515c2026d6092a631d48c5779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad88337515c2026d6092a631d48c5779">&#9670;&nbsp;</a></span>SPI_APP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_APP&#160;&#160;&#160;<a class="el" href="spi_8h.html#a4c4c3893bd4169998937dd7199875d64a439265cd63aa4351fa0b5c70f4abaf2c">SIMO_SPI1</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a188f5520ed029607100a205e8ab6afb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188f5520ed029607100a205e8ab6afb9">&#9670;&nbsp;</a></span>simo_memory_clear_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_memory_clear_counter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+
+</div>
+</div>
+<a id="a25be9c04b3d88e26e241db214c5490d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25be9c04b3d88e26e241db214c5490d0">&#9670;&nbsp;</a></span>simo_memory_read_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t simo_memory_read_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a>&#160;</td>
+          <td class="paramname"><em>fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fun</td><td>es un puntero a funcion que recibe char* como parametro y devuelve void. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** uint16_t </dd></dl>
+
+</div>
+</div>
+<a id="abcf7af373ce46234eb6e198b1cf67926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf7af373ce46234eb6e198b1cf67926">&#9670;&nbsp;</a></span>simo_memory_store_add_page()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t simo_memory_store_add_page </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Agrego datos en la memoria. Los datos se agregan a partir de la posicion OFFSETDATA. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>datos a enviar </td></tr>
+    <tr><td class="paramname">len</td><td>tamanio de los datos. Maximo 254. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** uint16_t </dd></dl>
+
+</div>
+</div>
+<a id="a964446e563ed31ea272138578a394af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964446e563ed31ea272138578a394af2">&#9670;&nbsp;</a></span>simo_memory_store_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_memory_store_deinit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Termino la memoria. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+
+</div>
+</div>
+<a id="a86ac668802fc25b81c1867329271451f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ac668802fc25b81c1867329271451f">&#9670;&nbsp;</a></span>simo_memory_store_full_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_memory_store_full_clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta la secuenca de borrado de la memoria completa. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+
+</div>
+</div>
+<a id="a6a24f219ebd053b2a578fd6b76e9660e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a24f219ebd053b2a578fd6b76e9660e">&#9670;&nbsp;</a></span>simo_memory_store_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool simo_memory_store_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicio la memoria. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a11b17a95537506727de07ffda7fd3616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b17a95537506727de07ffda7fd3616">&#9670;&nbsp;</a></span>simo_memory_store_read_page()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool simo_memory_store_read_page </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indico la pagina en la que quiero leer datos. Retorna true si esa pagina tiene datos validos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>buffer para guardar datos leidos </td></tr>
+    <tr><td class="paramname">len</td><td>tamanio del buffer </td></tr>
+    <tr><td class="paramname">index</td><td>pagina a leer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
