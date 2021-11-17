@@ -51,7 +51,7 @@ Luego de ejecutado con exito el primer comando se creara una carpeta llamada bui
  Luego de compilarse el codigo se generaran varios archivos. El simo.uf2 es el que debera introducir en el microcontrolador raspberry pi pico. No olvide antes de conectar el micro, tener el boton boot presionado. 
  
  
- Para generar la documentacion necesita tener instalado Doxygen en su computadora. Comando de generacion:
+ Para generar la documentacion necesita instalar Doxygen en su computadora. Comando de generacion:
 ```
     doxygen doc_config
  ```

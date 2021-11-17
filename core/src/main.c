@@ -41,9 +41,7 @@ static void debug_print(char* msg)
 
 void serial_task(void* params)
 {
-    #define SPI         SIMO_SPI1
-    #define SPI_FREQ     100*1000 // 1mhz
-    #define CHIP_SELECT  9
+
 
     char buffer[200];
     simo_uart_init(SIMO_UART0,115200);  
@@ -61,9 +59,10 @@ void serial_task(void* params)
         sprintf(buffer,"Memoria iniciada \r\n");
         simo_uart_write_buffer(SIMO_UART0,buffer,strlen(buffer));
 
-     //   simo_memory_store_full_clear();       
-        vTaskDelay(5000);
-     //   _set_counter(0);
+    //        simo_memory_store_full_clear();       
+           vTaskDelay(5000);
+    //      simo_memory_clear_counter();
+       
     }
     else
     {   sprintf(buffer,"Erro al iniciar memoriar \r\n");
@@ -71,37 +70,39 @@ void serial_task(void* params)
     }
     #define MSG_SIZE    100
     char mensaje_guardado[MSG_SIZE];
-    char mensaje_escrito[MSG_SIZE] = "APP MEMORY STORE contador:%d \r\n";
+    char mensaje_escrito[MSG_SIZE] ;
     uint16_t counter= 0;
     
     while(1)
     {
      
-        counter = _get_counter();
-        sprintf(mensaje_escrito,"APP MEMORY STORE )c= A");
+     
+        
+        sprintf(mensaje_escrito,"{Este es un json }");
         uint16_t pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        sprintf(mensaje_escrito,"APP MEMORY STORE )c= B");
+        sprintf(mensaje_escrito,"{datos de configuracion}");
          pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        sprintf(mensaje_escrito,"APP MEMORY STORE )c= C");
+        sprintf(mensaje_escrito,"{Mqtt servidor: kkkx.mqtt}");
          pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        sprintf(mensaje_escrito,"APP MEMORY STORE )c= D");
+        sprintf(mensaje_escrito,"1234mrk");
          pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        sprintf(mensaje_escrito,"APP MEMORY STORE )c= E");
+        sprintf(mensaje_escrito,"mensaje de alerta");
          pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
         char b[100];
         sprintf(b,"posicion escritas:%d\r\n",pos);
         simo_uart_write_buffer(SIMO_UART0,b,strlen(b)+1);
 
-
-        vTaskDelay(4000);
+    
    
-     
-     
+ 
+        
         
          
 
    
-        simo_memory_read_all(debug_print);
+        uint16_t datos_validos= simo_memory_read_all(debug_print);
+         sprintf(b,"cantidad de datos validos:%d\r\n",datos_validos);
+        simo_uart_write_buffer(SIMO_UART0,b,strlen(b)+1);
 
         while(1)
         {
