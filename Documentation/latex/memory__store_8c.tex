@@ -1,0 +1,260 @@
+\hypertarget{memory__store_8c}{}\doxysection{Referencia del Archivo core/src/simo/storage/memory\+\_\+store.c}
+\label{memory__store_8c}\index{core/src/simo/storage/memory\_store.c@{core/src/simo/storage/memory\_store.c}}
+{\ttfamily \#include \char`\"{}simo/storage/memory\+\_\+store.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}simo/storage/memory/\+A\+T45\+D\+B041\+E.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}simo/hardware/spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/time.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Dependencia gráfica adjunta para memory\+\_\+store.\+c\+:
+% FIG 0
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_ae9f8d1ca57a71e5e4a1b9b6dc96c0d0b}{N\+\_\+\+P\+A\+G\+ES}}~2048
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_a72adc862c84ef019effe055d5f12d9c6}{S\+I\+Z\+E\+\_\+\+P\+A\+GE}}~256
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_a667de334dc226f003857f60202986e9f}{A\+D\+D\+R\+E\+S\+\_\+\+C\+O\+U\+N\+T\+ER}}~10
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_a11faa4c105a137b8edaa096de5063835}{D\+A\+T\+A\+\_\+\+O\+F\+F\+S\+ET}}~48
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_aaf06a3762adb0aa04b8a5f8f016ca5e9}{M\+A\+X\+\_\+\+D\+A\+TA}}~2000
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_adc654d9e3f96615e2a679b52da30e54c}{C\+H\+A\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+I\+MO}}~0x11
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_a0bedc3a2739e909a4ca588c90bfaccf9}{M\+A\+X\+\_\+\+L\+E\+N\+\_\+\+S\+T\+R\+I\+NG}}~254
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_aad88337515c2026d6092a631d48c5779}{S\+P\+I\+\_\+\+A\+PP}}~\mbox{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64a439265cd63aa4351fa0b5c70f4abaf2c}{S\+I\+M\+O\+\_\+\+S\+P\+I1}}
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_abfcf05153ddbd63d5aff5d018867cc19}{C\+S\+\_\+\+P\+IN}}~9
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_abc1d2f563a903ad958394f5c5d9e2d54}{M\+E\+M\+O\+R\+Y\+\_\+\+A\+P\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+F\+A\+ST}}~(50$\ast$100000)
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_a30d9fb8d0e133144e921f1cd25c45e62}{M\+E\+M\+O\+R\+Y\+\_\+\+A\+P\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+L\+OW}}~(5$\ast$100000)
+\item 
+\#define \mbox{\hyperlink{memory__store_8c_a0d39fb8b25bd725dc8532df6ac8c0c20}{F\+R\+E\+Q\+\_\+\+A\+PP}}~\mbox{\hyperlink{memory__store_8c_abc1d2f563a903ad958394f5c5d9e2d54}{M\+E\+M\+O\+R\+Y\+\_\+\+A\+P\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+F\+A\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{memory__store_8c_a6a24f219ebd053b2a578fd6b76e9660e}{simo\+\_\+memory\+\_\+store\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Inicio la memoria. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{memory__store_8c_a964446e563ed31ea272138578a394af2}{simo\+\_\+memory\+\_\+store\+\_\+deinit}} (void)
+\begin{DoxyCompactList}\small\item\em Termino la memoria. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{memory__store_8c_abcf7af373ce46234eb6e198b1cf67926}{simo\+\_\+memory\+\_\+store\+\_\+add\+\_\+page}} (char $\ast$data, uint8\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Agrego datos en la memoria. Los datos se agregan a partir de la posicion O\+F\+F\+S\+E\+T\+D\+A\+TA. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{memory__store_8c_a11b17a95537506727de07ffda7fd3616}{simo\+\_\+memory\+\_\+store\+\_\+read\+\_\+page}} (uint8\+\_\+t $\ast$buffer, uint8\+\_\+t len, uint16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Indico la pagina en la que quiero leer datos. Retorna true si esa pagina tiene datos validos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{memory__store_8c_a86ac668802fc25b81c1867329271451f}{simo\+\_\+memory\+\_\+store\+\_\+full\+\_\+clear}} ()
+\begin{DoxyCompactList}\small\item\em Ejecuta la secuenca de borrado de la memoria completa. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{memory__store_8c_a25be9c04b3d88e26e241db214c5490d0}{simo\+\_\+memory\+\_\+read\+\_\+all}} (\mbox{\hyperlink{memory__store_8h_a8295f66b6d45f42c394c786a6817e97f}{print\+\_\+funcion}} print)
+\begin{DoxyCompactList}\small\item\em Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{memory__store_8c_a188f5520ed029607100a205e8ab6afb9}{simo\+\_\+memory\+\_\+clear\+\_\+counter}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\begin{DoxyAuthor}{Autor}
+German Velardez (\href{mailto:gvelardez@inti.gob.ar}{\texttt{ gvelardez@inti.\+gob.\+ar}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+2021-\/11-\/16
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{memory__store_8c_a667de334dc226f003857f60202986e9f}\label{memory__store_8c_a667de334dc226f003857f60202986e9f}} 
+\index{memory\_store.c@{memory\_store.c}!ADDRES\_COUNTER@{ADDRES\_COUNTER}}
+\index{ADDRES\_COUNTER@{ADDRES\_COUNTER}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{ADDRES\_COUNTER}{ADDRES\_COUNTER}}
+{\footnotesize\ttfamily \#define A\+D\+D\+R\+E\+S\+\_\+\+C\+O\+U\+N\+T\+ER~10}
+
+\mbox{\Hypertarget{memory__store_8c_adc654d9e3f96615e2a679b52da30e54c}\label{memory__store_8c_adc654d9e3f96615e2a679b52da30e54c}} 
+\index{memory\_store.c@{memory\_store.c}!CHAR\_INIT\_SIMO@{CHAR\_INIT\_SIMO}}
+\index{CHAR\_INIT\_SIMO@{CHAR\_INIT\_SIMO}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{CHAR\_INIT\_SIMO}{CHAR\_INIT\_SIMO}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+I\+MO~0x11}
+
+\mbox{\Hypertarget{memory__store_8c_abfcf05153ddbd63d5aff5d018867cc19}\label{memory__store_8c_abfcf05153ddbd63d5aff5d018867cc19}} 
+\index{memory\_store.c@{memory\_store.c}!CS\_PIN@{CS\_PIN}}
+\index{CS\_PIN@{CS\_PIN}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{CS\_PIN}{CS\_PIN}}
+{\footnotesize\ttfamily \#define C\+S\+\_\+\+P\+IN~9}
+
+\mbox{\Hypertarget{memory__store_8c_a11faa4c105a137b8edaa096de5063835}\label{memory__store_8c_a11faa4c105a137b8edaa096de5063835}} 
+\index{memory\_store.c@{memory\_store.c}!DATA\_OFFSET@{DATA\_OFFSET}}
+\index{DATA\_OFFSET@{DATA\_OFFSET}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{DATA\_OFFSET}{DATA\_OFFSET}}
+{\footnotesize\ttfamily \#define D\+A\+T\+A\+\_\+\+O\+F\+F\+S\+ET~48}
+
+\mbox{\Hypertarget{memory__store_8c_a0d39fb8b25bd725dc8532df6ac8c0c20}\label{memory__store_8c_a0d39fb8b25bd725dc8532df6ac8c0c20}} 
+\index{memory\_store.c@{memory\_store.c}!FREQ\_APP@{FREQ\_APP}}
+\index{FREQ\_APP@{FREQ\_APP}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{FREQ\_APP}{FREQ\_APP}}
+{\footnotesize\ttfamily \#define F\+R\+E\+Q\+\_\+\+A\+PP~\mbox{\hyperlink{memory__store_8c_abc1d2f563a903ad958394f5c5d9e2d54}{M\+E\+M\+O\+R\+Y\+\_\+\+A\+P\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+F\+A\+ST}}}
+
+\mbox{\Hypertarget{memory__store_8c_aaf06a3762adb0aa04b8a5f8f016ca5e9}\label{memory__store_8c_aaf06a3762adb0aa04b8a5f8f016ca5e9}} 
+\index{memory\_store.c@{memory\_store.c}!MAX\_DATA@{MAX\_DATA}}
+\index{MAX\_DATA@{MAX\_DATA}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_DATA}{MAX\_DATA}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+D\+A\+TA~2000}
+
+\mbox{\Hypertarget{memory__store_8c_a0bedc3a2739e909a4ca588c90bfaccf9}\label{memory__store_8c_a0bedc3a2739e909a4ca588c90bfaccf9}} 
+\index{memory\_store.c@{memory\_store.c}!MAX\_LEN\_STRING@{MAX\_LEN\_STRING}}
+\index{MAX\_LEN\_STRING@{MAX\_LEN\_STRING}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_LEN\_STRING}{MAX\_LEN\_STRING}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+E\+N\+\_\+\+S\+T\+R\+I\+NG~254}
+
+\mbox{\Hypertarget{memory__store_8c_abc1d2f563a903ad958394f5c5d9e2d54}\label{memory__store_8c_abc1d2f563a903ad958394f5c5d9e2d54}} 
+\index{memory\_store.c@{memory\_store.c}!MEMORY\_APP\_BAUDRATE\_FAST@{MEMORY\_APP\_BAUDRATE\_FAST}}
+\index{MEMORY\_APP\_BAUDRATE\_FAST@{MEMORY\_APP\_BAUDRATE\_FAST}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{MEMORY\_APP\_BAUDRATE\_FAST}{MEMORY\_APP\_BAUDRATE\_FAST}}
+{\footnotesize\ttfamily \#define M\+E\+M\+O\+R\+Y\+\_\+\+A\+P\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+F\+A\+ST~(50$\ast$100000)}
+
+\mbox{\Hypertarget{memory__store_8c_a30d9fb8d0e133144e921f1cd25c45e62}\label{memory__store_8c_a30d9fb8d0e133144e921f1cd25c45e62}} 
+\index{memory\_store.c@{memory\_store.c}!MEMORY\_APP\_BAUDRATE\_LOW@{MEMORY\_APP\_BAUDRATE\_LOW}}
+\index{MEMORY\_APP\_BAUDRATE\_LOW@{MEMORY\_APP\_BAUDRATE\_LOW}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{MEMORY\_APP\_BAUDRATE\_LOW}{MEMORY\_APP\_BAUDRATE\_LOW}}
+{\footnotesize\ttfamily \#define M\+E\+M\+O\+R\+Y\+\_\+\+A\+P\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+L\+OW~(5$\ast$100000)}
+
+\mbox{\Hypertarget{memory__store_8c_ae9f8d1ca57a71e5e4a1b9b6dc96c0d0b}\label{memory__store_8c_ae9f8d1ca57a71e5e4a1b9b6dc96c0d0b}} 
+\index{memory\_store.c@{memory\_store.c}!N\_PAGES@{N\_PAGES}}
+\index{N\_PAGES@{N\_PAGES}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{N\_PAGES}{N\_PAGES}}
+{\footnotesize\ttfamily \#define N\+\_\+\+P\+A\+G\+ES~2048}
+
+\mbox{\Hypertarget{memory__store_8c_a72adc862c84ef019effe055d5f12d9c6}\label{memory__store_8c_a72adc862c84ef019effe055d5f12d9c6}} 
+\index{memory\_store.c@{memory\_store.c}!SIZE\_PAGE@{SIZE\_PAGE}}
+\index{SIZE\_PAGE@{SIZE\_PAGE}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{SIZE\_PAGE}{SIZE\_PAGE}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E\+\_\+\+P\+A\+GE~256}
+
+\mbox{\Hypertarget{memory__store_8c_aad88337515c2026d6092a631d48c5779}\label{memory__store_8c_aad88337515c2026d6092a631d48c5779}} 
+\index{memory\_store.c@{memory\_store.c}!SPI\_APP@{SPI\_APP}}
+\index{SPI\_APP@{SPI\_APP}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_APP}{SPI\_APP}}
+{\footnotesize\ttfamily \#define S\+P\+I\+\_\+\+A\+PP~\mbox{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64a439265cd63aa4351fa0b5c70f4abaf2c}{S\+I\+M\+O\+\_\+\+S\+P\+I1}}}
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{memory__store_8c_a188f5520ed029607100a205e8ab6afb9}\label{memory__store_8c_a188f5520ed029607100a205e8ab6afb9}} 
+\index{memory\_store.c@{memory\_store.c}!simo\_memory\_clear\_counter@{simo\_memory\_clear\_counter}}
+\index{simo\_memory\_clear\_counter@{simo\_memory\_clear\_counter}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{simo\_memory\_clear\_counter()}{simo\_memory\_clear\_counter()}}
+{\footnotesize\ttfamily void simo\+\_\+memory\+\_\+clear\+\_\+counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{memory__store_8c_a25be9c04b3d88e26e241db214c5490d0}\label{memory__store_8c_a25be9c04b3d88e26e241db214c5490d0}} 
+\index{memory\_store.c@{memory\_store.c}!simo\_memory\_read\_all@{simo\_memory\_read\_all}}
+\index{simo\_memory\_read\_all@{simo\_memory\_read\_all}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{simo\_memory\_read\_all()}{simo\_memory\_read\_all()}}
+{\footnotesize\ttfamily uint16\+\_\+t simo\+\_\+memory\+\_\+read\+\_\+all (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{memory__store_8h_a8295f66b6d45f42c394c786a6817e97f}{print\+\_\+funcion}}}]{fun }\end{DoxyParamCaption})}
+
+
+
+Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fun} & es un puntero a funcion que recibe char$\ast$ como parametro y devuelve void. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ uint16\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{memory__store_8c_abcf7af373ce46234eb6e198b1cf67926}\label{memory__store_8c_abcf7af373ce46234eb6e198b1cf67926}} 
+\index{memory\_store.c@{memory\_store.c}!simo\_memory\_store\_add\_page@{simo\_memory\_store\_add\_page}}
+\index{simo\_memory\_store\_add\_page@{simo\_memory\_store\_add\_page}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{simo\_memory\_store\_add\_page()}{simo\_memory\_store\_add\_page()}}
+{\footnotesize\ttfamily uint16\+\_\+t simo\+\_\+memory\+\_\+store\+\_\+add\+\_\+page (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{uint8\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Agrego datos en la memoria. Los datos se agregan a partir de la posicion O\+F\+F\+S\+E\+T\+D\+A\+TA. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & datos a enviar \\
+\hline
+{\em len} & tamanio de los datos. Maximo 254. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ uint16\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{memory__store_8c_a964446e563ed31ea272138578a394af2}\label{memory__store_8c_a964446e563ed31ea272138578a394af2}} 
+\index{memory\_store.c@{memory\_store.c}!simo\_memory\_store\_deinit@{simo\_memory\_store\_deinit}}
+\index{simo\_memory\_store\_deinit@{simo\_memory\_store\_deinit}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{simo\_memory\_store\_deinit()}{simo\_memory\_store\_deinit()}}
+{\footnotesize\ttfamily void simo\+\_\+memory\+\_\+store\+\_\+deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Termino la memoria. 
+
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{memory__store_8c_a86ac668802fc25b81c1867329271451f}\label{memory__store_8c_a86ac668802fc25b81c1867329271451f}} 
+\index{memory\_store.c@{memory\_store.c}!simo\_memory\_store\_full\_clear@{simo\_memory\_store\_full\_clear}}
+\index{simo\_memory\_store\_full\_clear@{simo\_memory\_store\_full\_clear}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{simo\_memory\_store\_full\_clear()}{simo\_memory\_store\_full\_clear()}}
+{\footnotesize\ttfamily void simo\+\_\+memory\+\_\+store\+\_\+full\+\_\+clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ejecuta la secuenca de borrado de la memoria completa. 
+
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{memory__store_8c_a6a24f219ebd053b2a578fd6b76e9660e}\label{memory__store_8c_a6a24f219ebd053b2a578fd6b76e9660e}} 
+\index{memory\_store.c@{memory\_store.c}!simo\_memory\_store\_init@{simo\_memory\_store\_init}}
+\index{simo\_memory\_store\_init@{simo\_memory\_store\_init}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{simo\_memory\_store\_init()}{simo\_memory\_store\_init()}}
+{\footnotesize\ttfamily bool simo\+\_\+memory\+\_\+store\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Inicio la memoria. 
+
+\begin{DoxyReturn}{Devuelve}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{memory__store_8c_a11b17a95537506727de07ffda7fd3616}\label{memory__store_8c_a11b17a95537506727de07ffda7fd3616}} 
+\index{memory\_store.c@{memory\_store.c}!simo\_memory\_store\_read\_page@{simo\_memory\_store\_read\_page}}
+\index{simo\_memory\_store\_read\_page@{simo\_memory\_store\_read\_page}!memory\_store.c@{memory\_store.c}}
+\doxysubsubsection{\texorpdfstring{simo\_memory\_store\_read\_page()}{simo\_memory\_store\_read\_page()}}
+{\footnotesize\ttfamily bool simo\+\_\+memory\+\_\+store\+\_\+read\+\_\+page (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint8\+\_\+t}]{len,  }\item[{uint16\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Indico la pagina en la que quiero leer datos. Retorna true si esa pagina tiene datos validos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em buffer} & buffer para guardar datos leidos \\
+\hline
+{\em len} & tamanio del buffer \\
+\hline
+{\em index} & pagina a leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true 
+
+false 
+\end{DoxyReturn}

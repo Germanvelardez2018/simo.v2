@@ -1,0 +1,182 @@
+\hypertarget{_a_t45_d_b041_e_8h}{}\doxysection{Referencia del Archivo core/include/simo/storage/memory/\+A\+T45\+D\+B041E.h}
+\label{_a_t45_d_b041_e_8h}\index{core/include/simo/storage/memory/AT45DB041E.h@{core/include/simo/storage/memory/AT45DB041E.h}}
+
+
+Driver para manejar la memoria flash A\+T45\+D\+B041E. No usar de manera directa en aplicacion.  
+
+
+{\ttfamily \#include \char`\"{}simo/hardware/spi.\+h\char`\"{}}\newline
+Dependencia gráfica adjunta para A\+T45\+D\+B041\+E.\+h\+:
+% FIG 0
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:
+% FIG 1
+\doxysubsection*{Estructuras de datos}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Necesario libreria S\+I\+MO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$ \mbox{\hyperlink{_a_t45_d_b041_e_8h_ab391b3001407a9227793786d8e3eaa13}{simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+create}} (\mbox{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}} spi, uint32\+\_\+t cs\+\_\+pin, uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em Retorna un puntero instancia de \mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_t45_d_b041_e_8h_aedbb6242b12d1c13461e49cd06dfb996}{simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+delete}} (\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Liberar memoria de instancia A\+T45\+D\+B041E. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_a_t45_d_b041_e_8h_a9531ddfbe5fb7094741bf15fd6c3d9cf}{simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+init}} (\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Inicio el objeto memoria. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_t45_d_b041_e_8h_ae35a9c00b013309ec845427cc9039eea}{simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+full\+\_\+erase}} (\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$mem)
+\begin{DoxyCompactList}\small\item\em Borrar memoria completa. Tambien es posible borrar por sectores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_t45_d_b041_e_8h_a5f5fb5c3d759695b7a64784de0eba2bf}{simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+save\+\_\+data}} (\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$mem, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t buffer\+\_\+len, uint16\+\_\+t page, uint16\+\_\+t position\+\_\+page)
+\begin{DoxyCompactList}\small\item\em Guardar datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_t45_d_b041_e_8h_a740f4cafd0099fd6a37f48c22d160619}{simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+read\+\_\+data}} (\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$mem, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t buffer\+\_\+len, uint16\+\_\+t page, uint16\+\_\+t position\+\_\+page)
+\begin{DoxyCompactList}\small\item\em Leer datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver para manejar la memoria flash A\+T45\+D\+B041E. No usar de manera directa en aplicacion. 
+
+\begin{DoxyAuthor}{Autor}
+German Velardez (\href{mailto:gvelardez@inti.gob.ar}{\texttt{ gvelardez@inti.\+gob.\+ar}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+2021-\/11-\/15
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_a_t45_d_b041_e_8h_ab391b3001407a9227793786d8e3eaa13}\label{_a_t45_d_b041_e_8h_ab391b3001407a9227793786d8e3eaa13}} 
+\index{AT45DB041E.h@{AT45DB041E.h}!simo\_AT45DB041E\_create@{simo\_AT45DB041E\_create}}
+\index{simo\_AT45DB041E\_create@{simo\_AT45DB041E\_create}!AT45DB041E.h@{AT45DB041E.h}}
+\doxysubsubsection{\texorpdfstring{simo\_AT45DB041E\_create()}{simo\_AT45DB041E\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}}$\ast$ simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}}]{spi,  }\item[{uint32\+\_\+t}]{cs\+\_\+pin,  }\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+Retorna un puntero instancia de \mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em spi} & puerto S\+PI a utilizar \\
+\hline
+{\em cs\+\_\+pin} & pin de chip select \\
+\hline
+{\em freq} & Frecuencia de trabajo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ A\+T45\+D\+B041\+E\+\_\+t$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_t45_d_b041_e_8h_aedbb6242b12d1c13461e49cd06dfb996}\label{_a_t45_d_b041_e_8h_aedbb6242b12d1c13461e49cd06dfb996}} 
+\index{AT45DB041E.h@{AT45DB041E.h}!simo\_AT45DB041E\_delete@{simo\_AT45DB041E\_delete}}
+\index{simo\_AT45DB041E\_delete@{simo\_AT45DB041E\_delete}!AT45DB041E.h@{AT45DB041E.h}}
+\doxysubsubsection{\texorpdfstring{simo\_AT45DB041E\_delete()}{simo\_AT45DB041E\_delete()}}
+{\footnotesize\ttfamily void simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$}]{mem }\end{DoxyParamCaption})}
+
+
+
+Liberar memoria de instancia A\+T45\+D\+B041E. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mem} & puntero de instancia A\+T45\+D\+B041E \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_t45_d_b041_e_8h_ae35a9c00b013309ec845427cc9039eea}\label{_a_t45_d_b041_e_8h_ae35a9c00b013309ec845427cc9039eea}} 
+\index{AT45DB041E.h@{AT45DB041E.h}!simo\_AT45DB041E\_full\_erase@{simo\_AT45DB041E\_full\_erase}}
+\index{simo\_AT45DB041E\_full\_erase@{simo\_AT45DB041E\_full\_erase}!AT45DB041E.h@{AT45DB041E.h}}
+\doxysubsubsection{\texorpdfstring{simo\_AT45DB041E\_full\_erase()}{simo\_AT45DB041E\_full\_erase()}}
+{\footnotesize\ttfamily void simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+full\+\_\+erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$}]{mem }\end{DoxyParamCaption})}
+
+
+
+Borrar memoria completa. Tambien es posible borrar por sectores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mem} & objeto memoria a borrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_t45_d_b041_e_8h_a9531ddfbe5fb7094741bf15fd6c3d9cf}\label{_a_t45_d_b041_e_8h_a9531ddfbe5fb7094741bf15fd6c3d9cf}} 
+\index{AT45DB041E.h@{AT45DB041E.h}!simo\_AT45DB041E\_init@{simo\_AT45DB041E\_init}}
+\index{simo\_AT45DB041E\_init@{simo\_AT45DB041E\_init}!AT45DB041E.h@{AT45DB041E.h}}
+\doxysubsubsection{\texorpdfstring{simo\_AT45DB041E\_init()}{simo\_AT45DB041E\_init()}}
+{\footnotesize\ttfamily bool simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$}]{mem }\end{DoxyParamCaption})}
+
+
+
+Inicio el objeto memoria. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mem} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_t45_d_b041_e_8h_a740f4cafd0099fd6a37f48c22d160619}\label{_a_t45_d_b041_e_8h_a740f4cafd0099fd6a37f48c22d160619}} 
+\index{AT45DB041E.h@{AT45DB041E.h}!simo\_AT45DB041E\_read\_data@{simo\_AT45DB041E\_read\_data}}
+\index{simo\_AT45DB041E\_read\_data@{simo\_AT45DB041E\_read\_data}!AT45DB041E.h@{AT45DB041E.h}}
+\doxysubsubsection{\texorpdfstring{simo\_AT45DB041E\_read\_data()}{simo\_AT45DB041E\_read\_data()}}
+{\footnotesize\ttfamily void simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+read\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$}]{mem,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{buffer\+\_\+len,  }\item[{uint16\+\_\+t}]{page,  }\item[{uint16\+\_\+t}]{position\+\_\+page }\end{DoxyParamCaption})}
+
+
+
+Leer datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mem} & puntero a objeto memoria \\
+\hline
+{\em buffer} & buffer donde almacenar los datos leidos \\
+\hline
+{\em buffer\+\_\+len} & tamanio del buffer de datos \\
+\hline
+{\em page} & numero de pagina \\
+\hline
+{\em position\+\_\+page} & posicion dentro de la pagina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_t45_d_b041_e_8h_a5f5fb5c3d759695b7a64784de0eba2bf}\label{_a_t45_d_b041_e_8h_a5f5fb5c3d759695b7a64784de0eba2bf}} 
+\index{AT45DB041E.h@{AT45DB041E.h}!simo\_AT45DB041E\_save\_data@{simo\_AT45DB041E\_save\_data}}
+\index{simo\_AT45DB041E\_save\_data@{simo\_AT45DB041E\_save\_data}!AT45DB041E.h@{AT45DB041E.h}}
+\doxysubsubsection{\texorpdfstring{simo\_AT45DB041E\_save\_data()}{simo\_AT45DB041E\_save\_data()}}
+{\footnotesize\ttfamily void simo\+\_\+\+A\+T45\+D\+B041\+E\+\_\+save\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_a_t45_d_b041_e__t}{A\+T45\+D\+B041\+E\+\_\+t}} $\ast$}]{mem,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{buffer\+\_\+len,  }\item[{uint16\+\_\+t}]{page,  }\item[{uint16\+\_\+t}]{position\+\_\+page }\end{DoxyParamCaption})}
+
+
+
+Guardar datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mem} & puntero a objeto de memoria \\
+\hline
+{\em buffer} & buffer de datos a enviar \\
+\hline
+{\em buffer\+\_\+len} & tamanio de buffer de datos \\
+\hline
+{\em page} & numero de pagina \\
+\hline
+{\em position\+\_\+page} & posicion dentro de la pagina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}

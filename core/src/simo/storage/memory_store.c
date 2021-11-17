@@ -21,14 +21,14 @@
  * BLOQUES: 256         DIRECCION DE 8 BITS
  * SECTORES: 8  
 */
-#define N_PAGES                 2048
-#define SIZE_PAGE               256
-#define ADDRES_COUNTER          10    //Direccion donde se encuenctra el contador de datos
+#define N_PAGES                 2048   // Cantidad de paginas(256bytes disponibles)
+#define SIZE_PAGE               256     //Tamanio en bytes de las paginas
+#define ADDRES_COUNTER          10     //Direccion donde se encuentra el contador de datos
 
 #define DATA_OFFSET             48   //2000 DATOS PARA ALMACENAR
 #define MAX_DATA                2000
 
-#define CHAR_INIT_SIMO          0x11  Si no se detecta este caracter el string es invalido y se descarta
+#define CHAR_INIT_SIMO          0x11  //Si no se detecta este caracter el string es invalido y se descarta
 #define MAX_LEN_STRING          254  // Tamanio maximo de los string a almacenar
 
 

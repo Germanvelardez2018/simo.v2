@@ -37,7 +37,7 @@ void simo_memory_store_deinit(void);
  * @brief  Agrego datos en la memoria. Los datos se agregan a partir de la posicion OFFSETDATA
  * 
  * @param data  datos a enviar
- * @param len   tamanio de los datos. Maximo 256. (Cada datos tiene su propia pagina)
+ * @param len   tamanio de los datos. Maximo 254. 
  * @return ** uint16_t 
  */
 uint16_t simo_memory_store_add_page(char* data, uint8_t len);

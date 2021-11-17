@@ -24,10 +24,13 @@
  * 
  */
 typedef struct 
-{
-    spi_t spi;          //! Interfaz de hardware asociada
-    uint32_t cs_pin;    //!Pin de habilitacion (Chip select)
-    bool    spi_ready;    //! El hardware SPI esta inicializado?
+{   //! Interfaz de hardware asociada
+    spi_t spi;
+    //!Pin de habilitacion (Chip select)          
+    uint32_t cs_pin;
+    //! El hardware SPI esta inicializado?    
+    bool    spi_ready;
+    //! Frecuencia de transmicion SPI    
     uint32_t freq;
 
 }AT45DB041E_t;

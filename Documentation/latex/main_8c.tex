@@ -1,0 +1,80 @@
+\hypertarget{main_8c}{}\doxysection{Referencia del Archivo core/src/main.c}
+\label{main_8c}\index{core/src/main.c@{core/src/main.c}}
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S\+Config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}simo/hardware/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}simo/storage/memory\+\_\+store.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}simo/storage/memory/\+A\+T45\+D\+B041\+E.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Dependencia gráfica adjunta para main.\+c\+:
+% FIG 0
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a64589fb86e28f7e2a1f4b8f918b64582}{M\+E\+N\+S\+A\+J\+E\+\_\+\+S\+E\+R\+I\+AL}}~\char`\"{}hola mundo \textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{main_8c_ac2e847c7289a4f211b759ecb0a7095f5}{C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+SG}}~\char`\"{}contador = \%d\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{main_8c_ad4d025ecf1bdbf8b244ca688df8e478d}{M\+S\+G\+\_\+\+S\+I\+ZE}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a911673c14b3321975f2a3f35a185773a}{serial\+\_\+task}} (void $\ast$params)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\begin{DoxyAuthor}{Autor}
+German Velardez (\href{mailto:germanvelardez@gmail.com}{\texttt{ germanvelardez@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+2021-\/11-\/08
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{main_8c_ac2e847c7289a4f211b759ecb0a7095f5}\label{main_8c_ac2e847c7289a4f211b759ecb0a7095f5}} 
+\index{main.c@{main.c}!COUNTER\_MSG@{COUNTER\_MSG}}
+\index{COUNTER\_MSG@{COUNTER\_MSG}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{COUNTER\_MSG}{COUNTER\_MSG}}
+{\footnotesize\ttfamily \#define C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+SG~\char`\"{}contador = \%d\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{main_8c_a64589fb86e28f7e2a1f4b8f918b64582}\label{main_8c_a64589fb86e28f7e2a1f4b8f918b64582}} 
+\index{main.c@{main.c}!MENSAJE\_SERIAL@{MENSAJE\_SERIAL}}
+\index{MENSAJE\_SERIAL@{MENSAJE\_SERIAL}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MENSAJE\_SERIAL}{MENSAJE\_SERIAL}}
+{\footnotesize\ttfamily \#define M\+E\+N\+S\+A\+J\+E\+\_\+\+S\+E\+R\+I\+AL~\char`\"{}hola mundo \textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{main_8c_ad4d025ecf1bdbf8b244ca688df8e478d}\label{main_8c_ad4d025ecf1bdbf8b244ca688df8e478d}} 
+\index{main.c@{main.c}!MSG\_SIZE@{MSG\_SIZE}}
+\index{MSG\_SIZE@{MSG\_SIZE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MSG\_SIZE}{MSG\_SIZE}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+S\+I\+ZE~100}
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a911673c14b3321975f2a3f35a185773a}\label{main_8c_a911673c14b3321975f2a3f35a185773a}} 
+\index{main.c@{main.c}!serial\_task@{serial\_task}}
+\index{serial\_task@{serial\_task}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{serial\_task()}{serial\_task()}}
+{\footnotesize\ttfamily void serial\+\_\+task (\begin{DoxyParamCaption}\item[{void $\ast$}]{params }\end{DoxyParamCaption})}
+

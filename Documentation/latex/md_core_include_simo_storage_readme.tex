@@ -1,0 +1,47 @@
+\hypertarget{md_core_include_simo_storage_readme_autotoc_md1}{}\doxysubsubsection{Memoria flash utilizada\+: at45db041E}\label{md_core_include_simo_storage_readme_autotoc_md1}
+\doxysubparagraph*{P\+A\+G\+I\+N\+AS\+: 2048 D\+I\+R\+E\+C\+C\+I\+ON DE 11 B\+I\+TS}
+
+\doxysubparagraph*{B\+L\+O\+Q\+U\+ES\+: 256 D\+I\+R\+E\+C\+C\+I\+ON DE 8 B\+I\+TS}
+
+\doxysubparagraph*{S\+E\+C\+T\+O\+R\+ES\+: 8}\hypertarget{md_core_include_simo_storage_readme_autotoc_md2}{}\doxyparagraph{Formato de datos almacenados}\label{md_core_include_simo_storage_readme_autotoc_md2}
+\hypertarget{md_core_include_simo_storage_readme_autotoc_md3}{}\doxyparagraph{$\vert$\+C\+H\+A\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+I\+M\+O$\vert$ T\+A\+M\+A\+N\+I\+O D\+E\+L S\+T\+R\+I\+N\+G$\vert$\+S\+T\+R\+I\+N\+G$\vert$}\label{md_core_include_simo_storage_readme_autotoc_md3}
+\doxysubparagraph*{Datasheet\+: \href{https://github.com/Germanvelardez2018/simo.v2/blob/master/core/include/simo/storage/Datasheets/AT45DB041E.pdf}{\texttt{ Link}}}
+
+Estan diseñados para almacenar datos en formato char$\ast$ de 254 bytes de longitud maxima. Utilizan un formato de 2 bytes iniciales que le permite a las funciones de lectura saber si un datos es valido y cuantos bytes reales ocupa. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{memory__store_8h}{simo/storage/memory\_store.h}}"} \textcolor{comment}{// Incluimos memory\_store.h}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define N\_PAGES                 2048   // Cantidad de paginas(256bytes disponibles)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define SIZE\_PAGE               256     //Tamanio en bytes de las paginas}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define ADDRES\_COUNTER          10     //Direccion donde se encuentra el contador de datos}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define DATA\_OFFSET             48   //2000 DATOS PARA ALMACENAR}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MAX\_DATA                2000}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define CHAR\_INIT\_SIMO          0x11  Si no se detecta este caracter el string es invalido y se descarta}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define MAX\_LEN\_STRING          254  // Tamanio maximo de los string a almacenar}}
+\DoxyCodeLine{\textcolor{preprocessor}{|}}
+\end{DoxyCode}
+\hypertarget{md_core_include_simo_storage_readme_autotoc_md4}{}\doxysubsubsection{Principales funciones}\label{md_core_include_simo_storage_readme_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{memory__store_8h}{simo/storage/memory\_store.h}}"} \textcolor{comment}{// Incluimos memory\_store.h}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{bool} \mbox{\hyperlink{memory__store_8h_a6a24f219ebd053b2a578fd6b76e9660e}{simo\_memory\_store\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} \mbox{\hyperlink{memory__store_8h_a964446e563ed31ea272138578a394af2}{simo\_memory\_store\_deinit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} \mbox{\hyperlink{memory__store_8h_a86ac668802fc25b81c1867329271451f}{simo\_memory\_store\_full\_clear}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{uint16\_t \mbox{\hyperlink{memory__store_8h_abcf7af373ce46234eb6e198b1cf67926}{simo\_memory\_store\_add\_page}}(\textcolor{keywordtype}{char}* data, uint8\_t len);}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{uint16\_t \mbox{\hyperlink{memory__store_8h_a08cfe647412c0da9b29060c6928b2327}{simo\_memory\_read\_all}}(\mbox{\hyperlink{memory__store_8h_a8295f66b6d45f42c394c786a6817e97f}{print\_funcion}} fun);}
+\DoxyCodeLine{|}
+\end{DoxyCode}
+ 

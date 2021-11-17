@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SIMO: Fichero Fuente core/include/simo/storage/memory_store.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SIMO
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de monitoreo remoto basado en Rapsberry PI PICO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_24d671cfcbc5d5238a6bd565a49d198f.html">include</a></li><li class="navelem"><a class="el" href="dir_eb293059644a82a490cf75e36ed4597e.html">simo</a></li><li class="navelem"><a class="el" href="dir_2c203a4cf206be49b0d957ecead522f3.html">storage</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">memory_store.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="memory__store_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_8h.html">simo/core.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">   15</a></span>&#160;<span class="keyword">typedef</span> void(*<a class="code" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a>)(<span class="keywordtype">char</span>*);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="memory__store_8h.html#a6a24f219ebd053b2a578fd6b76e9660e">simo_memory_store_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="memory__store_8h.html#a964446e563ed31ea272138578a394af2">simo_memory_store_deinit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;uint16_t <a class="code" href="memory__store_8h.html#abcf7af373ce46234eb6e198b1cf67926">simo_memory_store_add_page</a>(<span class="keywordtype">char</span>* data, uint8_t len);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="memory__store_8h.html#a11b17a95537506727de07ffda7fd3616">simo_memory_store_read_page</a>(uint8_t* buffer,uint8_t len,uint16_t index);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="memory__store_8h.html#a86ac668802fc25b81c1867329271451f">simo_memory_store_full_clear</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;uint16_t <a class="code" href="memory__store_8h.html#a08cfe647412c0da9b29060c6928b2327">simo_memory_read_all</a>(<a class="code" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a> fun);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">void</span> <a class="code" href="memory__store_8h.html#a188f5520ed029607100a205e8ab6afb9">simo_memory_clear_counter</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="amemory__store_8h_html_a964446e563ed31ea272138578a394af2"><div class="ttname"><a href="memory__store_8h.html#a964446e563ed31ea272138578a394af2">simo_memory_store_deinit</a></div><div class="ttdeci">void simo_memory_store_deinit(void)</div><div class="ttdoc">Termino la memoria.</div><div class="ttdef"><b>Definition:</b> memory_store.c:130</div></div>
+<div class="ttc" id="amemory__store_8h_html_a8295f66b6d45f42c394c786a6817e97f"><div class="ttname"><a href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a></div><div class="ttdeci">void(* print_funcion)(char *)</div><div class="ttdef"><b>Definition:</b> memory_store.h:15</div></div>
+<div class="ttc" id="amemory__store_8h_html_a6a24f219ebd053b2a578fd6b76e9660e"><div class="ttname"><a href="memory__store_8h.html#a6a24f219ebd053b2a578fd6b76e9660e">simo_memory_store_init</a></div><div class="ttdeci">bool simo_memory_store_init(void)</div><div class="ttdoc">Inicio la memoria.</div><div class="ttdef"><b>Definition:</b> memory_store.c:116</div></div>
+<div class="ttc" id="amemory__store_8h_html_a08cfe647412c0da9b29060c6928b2327"><div class="ttname"><a href="memory__store_8h.html#a08cfe647412c0da9b29060c6928b2327">simo_memory_read_all</a></div><div class="ttdeci">uint16_t simo_memory_read_all(print_funcion fun)</div><div class="ttdoc">Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametro...</div><div class="ttdef"><b>Definition:</b> memory_store.c:204</div></div>
+<div class="ttc" id="amemory__store_8h_html_abcf7af373ce46234eb6e198b1cf67926"><div class="ttname"><a href="memory__store_8h.html#abcf7af373ce46234eb6e198b1cf67926">simo_memory_store_add_page</a></div><div class="ttdeci">uint16_t simo_memory_store_add_page(char *data, uint8_t len)</div><div class="ttdoc">Agrego datos en la memoria. Los datos se agregan a partir de la posicion OFFSETDATA.</div><div class="ttdef"><b>Definition:</b> memory_store.c:137</div></div>
+<div class="ttc" id="amemory__store_8h_html_a86ac668802fc25b81c1867329271451f"><div class="ttname"><a href="memory__store_8h.html#a86ac668802fc25b81c1867329271451f">simo_memory_store_full_clear</a></div><div class="ttdeci">void simo_memory_store_full_clear()</div><div class="ttdoc">Ejecuta la secuenca de borrado de la memoria completa.</div><div class="ttdef"><b>Definition:</b> memory_store.c:197</div></div>
+<div class="ttc" id="amemory__store_8h_html_a11b17a95537506727de07ffda7fd3616"><div class="ttname"><a href="memory__store_8h.html#a11b17a95537506727de07ffda7fd3616">simo_memory_store_read_page</a></div><div class="ttdeci">bool simo_memory_store_read_page(uint8_t *buffer, uint8_t len, uint16_t index)</div><div class="ttdoc">Indico la pagina en la que quiero leer datos. Retorna true si esa pagina tiene datos validos.</div><div class="ttdef"><b>Definition:</b> memory_store.c:168</div></div>
+<div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">Core de la aplicacion. En este archivo van elementos indispensables para la aplicacion....</div></div>
+<div class="ttc" id="amemory__store_8h_html_a188f5520ed029607100a205e8ab6afb9"><div class="ttname"><a href="memory__store_8h.html#a188f5520ed029607100a205e8ab6afb9">simo_memory_clear_counter</a></div><div class="ttdeci">void simo_memory_clear_counter()</div><div class="ttdef"><b>Definition:</b> memory_store.c:234</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

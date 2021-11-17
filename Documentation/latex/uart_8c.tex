@@ -1,0 +1,317 @@
+\hypertarget{uart_8c}{}\doxysection{Referencia del Archivo core/src/simo/hardware/uart.c}
+\label{uart_8c}\index{core/src/simo/hardware/uart.c@{core/src/simo/hardware/uart.c}}
+{\ttfamily \#include \char`\"{}simo/hardware/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/irq.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/gpio.\+h\char`\"{}}\newline
+Dependencia gráfica adjunta para uart.\+c\+:
+% FIG 0
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{uart_8c_a5cfd70d28dfc2a75815e31f512ea56ad}{N\+\_\+\+U\+A\+RT}}~2
+\begin{DoxyCompactList}\small\item\em Libreria simo. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8c_a19a389199858d939896f636e564c21af}{U\+A\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT}}~uart0
+\item 
+\#define \mbox{\hyperlink{uart_8c_a0508661f121639ffdee7de2353a0def2}{U\+A\+R\+T0}}~uart0
+\begin{DoxyCompactList}\small\item\em Pines asociados. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8c_a0a573eb024fbcf113feed4ce51dd3f64}{U\+A\+R\+T0\+\_\+\+TX}}~0
+\item 
+\#define \mbox{\hyperlink{uart_8c_a8e776259c346b71606231a18f2703f0d}{U\+A\+R\+T0\+\_\+\+T\+X\+\_\+\+O\+P\+T\+I\+O\+N\+AL}}~12
+\item 
+\#define \mbox{\hyperlink{uart_8c_ae9deeb1486fb1892e37b175810d23f1d}{U\+A\+R\+T0\+\_\+\+RX}}~1
+\item 
+\#define \mbox{\hyperlink{uart_8c_a1e15756395ab3c26bbb8828b06538740}{U\+A\+R\+T0\+\_\+\+R\+X\+\_\+\+O\+P\+T\+I\+O\+N\+AL}}~13
+\item 
+\#define \mbox{\hyperlink{uart_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{U\+A\+R\+T1}}~uart1
+\item 
+\#define \mbox{\hyperlink{uart_8c_ae9dbdd1c135a1428009938fd7875ab56}{U\+A\+R\+T1\+\_\+\+TX}}~4
+\item 
+\#define \mbox{\hyperlink{uart_8c_a4cde67695294daf8a0862e8cb9c6c808}{U\+A\+R\+T1\+\_\+\+T\+X\+\_\+\+O\+P\+T\+I\+O\+N\+AL}}~8
+\item 
+\#define \mbox{\hyperlink{uart_8c_a228447e1762b2ecba0d05f609356bf2f}{U\+A\+R\+T1\+\_\+\+RX}}~5
+\item 
+\#define \mbox{\hyperlink{uart_8c_ae39534ad3b39398dc5e50db866bb4a74}{U\+A\+R\+T1\+\_\+\+R\+X\+\_\+\+O\+P\+T\+I\+O\+N\+AL}}~9
+\item 
+\#define \mbox{\hyperlink{uart_8c_a395458fb0c7ec814df777adb6cf766e1}{N\+\_\+\+B\+A\+U\+D\+R\+A\+T\+ES}}~5
+\begin{DoxyCompactList}\small\item\em Baudrare validos para la aplicacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uart_8c_a7e1b40195edf9967651736ed4ede65f8}{simo\+\_\+uart\+\_\+init}} (\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}} uart, uint32\+\_\+t baudrate)
+\begin{DoxyCompactList}\small\item\em Puntero a funcion de interrupcion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_ab88c80a14b3885e59c7c3c5acff1eaf7}{simo\+\_\+uart\+\_\+deinit}} (\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}} uart)
+\begin{DoxyCompactList}\small\item\em Desconfigura el harware seleccionado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{uart_8c_a1b26fe4ac19c3b461312b0a036a7be36}{simo\+\_\+uart\+\_\+is\+\_\+enabled}} (\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}} uart)
+\begin{DoxyCompactList}\small\item\em Consulta si el puerto uart seleccionado puede enviar datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{uart_8c_aec2e451b076f57bb732239837559a944}{simo\+\_\+uart\+\_\+read\+\_\+available}} (\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}} uart, uint32\+\_\+t timeout\+\_\+us)
+\begin{DoxyCompactList}\small\item\em Consultar si el puerto uart seleccionado puede leer datos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_a1d000147e9a0b17f110aef7c8c2fd416}{simo\+\_\+uart\+\_\+write\+\_\+buffer}} (\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}} uart, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t len\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Envio un buffer mediante el uart selecionado. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{uart_8c_a78baf3871be64c303176b5c2f9ba9a9b}{simo\+\_\+uart\+\_\+read\+\_\+buffer}} (\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}} uart, uint8\+\_\+t $\ast$buffer, uint32\+\_\+t len\+\_\+buffer, uint\+\_\+fast32\+\_\+t timeout\+\_\+us)
+\item 
+void \mbox{\hyperlink{uart_8c_ac8f10b4ab82f77eda8d936cdec685312}{simo\+\_\+set\+\_\+rx\+\_\+interrupccion}} (\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}} uart, \mbox{\hyperlink{uart_8h_a357c3a7a86c430cc9bdf1ab327738af4}{uart\+\_\+irq\+\_\+callback\+\_\+t}} function\+\_\+handler)
+\item 
+char \mbox{\hyperlink{uart_8c_a8636993ae976e03edd18fb2dacaf9e19}{simo\+\_\+uart\+\_\+get\+\_\+char}} (\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}} uart)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\begin{DoxyAuthor}{Autor}
+German Velardez (\href{mailto:gvelardez@inti.gob.ar}{\texttt{ gvelardez@inti.\+gob.\+ar}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+2021-\/11-\/15
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{uart_8c_a395458fb0c7ec814df777adb6cf766e1}\label{uart_8c_a395458fb0c7ec814df777adb6cf766e1}} 
+\index{uart.c@{uart.c}!N\_BAUDRATES@{N\_BAUDRATES}}
+\index{N\_BAUDRATES@{N\_BAUDRATES}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{N\_BAUDRATES}{N\_BAUDRATES}}
+{\footnotesize\ttfamily \#define N\+\_\+\+B\+A\+U\+D\+R\+A\+T\+ES~5}
+
+
+
+Baudrare validos para la aplicacion. 
+
+\mbox{\Hypertarget{uart_8c_a5cfd70d28dfc2a75815e31f512ea56ad}\label{uart_8c_a5cfd70d28dfc2a75815e31f512ea56ad}} 
+\index{uart.c@{uart.c}!N\_UART@{N\_UART}}
+\index{N\_UART@{N\_UART}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{N\_UART}{N\_UART}}
+{\footnotesize\ttfamily \#define N\+\_\+\+U\+A\+RT~2}
+
+
+
+Libreria simo. 
+
+librerias del fabricante \mbox{\Hypertarget{uart_8c_a0508661f121639ffdee7de2353a0def2}\label{uart_8c_a0508661f121639ffdee7de2353a0def2}} 
+\index{uart.c@{uart.c}!UART0@{UART0}}
+\index{UART0@{UART0}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART0}{UART0}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T0~uart0}
+
+
+
+Pines asociados. 
+
+U\+A\+R\+T0 G\+P\+I\+OS\+: TX\+: 1, RX\+: 2 opcionalmente TX\+: 12, RX\+:13 \mbox{\Hypertarget{uart_8c_ae9deeb1486fb1892e37b175810d23f1d}\label{uart_8c_ae9deeb1486fb1892e37b175810d23f1d}} 
+\index{uart.c@{uart.c}!UART0\_RX@{UART0\_RX}}
+\index{UART0\_RX@{UART0\_RX}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART0\_RX}{UART0\_RX}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T0\+\_\+\+RX~1}
+
+\mbox{\Hypertarget{uart_8c_a1e15756395ab3c26bbb8828b06538740}\label{uart_8c_a1e15756395ab3c26bbb8828b06538740}} 
+\index{uart.c@{uart.c}!UART0\_RX\_OPTIONAL@{UART0\_RX\_OPTIONAL}}
+\index{UART0\_RX\_OPTIONAL@{UART0\_RX\_OPTIONAL}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART0\_RX\_OPTIONAL}{UART0\_RX\_OPTIONAL}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T0\+\_\+\+R\+X\+\_\+\+O\+P\+T\+I\+O\+N\+AL~13}
+
+\mbox{\Hypertarget{uart_8c_a0a573eb024fbcf113feed4ce51dd3f64}\label{uart_8c_a0a573eb024fbcf113feed4ce51dd3f64}} 
+\index{uart.c@{uart.c}!UART0\_TX@{UART0\_TX}}
+\index{UART0\_TX@{UART0\_TX}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART0\_TX}{UART0\_TX}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T0\+\_\+\+TX~0}
+
+\mbox{\Hypertarget{uart_8c_a8e776259c346b71606231a18f2703f0d}\label{uart_8c_a8e776259c346b71606231a18f2703f0d}} 
+\index{uart.c@{uart.c}!UART0\_TX\_OPTIONAL@{UART0\_TX\_OPTIONAL}}
+\index{UART0\_TX\_OPTIONAL@{UART0\_TX\_OPTIONAL}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART0\_TX\_OPTIONAL}{UART0\_TX\_OPTIONAL}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T0\+\_\+\+T\+X\+\_\+\+O\+P\+T\+I\+O\+N\+AL~12}
+
+\mbox{\Hypertarget{uart_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}\label{uart_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}} 
+\index{uart.c@{uart.c}!UART1@{UART1}}
+\index{UART1@{UART1}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART1}{UART1}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1~uart1}
+
+
+\begin{DoxyItemize}
+\item U\+A\+R\+T0 G\+P\+I\+OS\+: TX\+: 4, RX\+: 5 opcionalmente TX\+: 8, RX\+: 9 
+\end{DoxyItemize}\mbox{\Hypertarget{uart_8c_a228447e1762b2ecba0d05f609356bf2f}\label{uart_8c_a228447e1762b2ecba0d05f609356bf2f}} 
+\index{uart.c@{uart.c}!UART1\_RX@{UART1\_RX}}
+\index{UART1\_RX@{UART1\_RX}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART1\_RX}{UART1\_RX}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+RX~5}
+
+\mbox{\Hypertarget{uart_8c_ae39534ad3b39398dc5e50db866bb4a74}\label{uart_8c_ae39534ad3b39398dc5e50db866bb4a74}} 
+\index{uart.c@{uart.c}!UART1\_RX\_OPTIONAL@{UART1\_RX\_OPTIONAL}}
+\index{UART1\_RX\_OPTIONAL@{UART1\_RX\_OPTIONAL}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART1\_RX\_OPTIONAL}{UART1\_RX\_OPTIONAL}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+R\+X\+\_\+\+O\+P\+T\+I\+O\+N\+AL~9}
+
+\mbox{\Hypertarget{uart_8c_ae9dbdd1c135a1428009938fd7875ab56}\label{uart_8c_ae9dbdd1c135a1428009938fd7875ab56}} 
+\index{uart.c@{uart.c}!UART1\_TX@{UART1\_TX}}
+\index{UART1\_TX@{UART1\_TX}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART1\_TX}{UART1\_TX}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+TX~4}
+
+\mbox{\Hypertarget{uart_8c_a4cde67695294daf8a0862e8cb9c6c808}\label{uart_8c_a4cde67695294daf8a0862e8cb9c6c808}} 
+\index{uart.c@{uart.c}!UART1\_TX\_OPTIONAL@{UART1\_TX\_OPTIONAL}}
+\index{UART1\_TX\_OPTIONAL@{UART1\_TX\_OPTIONAL}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART1\_TX\_OPTIONAL}{UART1\_TX\_OPTIONAL}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T1\+\_\+\+T\+X\+\_\+\+O\+P\+T\+I\+O\+N\+AL~8}
+
+\mbox{\Hypertarget{uart_8c_a19a389199858d939896f636e564c21af}\label{uart_8c_a19a389199858d939896f636e564c21af}} 
+\index{uart.c@{uart.c}!UART\_DEFAULT@{UART\_DEFAULT}}
+\index{UART\_DEFAULT@{UART\_DEFAULT}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{UART\_DEFAULT}{UART\_DEFAULT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT~uart0}
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{uart_8c_ac8f10b4ab82f77eda8d936cdec685312}\label{uart_8c_ac8f10b4ab82f77eda8d936cdec685312}} 
+\index{uart.c@{uart.c}!simo\_set\_rx\_interrupccion@{simo\_set\_rx\_interrupccion}}
+\index{simo\_set\_rx\_interrupccion@{simo\_set\_rx\_interrupccion}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{simo\_set\_rx\_interrupccion()}{simo\_set\_rx\_interrupccion()}}
+{\footnotesize\ttfamily void simo\+\_\+set\+\_\+rx\+\_\+interrupccion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}}]{uart,  }\item[{\mbox{\hyperlink{uart_8h_a357c3a7a86c430cc9bdf1ab327738af4}{uart\+\_\+irq\+\_\+callback\+\_\+t}}}]{function\+\_\+handler }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em uart} & puerto uart seleccionado \\
+\hline
+{\em function\+\_\+handler} & function para el manejo de la interrupcion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uart_8c_ab88c80a14b3885e59c7c3c5acff1eaf7}\label{uart_8c_ab88c80a14b3885e59c7c3c5acff1eaf7}} 
+\index{uart.c@{uart.c}!simo\_uart\_deinit@{simo\_uart\_deinit}}
+\index{simo\_uart\_deinit@{simo\_uart\_deinit}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{simo\_uart\_deinit()}{simo\_uart\_deinit()}}
+{\footnotesize\ttfamily void simo\+\_\+uart\+\_\+deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}}]{uart }\end{DoxyParamCaption})}
+
+
+
+Desconfigura el harware seleccionado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em uart} & interfaza selecionada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uart_8c_a8636993ae976e03edd18fb2dacaf9e19}\label{uart_8c_a8636993ae976e03edd18fb2dacaf9e19}} 
+\index{uart.c@{uart.c}!simo\_uart\_get\_char@{simo\_uart\_get\_char}}
+\index{simo\_uart\_get\_char@{simo\_uart\_get\_char}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{simo\_uart\_get\_char()}{simo\_uart\_get\_char()}}
+{\footnotesize\ttfamily char simo\+\_\+uart\+\_\+get\+\_\+char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}}]{uart }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em uart} & puerot uart seleccionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uart_8c_a7e1b40195edf9967651736ed4ede65f8}\label{uart_8c_a7e1b40195edf9967651736ed4ede65f8}} 
+\index{uart.c@{uart.c}!simo\_uart\_init@{simo\_uart\_init}}
+\index{simo\_uart\_init@{simo\_uart\_init}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{simo\_uart\_init()}{simo\_uart\_init()}}
+{\footnotesize\ttfamily void simo\+\_\+uart\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}}]{uart,  }\item[{uint32\+\_\+t}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Puntero a funcion de interrupcion. 
+
+Inicio el harware uart selecionado
+
+
+\begin{DoxyParams}{Parámetros}
+{\em uart\+\_\+t} & interfaz seleccionada \\
+\hline
+{\em baudrate} & baudrate seleccionado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uart_8c_a1b26fe4ac19c3b461312b0a036a7be36}\label{uart_8c_a1b26fe4ac19c3b461312b0a036a7be36}} 
+\index{uart.c@{uart.c}!simo\_uart\_is\_enabled@{simo\_uart\_is\_enabled}}
+\index{simo\_uart\_is\_enabled@{simo\_uart\_is\_enabled}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{simo\_uart\_is\_enabled()}{simo\_uart\_is\_enabled()}}
+{\footnotesize\ttfamily bool simo\+\_\+uart\+\_\+is\+\_\+enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}}]{uart }\end{DoxyParamCaption})}
+
+
+
+Consulta si el puerto uart seleccionado puede enviar datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em uart} & puerto seleccionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uart_8c_aec2e451b076f57bb732239837559a944}\label{uart_8c_aec2e451b076f57bb732239837559a944}} 
+\index{uart.c@{uart.c}!simo\_uart\_read\_available@{simo\_uart\_read\_available}}
+\index{simo\_uart\_read\_available@{simo\_uart\_read\_available}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{simo\_uart\_read\_available()}{simo\_uart\_read\_available()}}
+{\footnotesize\ttfamily bool simo\+\_\+uart\+\_\+read\+\_\+available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}}]{uart,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Consultar si el puerto uart seleccionado puede leer datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em uart} & puerto seleccioando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uart_8c_a78baf3871be64c303176b5c2f9ba9a9b}\label{uart_8c_a78baf3871be64c303176b5c2f9ba9a9b}} 
+\index{uart.c@{uart.c}!simo\_uart\_read\_buffer@{simo\_uart\_read\_buffer}}
+\index{simo\_uart\_read\_buffer@{simo\_uart\_read\_buffer}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{simo\_uart\_read\_buffer()}{simo\_uart\_read\_buffer()}}
+{\footnotesize\ttfamily uint32\+\_\+t simo\+\_\+uart\+\_\+read\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}}]{,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{len\+\_\+buffer,  }\item[{uint\+\_\+fast32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em buffer} & buffer donde se almacenan los elementos leidos por el uart \\
+\hline
+{\em len\+\_\+buffer} & tamanio del buffer. \\
+\hline
+{\em timeout} & tiempo maximo en us. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ uint32\+\_\+t cantidad de elementos leios 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uart_8c_a1d000147e9a0b17f110aef7c8c2fd416}\label{uart_8c_a1d000147e9a0b17f110aef7c8c2fd416}} 
+\index{uart.c@{uart.c}!simo\_uart\_write\_buffer@{simo\_uart\_write\_buffer}}
+\index{simo\_uart\_write\_buffer@{simo\_uart\_write\_buffer}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{simo\_uart\_write\_buffer()}{simo\_uart\_write\_buffer()}}
+{\footnotesize\ttfamily void simo\+\_\+uart\+\_\+write\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{uart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}}]{uart,  }\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint32\+\_\+t}]{len\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Envio un buffer mediante el uart selecionado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em buffer} & buffer a enviar \\
+\hline
+{\em len\+\_\+buffer} & tamanio de buffer a enviar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+$\ast$$\ast$ void 
+\end{DoxyReturn}

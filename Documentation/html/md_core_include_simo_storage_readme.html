@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SIMO: Sistema de almacenamiento de datos del SIMO: memory_store.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SIMO
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de monitoreo remoto basado en Rapsberry PI PICO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Sistema de almacenamiento de datos del SIMO: <a class="el" href="memory__store_8h.html" title="Driver para memory.">memory_store.h</a> </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h3><a class="anchor" id="autotoc_md1"></a>
+Memoria flash utilizada: at45db041E</h3>
+<h5>PAGINAS: 2048 DIRECCION DE 11 BITS</h5>
+<h5>BLOQUES: 256 DIRECCION DE 8 BITS</h5>
+<h5>SECTORES: 8</h5>
+<h4><a class="anchor" id="autotoc_md2"></a>
+Formato de datos almacenados</h4>
+<h4><a class="anchor" id="autotoc_md3"></a>
+|CHAR_INIT_SIMO| TAMANIO DEL STRING|STRING|</h4>
+<h5>Datasheet: <a href="https://github.com/Germanvelardez2018/simo.v2/blob/master/core/include/simo/storage/Datasheets/AT45DB041E.pdf">Link</a></h5>
+<p>Estan diseñados para almacenar datos en formato char* de 254 bytes de longitud maxima. Utilizan un formato de 2 bytes iniciales que le permite a las funciones de lectura saber si un datos es valido y cuantos bytes reales ocupa. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="memory__store_8h.html">simo/storage/memory_store.h</a>&quot;</span> <span class="comment">// Incluimos memory_store.h</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define N_PAGES                 2048   // Cantidad de paginas(256bytes disponibles)</span></div>
+<div class="line"><span class="preprocessor">#define SIZE_PAGE               256     //Tamanio en bytes de las paginas</span></div>
+<div class="line"><span class="preprocessor">#define ADDRES_COUNTER          10     //Direccion donde se encuentra el contador de datos</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define DATA_OFFSET             48   //2000 DATOS PARA ALMACENAR</span></div>
+<div class="line"><span class="preprocessor">#define MAX_DATA                2000</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define CHAR_INIT_SIMO          0x11  Si no se detecta este caracter el string es invalido y se descarta</span></div>
+<div class="line"><span class="preprocessor">#define MAX_LEN_STRING          254  // Tamanio maximo de los string a almacenar</span></div>
+<div class="line"><span class="preprocessor">|</span></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md4"></a>
+Principales funciones</h3>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="memory__store_8h.html">simo/storage/memory_store.h</a>&quot;</span> <span class="comment">// Incluimos memory_store.h</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code" href="memory__store_8h.html#a6a24f219ebd053b2a578fd6b76e9660e">simo_memory_store_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="memory__store_8h.html#a964446e563ed31ea272138578a394af2">simo_memory_store_deinit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="memory__store_8h.html#a86ac668802fc25b81c1867329271451f">simo_memory_store_full_clear</a>();</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">uint16_t <a class="code" href="memory__store_8h.html#abcf7af373ce46234eb6e198b1cf67926">simo_memory_store_add_page</a>(<span class="keywordtype">char</span>* data, uint8_t len);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">uint16_t <a class="code" href="memory__store_8h.html#a08cfe647412c0da9b29060c6928b2327">simo_memory_read_all</a>(<a class="code" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a> fun);</div>
+<div class="line">|</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="amemory__store_8h_html_a964446e563ed31ea272138578a394af2"><div class="ttname"><a href="memory__store_8h.html#a964446e563ed31ea272138578a394af2">simo_memory_store_deinit</a></div><div class="ttdeci">void simo_memory_store_deinit(void)</div><div class="ttdoc">Termino la memoria.</div><div class="ttdef"><b>Definition:</b> memory_store.c:130</div></div>
+<div class="ttc" id="amemory__store_8h_html_a8295f66b6d45f42c394c786a6817e97f"><div class="ttname"><a href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a></div><div class="ttdeci">void(* print_funcion)(char *)</div><div class="ttdef"><b>Definition:</b> memory_store.h:15</div></div>
+<div class="ttc" id="amemory__store_8h_html_a6a24f219ebd053b2a578fd6b76e9660e"><div class="ttname"><a href="memory__store_8h.html#a6a24f219ebd053b2a578fd6b76e9660e">simo_memory_store_init</a></div><div class="ttdeci">bool simo_memory_store_init(void)</div><div class="ttdoc">Inicio la memoria.</div><div class="ttdef"><b>Definition:</b> memory_store.c:116</div></div>
+<div class="ttc" id="amemory__store_8h_html_a08cfe647412c0da9b29060c6928b2327"><div class="ttname"><a href="memory__store_8h.html#a08cfe647412c0da9b29060c6928b2327">simo_memory_read_all</a></div><div class="ttdeci">uint16_t simo_memory_read_all(print_funcion fun)</div><div class="ttdoc">Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametro...</div><div class="ttdef"><b>Definition:</b> memory_store.c:204</div></div>
+<div class="ttc" id="amemory__store_8h_html_abcf7af373ce46234eb6e198b1cf67926"><div class="ttname"><a href="memory__store_8h.html#abcf7af373ce46234eb6e198b1cf67926">simo_memory_store_add_page</a></div><div class="ttdeci">uint16_t simo_memory_store_add_page(char *data, uint8_t len)</div><div class="ttdoc">Agrego datos en la memoria. Los datos se agregan a partir de la posicion OFFSETDATA.</div><div class="ttdef"><b>Definition:</b> memory_store.c:137</div></div>
+<div class="ttc" id="amemory__store_8h_html_a86ac668802fc25b81c1867329271451f"><div class="ttname"><a href="memory__store_8h.html#a86ac668802fc25b81c1867329271451f">simo_memory_store_full_clear</a></div><div class="ttdeci">void simo_memory_store_full_clear()</div><div class="ttdoc">Ejecuta la secuenca de borrado de la memoria completa.</div><div class="ttdef"><b>Definition:</b> memory_store.c:197</div></div>
+<div class="ttc" id="amemory__store_8h_html"><div class="ttname"><a href="memory__store_8h.html">memory_store.h</a></div><div class="ttdoc">Driver para memory.</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
