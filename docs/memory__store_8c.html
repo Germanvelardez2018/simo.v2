@@ -111,12 +111,14 @@ defines</h2></td></tr>
 <tr class="separator:aad88337515c2026d6092a631d48c5779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfcf05153ddbd63d5aff5d018867cc19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#abfcf05153ddbd63d5aff5d018867cc19">CS_PIN</a>&#160;&#160;&#160;9</td></tr>
 <tr class="separator:abfcf05153ddbd63d5aff5d018867cc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc1d2f563a903ad958394f5c5d9e2d54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#abc1d2f563a903ad958394f5c5d9e2d54">MEMORY_APP_BAUDRATE_FAST</a>&#160;&#160;&#160;(50*100000)</td></tr>
+<tr class="memitem:abc1d2f563a903ad958394f5c5d9e2d54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#abc1d2f563a903ad958394f5c5d9e2d54">MEMORY_APP_BAUDRATE_FAST</a>&#160;&#160;&#160;(50*1000000)</td></tr>
 <tr class="separator:abc1d2f563a903ad958394f5c5d9e2d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30d9fb8d0e133144e921f1cd25c45e62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a30d9fb8d0e133144e921f1cd25c45e62">MEMORY_APP_BAUDRATE_LOW</a>&#160;&#160;&#160;(5*100000)</td></tr>
+<tr class="memitem:a30d9fb8d0e133144e921f1cd25c45e62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a30d9fb8d0e133144e921f1cd25c45e62">MEMORY_APP_BAUDRATE_LOW</a>&#160;&#160;&#160;(10*1000000)</td></tr>
 <tr class="separator:a30d9fb8d0e133144e921f1cd25c45e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d39fb8b25bd725dc8532df6ac8c0c20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a0d39fb8b25bd725dc8532df6ac8c0c20">FREQ_APP</a>&#160;&#160;&#160;<a class="el" href="memory__store_8c.html#abc1d2f563a903ad958394f5c5d9e2d54">MEMORY_APP_BAUDRATE_FAST</a></td></tr>
+<tr class="memitem:a0d39fb8b25bd725dc8532df6ac8c0c20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a0d39fb8b25bd725dc8532df6ac8c0c20">FREQ_APP</a>&#160;&#160;&#160;<a class="el" href="memory__store_8c.html#a30d9fb8d0e133144e921f1cd25c45e62">MEMORY_APP_BAUDRATE_LOW</a></td></tr>
 <tr class="separator:a0d39fb8b25bd725dc8532df6ac8c0c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08d2adbe0109ea8cf847f6938220938e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a08d2adbe0109ea8cf847f6938220938e">OFFSET_FORMAT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a08d2adbe0109ea8cf847f6938220938e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funciones</h2></td></tr>
@@ -211,7 +213,7 @@ Funciones</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FREQ_APP&#160;&#160;&#160;<a class="el" href="memory__store_8c.html#abc1d2f563a903ad958394f5c5d9e2d54">MEMORY_APP_BAUDRATE_FAST</a></td>
+          <td class="memname">#define FREQ_APP&#160;&#160;&#160;<a class="el" href="memory__store_8c.html#a30d9fb8d0e133144e921f1cd25c45e62">MEMORY_APP_BAUDRATE_LOW</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -253,7 +255,7 @@ Funciones</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MEMORY_APP_BAUDRATE_FAST&#160;&#160;&#160;(50*100000)</td>
+          <td class="memname">#define MEMORY_APP_BAUDRATE_FAST&#160;&#160;&#160;(50*1000000)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -267,7 +269,7 @@ Funciones</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MEMORY_APP_BAUDRATE_LOW&#160;&#160;&#160;(5*100000)</td>
+          <td class="memname">#define MEMORY_APP_BAUDRATE_LOW&#160;&#160;&#160;(10*1000000)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -282,6 +284,20 @@ Funciones</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define N_PAGES&#160;&#160;&#160;2048</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08d2adbe0109ea8cf847f6938220938e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d2adbe0109ea8cf847f6938220938e">&#9670;&nbsp;</a></span>OFFSET_FORMAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OFFSET_FORMAT&#160;&#160;&#160;2</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -75,9 +75,9 @@ Memoria flash utilizada: at45db041E</h3>
 <h4><a class="anchor" id="autotoc_md2"></a>
 Formato de datos almacenados</h4>
 <h4><a class="anchor" id="autotoc_md3"></a>
-|CHAR_INIT_SIMO| TAMANIO DEL STRING|STRING|</h4>
+|CHAR_INIT_SIMO| TAMANIO DE STRING|STRING|</h4>
 <h5>Datasheet: <a href="https://github.com/Germanvelardez2018/simo.v2/blob/master/core/include/simo/storage/Datasheets/AT45DB041E.pdf">Link</a></h5>
-<p>Estan diseñados para almacenar datos en formato char* de 254 bytes de longitud maxima. Utilizan un formato de 2 bytes iniciales que le permite a las funciones de lectura saber si un datos es valido y cuantos bytes reales ocupa. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="memory__store_8h.html">simo/storage/memory_store.h</a>&quot;</span> <span class="comment">// Incluimos memory_store.h</span></div>
+<p>Estan diseñados para almacenar datos en formato char* de 254 bytes de longitud maxima(256 bytes totales). Utilizan un formato de 2 bytes iniciales que le permite a las funciones de lectura saber si un datos es valido y cuantos bytes reales ocupa. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="memory__store_8h.html">simo/storage/memory_store.h</a>&quot;</span> <span class="comment">// Incluimos memory_store.h</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#define N_PAGES                 2048   // Cantidad de paginas(256bytes disponibles)</span></div>
 <div class="line"><span class="preprocessor">#define SIZE_PAGE               256     //Tamanio en bytes de las paginas</span></div>
@@ -108,7 +108,6 @@ Principales funciones</h3>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">uint16_t <a class="code" href="memory__store_8h.html#a08cfe647412c0da9b29060c6928b2327">simo_memory_read_all</a>(<a class="code" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a> fun);</div>
-<div class="line">|</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div class="ttc" id="amemory__store_8h_html_a964446e563ed31ea272138578a394af2"><div class="ttname"><a href="memory__store_8h.html#a964446e563ed31ea272138578a394af2">simo_memory_store_deinit</a></div><div class="ttdeci">void simo_memory_store_deinit(void)</div><div class="ttdoc">Termino la memoria.</div><div class="ttdef"><b>Definition:</b> memory_store.c:130</div></div>

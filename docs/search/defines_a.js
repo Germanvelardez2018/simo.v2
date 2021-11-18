@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['page_5foffset_365',['PAGE_OFFSET',['../_a_t45_d_b041_e_8c.html#acbc0993bee14429ee6ca886504dca2ee',1,'AT45DB041E.c']]],
-  ['pos_5foffset_366',['POS_OFFSET',['../_a_t45_d_b041_e_8c.html#ad4a1fa2e9e9d770e1d79749ba7a473d5',1,'AT45DB041E.c']]]
+  ['offset_5fformat_366',['OFFSET_FORMAT',['../memory__store_8c.html#a08d2adbe0109ea8cf847f6938220938e',1,'memory_store.c']]]
 ];

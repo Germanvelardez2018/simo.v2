@@ -113,12 +113,12 @@ Funciones</h2></td></tr>
 <tr class="memitem:ae35a9c00b013309ec845427cc9039eea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_t45_d_b041_e_8h.html#ae35a9c00b013309ec845427cc9039eea">simo_AT45DB041E_full_erase</a> (<a class="el" href="struct_a_t45_d_b041_e__t.html">AT45DB041E_t</a> *mem)</td></tr>
 <tr class="memdesc:ae35a9c00b013309ec845427cc9039eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borrar memoria completa. Tambien es posible borrar por sectores.  <a href="_a_t45_d_b041_e_8h.html#ae35a9c00b013309ec845427cc9039eea">Más...</a><br /></td></tr>
 <tr class="separator:ae35a9c00b013309ec845427cc9039eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f5fb5c3d759695b7a64784de0eba2bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_t45_d_b041_e_8h.html#a5f5fb5c3d759695b7a64784de0eba2bf">simo_AT45DB041E_save_data</a> (<a class="el" href="struct_a_t45_d_b041_e__t.html">AT45DB041E_t</a> *mem, uint8_t *buffer, uint32_t buffer_len, uint16_t page, uint16_t position_page)</td></tr>
-<tr class="memdesc:a5f5fb5c3d759695b7a64784de0eba2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guardar datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina.  <a href="_a_t45_d_b041_e_8h.html#a5f5fb5c3d759695b7a64784de0eba2bf">Más...</a><br /></td></tr>
-<tr class="separator:a5f5fb5c3d759695b7a64784de0eba2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a740f4cafd0099fd6a37f48c22d160619"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_t45_d_b041_e_8h.html#a740f4cafd0099fd6a37f48c22d160619">simo_AT45DB041E_read_data</a> (<a class="el" href="struct_a_t45_d_b041_e__t.html">AT45DB041E_t</a> *mem, uint8_t *buffer, uint32_t buffer_len, uint16_t page, uint16_t position_page)</td></tr>
-<tr class="memdesc:a740f4cafd0099fd6a37f48c22d160619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leer datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina.  <a href="_a_t45_d_b041_e_8h.html#a740f4cafd0099fd6a37f48c22d160619">Más...</a><br /></td></tr>
-<tr class="separator:a740f4cafd0099fd6a37f48c22d160619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3259228ba14d2441a053b54c0ea6934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_t45_d_b041_e_8h.html#ae3259228ba14d2441a053b54c0ea6934">simo_AT45DB041E_save_data</a> (<a class="el" href="struct_a_t45_d_b041_e__t.html">AT45DB041E_t</a> *mem, uint8_t *buffer, uint32_t buffer_len, uint32_t page, uint32_t position_page)</td></tr>
+<tr class="memdesc:ae3259228ba14d2441a053b54c0ea6934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guardar datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina.  <a href="_a_t45_d_b041_e_8h.html#ae3259228ba14d2441a053b54c0ea6934">Más...</a><br /></td></tr>
+<tr class="separator:ae3259228ba14d2441a053b54c0ea6934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738790cd345702758231d08410786e02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_a_t45_d_b041_e_8h.html#a738790cd345702758231d08410786e02">simo_AT45DB041E_read_data</a> (<a class="el" href="struct_a_t45_d_b041_e__t.html">AT45DB041E_t</a> *mem, uint8_t *buffer, uint32_t buffer_len, uint32_t page, uint32_t position_page)</td></tr>
+<tr class="memdesc:a738790cd345702758231d08410786e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leer datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina.  <a href="_a_t45_d_b041_e_8h.html#a738790cd345702758231d08410786e02">Más...</a><br /></td></tr>
+<tr class="separator:a738790cd345702758231d08410786e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Driver para manejar la memoria flash AT45DB041E. No usar de manera directa en aplicacion. </p>
@@ -255,8 +255,8 @@ false </dd></dl>
 
 </div>
 </div>
-<a id="a740f4cafd0099fd6a37f48c22d160619"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a740f4cafd0099fd6a37f48c22d160619">&#9670;&nbsp;</a></span>simo_AT45DB041E_read_data()</h2>
+<a id="a738790cd345702758231d08410786e02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738790cd345702758231d08410786e02">&#9670;&nbsp;</a></span>simo_AT45DB041E_read_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,13 +282,13 @@ false </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>page</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>position_page</em>&#160;</td>
         </tr>
         <tr>
@@ -314,8 +314,8 @@ false </dd></dl>
 
 </div>
 </div>
-<a id="a5f5fb5c3d759695b7a64784de0eba2bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f5fb5c3d759695b7a64784de0eba2bf">&#9670;&nbsp;</a></span>simo_AT45DB041E_save_data()</h2>
+<a id="ae3259228ba14d2441a053b54c0ea6934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3259228ba14d2441a053b54c0ea6934">&#9670;&nbsp;</a></span>simo_AT45DB041E_save_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,13 +341,13 @@ false </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>page</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>position_page</em>&#160;</td>
         </tr>
         <tr>

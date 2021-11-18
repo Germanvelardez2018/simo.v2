@@ -39,8 +39,8 @@
 static AT45DB041E_t* _memory_app;
 #define SPI_APP             SIMO_SPI1  //! Utilizo el SPI1
 #define CS_PIN              9          //! El chip select utilizado sera el pin 9
-#define MEMORY_APP_BAUDRATE_FAST       (50*100000) //5 MHz
-#define MEMORY_APP_BAUDRATE_LOW        (10*10000) //1 MHz
+#define MEMORY_APP_BAUDRATE_FAST       (50*1000000) //5 MHz
+#define MEMORY_APP_BAUDRATE_LOW        (10*1000000) //10MkHz
 #define FREQ_APP            MEMORY_APP_BAUDRATE_LOW
 
 
@@ -216,7 +216,8 @@ uint16_t simo_memory_read_all(print_funcion print)
        msg_valid =  simo_memory_store_read_page(buffer,200,index);
        if(true)
        {
-            sprintf(buffer_print,"--mem:%d)=> %s\r\n",index,buffer);
+           #define OFFSET_FORMAT 2
+            sprintf(buffer_print,"--mem:%d)=> %s\r\n",index,buffer+ OFFSET_FORMAT);
             print(buffer_print);
             count_msg +=1;
 

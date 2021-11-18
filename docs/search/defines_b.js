@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['resume_5fcmd_367',['RESUME_CMD',['../_a_t45_d_b041_e_8c.html#ac887671e7cb0e10b75b694265232576f',1,'AT45DB041E.c']]]
+  ['page_5foffset_367',['PAGE_OFFSET',['../_a_t45_d_b041_e_8c.html#acbc0993bee14429ee6ca886504dca2ee',1,'AT45DB041E.c']]],
+  ['pos_5foffset_368',['POS_OFFSET',['../_a_t45_d_b041_e_8c.html#ad4a1fa2e9e9d770e1d79749ba7a473d5',1,'AT45DB041E.c']]]
 ];
