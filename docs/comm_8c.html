@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SIMO: Referencia del Archivo core/include/simo/comm/comm.h</title>
+<title>SIMO: Referencia del Archivo core/src/simo/comm/comm.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,45 +63,45 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_24d671cfcbc5d5238a6bd565a49d198f.html">include</a></li><li class="navelem"><a class="el" href="dir_eb293059644a82a490cf75e36ed4597e.html">simo</a></li><li class="navelem"><a class="el" href="dir_7be650b33193ecdab0ba581ffef38697.html">comm</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_c4acac0979fb7e09bcb67a660e699ac3.html">simo</a></li><li class="navelem"><a class="el" href="dir_6fa789263611014976c50996af3517c5.html">comm</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Funciones</a>  </div>
   <div class="headertitle">
-<div class="title">Referencia del Archivo comm.h</div>  </div>
+<div class="title">Referencia del Archivo comm.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Modulo de capa 2 que sirve para gestionar comunicacion mediante hardware externo.  
+<p>API para la comunicacion del sistema.  
 <a href="#details">Más...</a></p>
-<div class="textblock"><div class="dynheader">
-Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</div>
+<div class="textblock"><code>#include &quot;<a class="el" href="comm_8h_source.html">simo/comm/comm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="core_8h_source.html">simo/core.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para comm.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="comm_8h__dep__incl.png" border="0" usemap="#core_2include_2simo_2comm_2comm_8hdep" alt=""/></div>
+<div class="center"><img src="comm_8c__incl.png" border="0" usemap="#core_2src_2simo_2comm_2comm_8c" alt=""/></div>
 <!-- MAP 0 -->
 </div>
-</div>
-<p><a href="comm_8h_source.html">Ir al código fuente de este archivo.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:a68fd3b5c6f0cd7ba950ec5fa65354c9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#a68fd3b5c6f0cd7ba950ec5fa65354c9b">simo_comm_create</a> (void)</td></tr>
-<tr class="memdesc:a68fd3b5c6f0cd7ba950ec5fa65354c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creamos un objeto modulo de comunicacion (comm)  <a href="comm_8h.html#a68fd3b5c6f0cd7ba950ec5fa65354c9b">Más...</a><br /></td></tr>
+<tr class="memitem:a68fd3b5c6f0cd7ba950ec5fa65354c9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8c.html#a68fd3b5c6f0cd7ba950ec5fa65354c9b">simo_comm_create</a> (void)</td></tr>
+<tr class="memdesc:a68fd3b5c6f0cd7ba950ec5fa65354c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creamos un objeto modulo de comunicacion (comm)  <a href="comm_8c.html#a68fd3b5c6f0cd7ba950ec5fa65354c9b">Más...</a><br /></td></tr>
 <tr class="separator:a68fd3b5c6f0cd7ba950ec5fa65354c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e423c3490ee462ae651c50b94d9a0b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#a3e423c3490ee462ae651c50b94d9a0b1">simo_comm_delete</a> (void)</td></tr>
-<tr class="memdesc:a3e423c3490ee462ae651c50b94d9a0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liberamos recursos asociados con la comunicaicon.  <a href="comm_8h.html#a3e423c3490ee462ae651c50b94d9a0b1">Más...</a><br /></td></tr>
+<tr class="memitem:a3e423c3490ee462ae651c50b94d9a0b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8c.html#a3e423c3490ee462ae651c50b94d9a0b1">simo_comm_delete</a> (void)</td></tr>
+<tr class="memdesc:a3e423c3490ee462ae651c50b94d9a0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liberamos recursos asociados con la comunicaicon.  <a href="comm_8c.html#a3e423c3490ee462ae651c50b94d9a0b1">Más...</a><br /></td></tr>
 <tr class="separator:a3e423c3490ee462ae651c50b94d9a0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a141cfce3e8029ef0a257c2496e13cf56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#a141cfce3e8029ef0a257c2496e13cf56">simo_comm_init</a> (void)</td></tr>
-<tr class="memdesc:a141cfce3e8029ef0a257c2496e13cf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iniciamos el modulos de comunicacion.  <a href="comm_8h.html#a141cfce3e8029ef0a257c2496e13cf56">Más...</a><br /></td></tr>
+<tr class="memitem:a141cfce3e8029ef0a257c2496e13cf56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8c.html#a141cfce3e8029ef0a257c2496e13cf56">simo_comm_init</a> (void)</td></tr>
+<tr class="memdesc:a141cfce3e8029ef0a257c2496e13cf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iniciamos el modulos de comunicacion.  <a href="comm_8c.html#a141cfce3e8029ef0a257c2496e13cf56">Más...</a><br /></td></tr>
 <tr class="separator:a141cfce3e8029ef0a257c2496e13cf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e05a9f0c051e7e987b0573c95a8868"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#ae0e05a9f0c051e7e987b0573c95a8868">simo_send_message</a> (char *msg)</td></tr>
-<tr class="memdesc:ae0e05a9f0c051e7e987b0573c95a8868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enviamos datos mediante el objeto modulo de comunicacion.  <a href="comm_8h.html#ae0e05a9f0c051e7e987b0573c95a8868">Más...</a><br /></td></tr>
+<tr class="memitem:ae0e05a9f0c051e7e987b0573c95a8868"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8c.html#ae0e05a9f0c051e7e987b0573c95a8868">simo_send_message</a> (char *msg)</td></tr>
+<tr class="memdesc:ae0e05a9f0c051e7e987b0573c95a8868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enviamos datos mediante el objeto modulo de comunicacion.  <a href="comm_8c.html#ae0e05a9f0c051e7e987b0573c95a8868">Más...</a><br /></td></tr>
 <tr class="separator:ae0e05a9f0c051e7e987b0573c95a8868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Modulo de capa 2 que sirve para gestionar comunicacion mediante hardware externo. </p>
+<div class="textblock"><p>API para la comunicacion del sistema. </p>
 <dl class="section author"><dt>Autor</dt><dd>German Velardez (<a href="#" onclick="location.href='mai'+'lto:'+'gve'+'la'+'rde'+'z@'+'int'+'i.'+'gob'+'.a'+'r'; return false;">gvela<span style="display: none;">.nosp@m.</span>rdez<span style="display: none;">.nosp@m.</span>@inti<span style="display: none;">.nosp@m.</span>.gob<span style="display: none;">.nosp@m.</span>.ar</a>) </dd></dl>
 <dl class="section version"><dt>Versión</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Fecha</dt><dd>2021-11-18</dd></dl>

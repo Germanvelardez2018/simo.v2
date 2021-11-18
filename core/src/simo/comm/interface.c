@@ -1,7 +1,7 @@
 /**
  * @file interface.c
  * @author German Velardez (gvelardez@inti.gob.ar)
- * @brief  Implementacion del interfacez para abstraer hardware. Dependen del algun driver de hardware de CAPA 0.
+ * @brief  Implementacion del interfacez para abstraer hardware. 
  * @version 0.1
  * @date 2021-11-18
  * 

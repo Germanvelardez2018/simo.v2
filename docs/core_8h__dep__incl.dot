@@ -11,7 +11,7 @@ digraph "core/include/simo/core.h"
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="core/src/simo/comm\l/device/SIM_device.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_i_m__device_8c.html",tooltip=" "];
   Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="core/src/simo/comm\l/interface.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_8c.html",tooltip="Implementacion del interfacez para abstraer hardware. Dependen del algun driver de hardware de CAPA 0..."];
+  Node5 [label="core/src/simo/comm\l/interface.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_8c.html",tooltip="Implementacion del interfacez para abstraer hardware."];
   Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="core/include/simo/hardware\l/uart.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart_8h.html",tooltip="Header de capa para manejor del hardware UART (NIVEL 0)"];
   Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -23,4 +23,6 @@ digraph "core/include/simo/core.h"
   Node9 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node10 [label="core/src/simo/storage\l/memory_store.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory__store_8c.html",tooltip="Implementacion de driver para el manejor del almacenamiento externo (NIVEL 1).Depende de SIMO SPI."];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="core/src/simo/comm\l/comm.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$comm_8c.html",tooltip="API para la comunicacion del sistema."];
 }

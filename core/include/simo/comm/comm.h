@@ -42,7 +42,7 @@
      * @brief Enviamos datos mediante el objeto modulo de comunicacion
      * 
      * @param msg 
-     * @return ** void 
+     * @return ** bool , mensaje enviado correctamente
      */
     bool simo_send_message(char* msg);
 
