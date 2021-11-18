@@ -1,7 +1,7 @@
 /**
  * @file AT45DB041E.c
  * @author Velardez German (gvelardez@inti.gob.ar)
- * @brief  Driver para el manejo basico de memoria AT45DB041E. No utilizar de manera directa. Usar con memory_store
+ * @brief  Driver para el manejo basico de memoria AT45DB041E. No utilizar de manera directa. 
  * @version 0.1
  * @date 2021-11-15
  * 
@@ -111,8 +111,8 @@ static  uint8_t erase_cmd[ERASE_SECUENCE_LEN] = {ERASE_SECUENCE};
  * Se pueden usar paginas de 264bytes o de 256bytes. 
  * cmd escribir | 3bytes de direccion(  11 bits pagina (0 a 2048| 8 bytes posicion de la pagina | 5 dummy bits)
  * **/
-#define PAGE_OFFSET         13
-#define POS_OFFSET          5
+#define PAGE_OFFSET         21   //Deberia ser 13 pero esta pensando para acomodar los dartos en uin32_t
+#define POS_OFFSET          13   // y dejar 13 bytes dommies
 #define BLOCK_OFFSET        
 
 
@@ -240,6 +240,8 @@ static inline uint8_t __at45db_get_status(AT45DB041E_t* mem)
     gpio_put(mem->cs_pin, 1);  //flanco ascendente
     return  status[1];
 }
+
+
 /**
  * @brief  Espero que la memoria este disponible y retorno el primer byte de status
  * 
@@ -251,7 +253,7 @@ static inline uint8_t __at45_is_bussy(AT45DB041E_t* mem)
     uint8_t sr;
 
     uint32_t counter= 0;
-    while(!((sr =__at45db_get_status(mem)) & AT45DB_STATUS_READY) || (counter <= AT45DB_TIMEOUT))  //mientras este ocupado, espere
+    while(!((sr =__at45db_get_status(mem)) & AT45DB_STATUS_READY) || !(counter > AT45DB_TIMEOUT))  //mientras este ocupado, espere
     {
         sleep_us(1);
         counter+=1;
@@ -339,16 +341,16 @@ void simo_AT45DB041E_full_erase(AT45DB041E_t* mem)
 void simo_AT45DB041E_save_data(AT45DB041E_t* mem,
                                  uint8_t* buffer,
                                  uint32_t buffer_len,
-                                 uint16_t page,
-                                 uint16_t position_page)
+                                 uint32_t page,
+                                 uint32_t position_page)
 {
 
 
-    // cmd escribir | 3bytes de direccion(  15 bits pagina (0 a 2048| 8 bytes posicion de la pagina | 5 dummy bits)
+    // cmd escribir | 3bytes de direccion(  11 bits pagina (0 a 2048| 8 bytes posicion de la pagina | 5 dummy bits)
 
     uint32_t _page = (uint32_t) (page << PAGE_OFFSET);
     uint32_t _pos = (uint32_t)  (position_page << POS_OFFSET);
-    uint32_t address = (uint32_t)  _page | _pos;
+    uint32_t address = (uint32_t)  _page + _pos;
     
     uint8_t cmd[4] ;    
       
@@ -378,15 +380,15 @@ void simo_AT45DB041E_save_data(AT45DB041E_t* mem,
 void simo_AT45DB041E_read_data(AT45DB041E_t* mem,
                                 uint8_t* buffer,
                                 uint32_t buffer_len,
-                                uint16_t page,
-                                uint16_t position_page)
+                                uint32_t page,
+                                uint32_t position_page)
 {
 
     // cmd escribir | 3bytes de direccion(  11 bits pagina (0 a 2048| 8 bytes posicion de la pagina | 5 dummy bits)
 
     uint32_t _page = (uint32_t) (page << PAGE_OFFSET);
     uint32_t _pos = (uint32_t)  (position_page << POS_OFFSET);
-    uint32_t address = (uint32_t)  _page | _pos;
+    uint32_t address = (uint32_t)  _page + _pos;
     uint8_t cmd[5] ;    
       
     cmd[0] = CMD_FAST_READ;

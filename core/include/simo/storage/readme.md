@@ -8,10 +8,10 @@
  ###### SECTORES: 8  
  
  ##### Formato de datos almacenados
- ##### |CHAR_INIT_SIMO| TAMANIO DEL STRING|STRING|
+ ##### |CHAR_INIT_SIMO| TAMANIO DE STRING|STRING|
  ###### Datasheet: [Link](https://github.com/Germanvelardez2018/simo.v2/blob/master/core/include/simo/storage/Datasheets/AT45DB041E.pdf)
  
-Estan diseñados para almacenar datos en formato char* de 254 bytes de longitud maxima.
+Estan diseñados para almacenar datos en formato char* de 254 bytes de longitud maxima(256 bytes totales).
 Utilizan un formato de 2 bytes iniciales que le permite a las funciones de lectura saber si un datos es valido y cuantos bytes reales ocupa.
 ```c  
 #include "simo/storage/memory_store.h" // Incluimos memory_store.h
@@ -77,5 +77,5 @@ uint16_t simo_memory_store_add_page(char* data, uint8_t len);
  * @return ** uint16_t 
  */
 uint16_t simo_memory_read_all(print_funcion fun);
-|
+
 ```

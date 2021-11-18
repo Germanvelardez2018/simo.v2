@@ -59,9 +59,9 @@ void serial_task(void* params)
         sprintf(buffer,"Memoria iniciada \r\n");
         simo_uart_write_buffer(SIMO_UART0,buffer,strlen(buffer));
 
-    //        simo_memory_store_full_clear();       
+          // simo_memory_store_full_clear();       
            vTaskDelay(5000);
-    //      simo_memory_clear_counter();
+          // simo_memory_clear_counter();
        
     }
     else

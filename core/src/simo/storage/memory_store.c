@@ -40,8 +40,8 @@ static AT45DB041E_t* _memory_app;
 #define SPI_APP             SIMO_SPI1  //! Utilizo el SPI1
 #define CS_PIN              9          //! El chip select utilizado sera el pin 9
 #define MEMORY_APP_BAUDRATE_FAST       (50*100000) //5 MHz
-#define MEMORY_APP_BAUDRATE_LOW        (5*100000) //1 MHz
-#define FREQ_APP            MEMORY_APP_BAUDRATE_FAST
+#define MEMORY_APP_BAUDRATE_LOW        (10*10000) //1 MHz
+#define FREQ_APP            MEMORY_APP_BAUDRATE_LOW
 
 
 
@@ -73,11 +73,11 @@ static AT45DB041E_t* _memory_app;
 
 static void  add_simo_format(char const* msg, char* buffer_static)
 {
-    uint8_t len = strlen(msg);
+    uint8_t len = strlen(msg)+1;
 
     buffer_static[0]= CHAR_INIT_SIMO;               //primer byte en todas las paginas con datos utiles
-    buffer_static[1]= len + 1;    //tamanio del buffer
-    memcpy((buffer_static +2),msg,len+1);
+    buffer_static[1]= len ;    //tamanio del buffer
+    memcpy(&(buffer_static[2]),msg,len);
 
 }
 
@@ -143,7 +143,7 @@ uint16_t simo_memory_store_add_page(char* data, uint8_t len)
     if(_counter >= MAX_DATA) return _counter; // MAXIMA CANTIDAD DE DATOS, NO SE ALMACENA NADA MAS
     uint32_t _page = _counter +DATA_OFFSET;
 
-    //darle formato valido al string
+    //darle formato valido al string y dejarlos en buffer_string
 
     add_simo_format(data,buffer_static);
 
@@ -180,7 +180,7 @@ bool simo_memory_store_read_page(uint8_t* buffer,uint8_t len,uint16_t index)
 
     if( buffer[0] == CHAR_INIT_SIMO)
     {
-        uint8_t len_msg = buffer[1];
+        uint8_t len_msg = (uint8_t)buffer[1];
         simo_AT45DB041E_read_data(_memory_app,buffer,len_msg+2,_page,0); // avanzo dos posiciones
 
         ret = true;
@@ -214,9 +214,9 @@ uint16_t simo_memory_read_all(print_funcion print)
     for(uint16_t index=0 ; index< counter; index+=1)
     {
        msg_valid =  simo_memory_store_read_page(buffer,200,index);
-       if(msg_valid)
+       if(true)
        {
-            sprintf(buffer_print,"--mem:%d)=> %s\r\n",index,buffer+2);
+            sprintf(buffer_print,"--mem:%d)=> %s\r\n",index,buffer);
             print(buffer_print);
             count_msg +=1;
 

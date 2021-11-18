@@ -98,8 +98,8 @@ void simo_AT45DB041E_full_erase(AT45DB041E_t* mem);
 void simo_AT45DB041E_save_data(AT45DB041E_t* mem,
                                  uint8_t* buffer,
                                  uint32_t buffer_len,
-                                 uint16_t page,
-                                 uint16_t position_page);
+                                 uint32_t page,
+                                 uint32_t position_page);
 
 /**
  * @brief  Leer datos en memoria. Ingresar numero de pagina y posicion dentro de la pagina
@@ -114,8 +114,8 @@ void simo_AT45DB041E_save_data(AT45DB041E_t* mem,
 void simo_AT45DB041E_read_data(AT45DB041E_t* mem,
                                 uint8_t* buffer,
                                 uint32_t buffer_len,
-                                uint16_t page,
-                                uint16_t position_page);
+                                uint32_t page,
+                                uint32_t position_page);
 
 
 
