@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_119',['readme.md',['../readme_8md.html',1,'']]],
-  ['resume_5fcmd_120',['RESUME_CMD',['../_a_t45_d_b041_e_8c.html#ac887671e7cb0e10b75b694265232576f',1,'AT45DB041E.c']]]
+  ['offset_5fformat_125',['OFFSET_FORMAT',['../memory__store_8c.html#a08d2adbe0109ea8cf847f6938220938e',1,'memory_store.c']]]
 ];

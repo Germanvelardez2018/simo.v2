@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['get_5fid_5fcmd_80',['GET_ID_CMD',['../_a_t45_d_b041_e_8c.html#a1cdaece3ad2968c4e5a6174a3d8038cf',1,'AT45DB041E.c']]],
-  ['getstatus_5fcmd_81',['GETSTATUS_CMD',['../_a_t45_d_b041_e_8c.html#a3ff1e5fa50cf725c6559b8d1f800e789',1,'AT45DB041E.c']]],
-  ['gpio_2ec_82',['gpio.c',['../gpio_8c.html',1,'']]],
-  ['gpio_2eh_83',['gpio.h',['../gpio_8h.html',1,'']]]
+  ['freertosconfig_2eh_81',['FreeRTOSConfig.h',['../_free_r_t_o_s_config_8h.html',1,'']]],
+  ['freq_82',['freq',['../struct_a_t45_d_b041_e__t.html#aacfad457f5366fa9265eb0a89e43f23b',1,'AT45DB041E_t']]],
+  ['freq_5fapp_83',['FREQ_APP',['../memory__store_8c.html#a0d39fb8b25bd725dc8532df6ac8c0c20',1,'memory_store.c']]]
 ];

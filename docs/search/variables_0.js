@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cs_5fpin_252',['cs_pin',['../struct_a_t45_d_b041_e__t.html#a7db91d976f58eece672e200bb44f2abe',1,'AT45DB041E_t']]]
+  ['buff_5fin_305',['buff_in',['../struct_s_i_m__device__t.html#a5f16e0a700b048e47b1dc69c24df92d6',1,'SIM_device_t']]],
+  ['buff_5fout_306',['buff_out',['../struct_s_i_m__device__t.html#ac6fad55e7635247473c3fd7b5f76ae47',1,'SIM_device_t']]]
 ];

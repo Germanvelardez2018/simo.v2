@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['freq_5fapp_336',['FREQ_APP',['../memory__store_8c.html#a0d39fb8b25bd725dc8532df6ac8c0c20',1,'memory_store.c']]]
+  ['edi_396',['EDI',['../_a_t45_d_b041_e_8c.html#aebb930ae9eecaa5a8fa94d2ef4f159e0',1,'AT45DB041E.c']]],
+  ['erase_5fsecuence_397',['ERASE_SECUENCE',['../_a_t45_d_b041_e_8c.html#acb75adbbbf397d06fade8b9efe0374ce',1,'AT45DB041E.c']]],
+  ['erase_5fsecuence_5flen_398',['ERASE_SECUENCE_LEN',['../_a_t45_d_b041_e_8c.html#a0ab640a00777deba71ffa5d413e5d7c0',1,'AT45DB041E.c']]]
 ];

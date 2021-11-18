@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['edi_74',['EDI',['../_a_t45_d_b041_e_8c.html#aebb930ae9eecaa5a8fa94d2ef4f159e0',1,'AT45DB041E.c']]],
-  ['erase_5fsecuence_75',['ERASE_SECUENCE',['../_a_t45_d_b041_e_8c.html#acb75adbbbf397d06fade8b9efe0374ce',1,'AT45DB041E.c']]],
-  ['erase_5fsecuence_5flen_76',['ERASE_SECUENCE_LEN',['../_a_t45_d_b041_e_8c.html#a0ab640a00777deba71ffa5d413e5d7c0',1,'AT45DB041E.c']]]
+  ['data_5foffset_75',['DATA_OFFSET',['../memory__store_8c.html#a11faa4c105a137b8edaa096de5063835',1,'memory_store.c']]],
+  ['device_5fid_5f1_76',['DEVICE_ID_1',['../_a_t45_d_b041_e_8c.html#aef69887b8477d59acf5e5b06126b56e5',1,'AT45DB041E.c']]],
+  ['device_5fid_5f2_77',['DEVICE_ID_2',['../_a_t45_d_b041_e_8c.html#a6a585b96007e4b4d3369ed7c7b0fb568',1,'AT45DB041E.c']]]
 ];

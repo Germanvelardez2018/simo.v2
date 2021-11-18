@@ -33,7 +33,8 @@ var menudata={children:[
 {text:"Lista de archivos",url:"files.html"},
 {text:"Globales",url:"globals.html",children:[
 {text:"Todo",url:"globals.html",children:[
-{text:"a",url:"globals.html#index_a"},
+{text:"_",url:"globals.html#index__5F"},
+{text:"a",url:"globals_a.html#index_a"},
 {text:"b",url:"globals_b.html#index_b"},
 {text:"c",url:"globals_c.html#index_c"},
 {text:"d",url:"globals_d.html#index_d"},
@@ -58,6 +59,7 @@ var menudata={children:[
 {text:"Enumeraciones",url:"globals_enum.html"},
 {text:"Valores de enumeraciones",url:"globals_eval.html"},
 {text:"defines",url:"globals_defs.html",children:[
+{text:"_",url:"globals_defs.html#index__5F"},
 {text:"a",url:"globals_defs.html#index_a"},
 {text:"b",url:"globals_defs.html#index_b"},
 {text:"c",url:"globals_defs.html#index_c"},

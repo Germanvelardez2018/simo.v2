@@ -96,6 +96,7 @@ Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 typedefs</h2></td></tr>
 <tr class="memitem:a8295f66b6d45f42c394c786a6817e97f"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a>) (char *)</td></tr>
+<tr class="memdesc:a8295f66b6d45f42c394c786a6817e97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">funcion print  <a href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">Más...</a><br /></td></tr>
 <tr class="separator:a8295f66b6d45f42c394c786a6817e97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -118,8 +119,9 @@ Funciones</h2></td></tr>
 <tr class="memitem:a08cfe647412c0da9b29060c6928b2327"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8h.html#a08cfe647412c0da9b29060c6928b2327">simo_memory_read_all</a> (<a class="el" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a> fun)</td></tr>
 <tr class="memdesc:a08cfe647412c0da9b29060c6928b2327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt.  <a href="memory__store_8h.html#a08cfe647412c0da9b29060c6928b2327">Más...</a><br /></td></tr>
 <tr class="separator:a08cfe647412c0da9b29060c6928b2327"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a188f5520ed029607100a205e8ab6afb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8h.html#a188f5520ed029607100a205e8ab6afb9">simo_memory_clear_counter</a> ()</td></tr>
-<tr class="separator:a188f5520ed029607100a205e8ab6afb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3b2bc84af85e6d3e0f34d5f65bc1fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8h.html#aeb3b2bc84af85e6d3e0f34d5f65bc1fe">simo_memory_store_clear_counter</a> ()</td></tr>
+<tr class="memdesc:aeb3b2bc84af85e6d3e0f34d5f65bc1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ponemos a cero el contador de datos almacenados.  <a href="memory__store_8h.html#aeb3b2bc84af85e6d3e0f34d5f65bc1fe">Más...</a><br /></td></tr>
+<tr class="separator:aeb3b2bc84af85e6d3e0f34d5f65bc1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Driver para memory. </p>
@@ -140,27 +142,13 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>funcion print </p>
+<dl class="section note"><dt>Nota</dt><dd><br  />
+ </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Documentación de las funciones</h2>
-<a id="a188f5520ed029607100a205e8ab6afb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a188f5520ed029607100a205e8ab6afb9">&#9670;&nbsp;</a></span>simo_memory_clear_counter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void simo_memory_clear_counter </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
-
-</div>
-</div>
 <a id="a08cfe647412c0da9b29060c6928b2327"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08cfe647412c0da9b29060c6928b2327">&#9670;&nbsp;</a></span>simo_memory_read_all()</h2>
 
@@ -223,6 +211,27 @@ Funciones</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>** uint16_t </dd></dl>
+
+</div>
+</div>
+<a id="aeb3b2bc84af85e6d3e0f34d5f65bc1fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3b2bc84af85e6d3e0f34d5f65bc1fe">&#9670;&nbsp;</a></span>simo_memory_store_clear_counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_memory_store_clear_counter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ponemos a cero el contador de datos almacenados. </p>
+<dl class="section note"><dt>Nota</dt><dd>Deberia ser antecedido por la funcion <a class="el" href="memory__store_8h.html#a86ac668802fc25b81c1867329271451f" title="Ejecuta la secuenca de borrado de la memoria completa.">simo_memory_store_full_clear()</a></dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
 
 </div>
 </div>

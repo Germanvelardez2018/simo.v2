@@ -232,7 +232,7 @@ uint16_t simo_memory_read_all(print_funcion print)
 
 
 
-void simo_memory_clear_counter()
+void simo_memory_store_clear_counter()
 {
     _set_counter(0);
 }

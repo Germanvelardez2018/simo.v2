@@ -15,7 +15,8 @@ add_executable(simo
 	core/src/simo/hardware/spi.c
 	core/src/simo/storage/memory/AT45DB041E.c
 	core/src/simo/storage/memory_store.c
-
+	core/src/simo/comm/interface.c
+	core/src/simo/comm/device/SIM_device.c
 
 )
 

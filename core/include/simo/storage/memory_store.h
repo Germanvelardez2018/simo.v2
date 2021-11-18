@@ -11,6 +11,11 @@
 
 
 #include "simo/core.h"
+/**
+ * @brief funcion print
+ * @note  
+ * 
+ */
 
 typedef void(*print_funcion)(char*);
 
@@ -77,11 +82,11 @@ uint16_t simo_memory_read_all(print_funcion fun);
 
 
 /**
- * @brief 
+ * @brief Ponemos a cero el contador de datos almacenados. 
+ * @note Deberia ser antecedido por la funcion simo_memory_store_full_clear()
  * 
  * @return ** void 
  */
-void simo_memory_clear_counter();
-
+void simo_memory_store_clear_counter();
 
 

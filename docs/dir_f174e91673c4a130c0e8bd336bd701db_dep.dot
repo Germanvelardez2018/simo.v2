@@ -1,0 +1,9 @@
+digraph "core/include/simo/comm/device" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7be650b33193ecdab0ba581ffef38697 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="comm" fontname="Helvetica", fontsize="10", URL="dir_7be650b33193ecdab0ba581ffef38697.html"]
+  dir_f174e91673c4a130c0e8bd336bd701db [shape=box, label="device", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f174e91673c4a130c0e8bd336bd701db.html"];
+  }
+}

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['get_5fid_5fcmd_337',['GET_ID_CMD',['../_a_t45_d_b041_e_8c.html#a1cdaece3ad2968c4e5a6174a3d8038cf',1,'AT45DB041E.c']]],
-  ['getstatus_5fcmd_338',['GETSTATUS_CMD',['../_a_t45_d_b041_e_8c.html#a3ff1e5fa50cf725c6559b8d1f800e789',1,'AT45DB041E.c']]]
+  ['freq_5fapp_399',['FREQ_APP',['../memory__store_8c.html#a0d39fb8b25bd725dc8532df6ac8c0c20',1,'memory_store.c']]]
 ];
