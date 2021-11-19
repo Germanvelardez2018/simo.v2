@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['read_130',['read',['../structinterface__t.html#a988f53352049eff951459c2882942b0d',1,'interface_t']]],
-  ['read_5ffunction_131',['read_function',['../interface_8h.html#a922def74c11f943a1ee242e72b3ff210',1,'interface.h']]],
-  ['readme_2emd_132',['readme.md',['../readme_8md.html',1,'']]],
-  ['resume_5fcmd_133',['RESUME_CMD',['../_a_t45_d_b041_e_8c.html#ac887671e7cb0e10b75b694265232576f',1,'AT45DB041E.c']]]
+  ['page_5foffset_138',['PAGE_OFFSET',['../_a_t45_d_b041_e_8c.html#acbc0993bee14429ee6ca886504dca2ee',1,'AT45DB041E.c']]],
+  ['pos_5foffset_139',['POS_OFFSET',['../_a_t45_d_b041_e_8c.html#ad4a1fa2e9e9d770e1d79749ba7a473d5',1,'AT45DB041E.c']]],
+  ['print_140',['print',['../structdebug__t.html#af85263cdaf1ddb7e3d549d801af1e161',1,'debug_t']]],
+  ['print_5ffuncion_141',['print_funcion',['../memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f',1,'memory_store.h']]]
 ];

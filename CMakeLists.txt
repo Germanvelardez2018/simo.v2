@@ -10,6 +10,7 @@ pico_sdk_init()
 
 add_executable(simo
 	core/src/main.c
+	core/src/simo/debug/debug.c
 	core/src/simo/hardware/gpio.c
 	core/src/simo/hardware/uart.c
 	core/src/simo/hardware/spi.c

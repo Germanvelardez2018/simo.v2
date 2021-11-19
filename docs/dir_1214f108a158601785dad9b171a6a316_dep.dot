@@ -1,0 +1,11 @@
+digraph "core/src/simo/debug" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c4acac0979fb7e09bcb67a660e699ac3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="simo" fontname="Helvetica", fontsize="10", URL="dir_c4acac0979fb7e09bcb67a660e699ac3.html"]
+  dir_1214f108a158601785dad9b171a6a316 [shape=box, label="debug", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_1214f108a158601785dad9b171a6a316.html"];
+  }
+  dir_24d671cfcbc5d5238a6bd565a49d198f [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_24d671cfcbc5d5238a6bd565a49d198f.html"];
+  dir_1214f108a158601785dad9b171a6a316->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="1", labeldistance=1.5 headhref="dir_000013_000001.html"];
+}

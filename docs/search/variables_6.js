@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['spi_314',['spi',['../struct_a_t45_d_b041_e__t.html#a9b1d141ba9ccc29d6c4758b5e284afc5',1,'AT45DB041E_t']]],
-  ['spi_5fready_315',['spi_ready',['../struct_a_t45_d_b041_e__t.html#ad58dcf250ce5c278798d7e929a44b1a7',1,'AT45DB041E_t']]]
+  ['print_337',['print',['../structdebug__t.html#af85263cdaf1ddb7e3d549d801af1e161',1,'debug_t']]]
 ];

@@ -11,5 +11,5 @@ digraph "core/include/simo/storage" {
   }
   }
   dir_2fbf62330853db8854ddd88dde5ea014 [shape=box label="hardware" URL="dir_2fbf62330853db8854ddd88dde5ea014.html"];
-  dir_e71ba9a583ca174ca688eb59f429c8e8->dir_2fbf62330853db8854ddd88dde5ea014 [headlabel="1", labeldistance=1.5 headhref="dir_000007_000005.html"];
+  dir_e71ba9a583ca174ca688eb59f429c8e8->dir_2fbf62330853db8854ddd88dde5ea014 [headlabel="1", labeldistance=1.5 headhref="dir_000008_000006.html"];
 }

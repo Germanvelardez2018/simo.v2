@@ -8,12 +8,14 @@ digraph "core/src/simo" {
     graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_c4acac0979fb7e09bcb67a660e699ac3.html"];
     dir_c4acac0979fb7e09bcb67a660e699ac3 [shape=plaintext label="simo"];
     dir_6fa789263611014976c50996af3517c5 [shape=box label="comm" color="red" fillcolor="white" style="filled" URL="dir_6fa789263611014976c50996af3517c5.html"];
+    dir_1214f108a158601785dad9b171a6a316 [shape=box label="debug" color="black" fillcolor="white" style="filled" URL="dir_1214f108a158601785dad9b171a6a316.html"];
     dir_6d88a1801a5915da0665f21e766a543a [shape=box label="hardware" color="black" fillcolor="white" style="filled" URL="dir_6d88a1801a5915da0665f21e766a543a.html"];
     dir_2c8bc93ff3a5e0101bc097bb9a4d49bf [shape=box label="storage" color="red" fillcolor="white" style="filled" URL="dir_2c8bc93ff3a5e0101bc097bb9a4d49bf.html"];
   }
   }
   dir_24d671cfcbc5d5238a6bd565a49d198f [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_24d671cfcbc5d5238a6bd565a49d198f.html"];
-  dir_6fa789263611014976c50996af3517c5->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="4", labeldistance=1.5 headhref="dir_000010_000001.html"];
-  dir_2c8bc93ff3a5e0101bc097bb9a4d49bf->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="5", labeldistance=1.5 headhref="dir_000013_000001.html"];
-  dir_6d88a1801a5915da0665f21e766a543a->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="5", labeldistance=1.5 headhref="dir_000012_000001.html"];
+  dir_1214f108a158601785dad9b171a6a316->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="1", labeldistance=1.5 headhref="dir_000013_000001.html"];
+  dir_6fa789263611014976c50996af3517c5->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="4", labeldistance=1.5 headhref="dir_000011_000001.html"];
+  dir_2c8bc93ff3a5e0101bc097bb9a4d49bf->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="5", labeldistance=1.5 headhref="dir_000015_000001.html"];
+  dir_6d88a1801a5915da0665f21e766a543a->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="5", labeldistance=1.5 headhref="dir_000014_000001.html"];
 }

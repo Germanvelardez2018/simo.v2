@@ -16,6 +16,7 @@
 
 #include "simo/hardware/uart.h"
 #include "simo/storage/memory_store.h"
+#include "simo/debug/debug.h"  //! probemos el simo debug
 
 #include <string.h>
 #include <stdio.h>
@@ -26,9 +27,12 @@
 #define COUNTER_MSG     "contador = %d\r\n"
 
 
+
 static void debug_print(char* msg)
 {
-    simo_uart_write_buffer(SIMO_UART0,msg,strlen(msg));
+  
+    simo_debug_print(msg,"flash memory");
+
 
 }
 
@@ -42,11 +46,12 @@ static void debug_print(char* msg)
 void serial_task(void* params)
 {
 
-
+    vTaskDelay(5000);
+    simo_debug_print("comenzamos el programa","serial task");
     char buffer[200];
-    simo_uart_init(SIMO_UART0,115200);  
+    //simo_uart_init(SIMO_UART0,115200);  
     //creo una memoria
-    vTaskDelay(5000); 
+    vTaskDelay(2000); 
     bool ret = simo_memory_store_init();
 
     if (ret )
@@ -57,7 +62,7 @@ void serial_task(void* params)
 
 
         sprintf(buffer,"Memoria iniciada \r\n");
-        simo_uart_write_buffer(SIMO_UART0,buffer,strlen(buffer));
+        //simo_uart_write_buffer(SIMO_UART0,buffer,strlen(buffer));
 
           // simo_memory_store_full_clear();       
            vTaskDelay(5000);
@@ -66,7 +71,7 @@ void serial_task(void* params)
     }
     else
     {   sprintf(buffer,"Erro al iniciar memoriar \r\n");
-        simo_uart_write_buffer(SIMO_UART0,buffer,strlen(buffer));
+        //simo_uart_write_buffer(SIMO_UART0,buffer,strlen(buffer));
     }
     #define MSG_SIZE    100
     char mensaje_guardado[MSG_SIZE];
@@ -90,7 +95,7 @@ void serial_task(void* params)
          pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
         char b[100];
         sprintf(b,"posicion escritas:%d\r\n",pos);
-        simo_uart_write_buffer(SIMO_UART0,b,strlen(b)+1);
+        //simo_uart_write_buffer(SIMO_UART0,b,strlen(b)+1);
 
     
    
@@ -101,8 +106,8 @@ void serial_task(void* params)
 
    
         uint16_t datos_validos= simo_memory_read_all(debug_print);
-         sprintf(b,"cantidad de datos validos:%d\r\n",datos_validos);
-        simo_uart_write_buffer(SIMO_UART0,b,strlen(b)+1);
+        sprintf(b,"cantidad de datos validos:%d\r\n",datos_validos);
+        //simo_uart_write_buffer(SIMO_UART0,b,strlen(b)+1);
 
         while(1)
         {
@@ -117,7 +122,7 @@ void serial_task(void* params)
 int main(void)
 {
    
-   
+    bool debug =  simo_debug_init(300);
     BaseType_t ret =   xTaskCreate(serial_task,"serial test",10000,0,3,0);
   
     vTaskStartScheduler();

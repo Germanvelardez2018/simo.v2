@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['freertosconfig_2eh_242',['FreeRTOSConfig.h',['../_free_r_t_o_s_config_8h.html',1,'']]]
+  ['debug_2ec_258',['debug.c',['../debug_8c.html',1,'']]],
+  ['debug_2eh_259',['debug.h',['../debug_8h.html',1,'']]]
 ];

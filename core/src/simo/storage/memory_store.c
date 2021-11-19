@@ -207,7 +207,7 @@ uint16_t simo_memory_read_all(print_funcion print)
     uint16_t count_msg = 0;
     char buffer_print[250];
     char buffer[200];
-    sprintf(buffer_print,"\n\n\nLa cantidad almacenados en memoria es: %d\r\n",counter);
+    sprintf(buffer_print,"\n\n\nDatos almacenados: %d",counter);
     print(buffer_print);
     bool msg_valid= false;
     
@@ -217,7 +217,7 @@ uint16_t simo_memory_read_all(print_funcion print)
        if(true)
        {
            #define OFFSET_FORMAT 2
-            sprintf(buffer_print,"--mem:%d)=> %s\r\n",index,buffer+ OFFSET_FORMAT);
+            sprintf(buffer_print,"mem[%d]:: %s",index,buffer+ OFFSET_FORMAT);
             print(buffer_print);
             count_msg +=1;
 
