@@ -125,7 +125,7 @@
         if(num)
         {
             char out[200];
-            __SIM->buff_in[num];
+            __SIM->buff_in[num]=0;
             sprintf(out,"se recibio:%s",__SIM->buff_in);
             __print(out);
         }
