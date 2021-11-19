@@ -17,9 +17,10 @@
 #include "simo/hardware/uart.h"
 #include "simo/storage/memory_store.h"
 #include "simo/debug/debug.h"  //! probemos el simo debug
-
+#include "simo/comm/comm.h"
 #include <string.h>
 #include <stdio.h>
+
 
 
 
@@ -41,9 +42,14 @@ static void debug_print(char* msg)
 
 
 
+/**
+ * @brief Tarea para probas memoria flash
+ * 
+ * @param params 
+ * @return ** void 
+ */
 
-
-void serial_task(void* params)
+void flash_task(void* params)
 {
 
     vTaskDelay(5000);
@@ -119,11 +125,64 @@ void serial_task(void* params)
     }
 }
 
+
+
+static void debug_device(char* msg)
+{
+  
+    simo_debug_print(msg,"comm debug");
+
+
+}
+
+/**
+ * @brief Tarea para probar comm ( modulo de  comunicacion)
+ * 
+ * @param params 
+ * @return ** void 
+ */
+static void comm_task(void* params)
+{
+
+    cmd_request_t req =
+    {
+        .p_cmd = "AT\r\n",
+        .p_expected_resp="OK\r\n",
+        .timeout_us = 10000
+    };
+    vTaskDelay(5000);
+    vTaskDelay(2000);
+    simo_debug_print("tarea com","comm task");
+    simo_debug_print("iniciamos test sim device","comm_task");
+    vTaskDelay(4000);
+    bool ret = simo_comm_init(debug_device);
+
+    if(ret)
+    {
+        simo_debug_print("se creo el device","comm task");
+    }
+    else
+    {
+        simo_debug_print("error al crear dispositivo","comm task");
+    }
+    
+    while(1)
+    {
+
+      
+       if(ret)simo_comm_send_request(&req);
+        vTaskDelay(4000);
+    }
+}
+
 int main(void)
 {
    
     bool debug =  simo_debug_init(300);
-    BaseType_t ret =   xTaskCreate(serial_task,"serial test",10000,0,3,0);
+    BaseType_t ret;
+    // ret =   xTaskCreate(flash_task,"flash test",10000,0,3,0);
+    ret =   xTaskCreate(comm_task,"sim device test",10000,0,3,0);
+
   
     vTaskStartScheduler();
     while(1)

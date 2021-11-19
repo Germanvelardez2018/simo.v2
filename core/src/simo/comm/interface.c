@@ -56,5 +56,5 @@ void simo_interface_write(interface_t* interface,char* msg,uint32_t len)
 uint32_t simo_interface_read(interface_t* interface,char* buffer, uint32_t len_buffer)
 {
     uint32_t res = interface->read(buffer,len_buffer);
-    return 0;
+    return res;
 }

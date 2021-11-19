@@ -8,13 +8,14 @@
  * @copyright Copyright (c) 2021
  * 
  */
-
+#include "simo/core.h"
 #include "simo/hardware/uart.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-//! Funcion de objeto debug
-typedef void (*dbg_print)(char*,uint32_t);
+
+
+//!Funcion para inicializar el hardware
 typedef void(*dbg_hardware_init)();
 
 

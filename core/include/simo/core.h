@@ -19,7 +19,15 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 
+
+
+typedef void (*print_out)(char*);
+//! Funcion de objeto debug
+typedef void (*dbg_print)(char*,uint32_t);
 
 #endif

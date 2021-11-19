@@ -14,14 +14,18 @@
 #ifndef   _SIMO_COMM_COMM_H
 #define   _SIMO_COMM_COMM_H
 
+    #include "simo/core.h"
+    #include "simo/utiles/cmd_request.h"
 
 
-    /**
-     * @brief  Creamos un objeto  modulo de comunicacion (comm)
-     * 
-     * @return ** void 
-     */
-    void simo_comm_create(void);
+   /**
+    * @brief 
+    * 
+    * @param print_debug 
+    * @return true 
+    * @return false 
+    */
+    bool simo_comm_init(print_out print_debug);
 
     /**
      * @brief  Liberamos recursos asociados con la comunicaicon
@@ -30,12 +34,7 @@
      */
     void simo_comm_delete(void);
 
-    /**
-     * @brief  Iniciamos el modulos de comunicacion
-     * 
-     * @return ** void 
-     */
-    void simo_comm_init(void);
+   
 
 
     /**
@@ -44,6 +43,15 @@
      * @param msg 
      * @return ** bool , mensaje enviado correctamente
      */
-    bool simo_send_message(char* msg);
+    bool simo_comm_send_message(char* msg);
 
+
+    /**
+     * @brief  Envia una peticion desde el modulo comm
+     * @note las peticiones cmd_request tiene 3 elemento, el commando, la respuesta esperada y el timeout en us
+     * @param req 
+     * @return true  si respuesta esperada coinciden con respuesta coinciden
+     * @return false 
+     */
+    bool simo_comm_send_request(cmd_request_t* req);
 #endif

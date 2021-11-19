@@ -107,7 +107,7 @@ void simo_debug_print(char* msg,char* name_module)
     {
           sprintf(_debug->buffer,DEBUG_FORMAT,name_module,msg);
           
-          _debug->print(_debug->buffer,strlen(_debug->buffer)+1);
+          _debug->print(_debug->buffer,strlen(_debug->buffer));
 
     }
   

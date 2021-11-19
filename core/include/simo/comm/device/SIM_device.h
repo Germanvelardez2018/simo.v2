@@ -25,7 +25,7 @@
         char  buff_in[SIM_BUFFER_SIZE];
 
         //! Interfaz de hardware asociada
-        interface_t  hardware;
+        interface_t*  hardware;
     } 
     SIM_device_t;
 
@@ -56,7 +56,7 @@
      * @param len  tamanio de array
      * @return ** void 
      */
-    void simo_sim_device_write(SIM_device_t sim,char* msg,uint32_t len);
+    void simo_sim_device_write(SIM_device_t *sim,char* msg,uint32_t len);
 
     /**
      * @brief 
@@ -64,7 +64,7 @@
      * @param sim 
      * @return ** uint32_t 
      */
-    uint32_t simo_sim_device_read(SIM_device_t sim );
+    uint32_t simo_sim_device_read(SIM_device_t *sim );
 
 
 
