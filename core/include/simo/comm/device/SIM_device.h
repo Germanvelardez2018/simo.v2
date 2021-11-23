@@ -26,6 +26,7 @@
 
         //! Interfaz de hardware asociada
         interface_t*  hardware;
+
     } 
     SIM_device_t;
 

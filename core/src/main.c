@@ -148,14 +148,14 @@ static void comm_task(void* params)
     {
         .p_cmd = "AT\r\n",
         .p_expected_resp="OK\r\n",
-        .timeout_us = 10000
+        .timeout_us = 1000
     };
     vTaskDelay(5000);
     vTaskDelay(2000);
     simo_debug_print("tarea com","comm task");
     simo_debug_print("iniciamos test sim device","comm_task");
     vTaskDelay(4000);
-    bool ret = simo_comm_init(debug_device);
+    bool ret = simo_comm_init(debug_device,vTaskDelay); // inyecto delay de rtos al modulo
 
     if(ret)
     {
@@ -183,7 +183,7 @@ int main(void)
     // ret =   xTaskCreate(flash_task,"flash test",10000,0,3,0);
     ret =   xTaskCreate(comm_task,"sim device test",10000,0,3,0);
 
-  
+   
     vTaskStartScheduler();
     while(1)
     {

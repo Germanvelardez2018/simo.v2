@@ -22,12 +22,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-
+#include "FreeRTOS.h"
+#include "task.h"
 
 
 
 typedef void (*print_out)(char*);
 //! Funcion de objeto debug
 typedef void (*dbg_print)(char*,uint32_t);
+
+
+//! Funcion delay rtos para inyectar a  modulos con tiempos de respuesta altos
+
+typedef void (*delay_rtos)(const TickType_t xTicksToDelay);
+
 
 #endif

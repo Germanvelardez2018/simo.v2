@@ -18,14 +18,15 @@
     #include "simo/utiles/cmd_request.h"
 
 
-   /**
-    * @brief 
-    * 
-    * @param print_debug 
-    * @return true 
-    * @return false 
-    */
-    bool simo_comm_init(print_out print_debug);
+ /**
+  * @brief Iniciamos modulo de comunicacion
+  * 
+  * @param print_debug  Funcion de salida debug
+  * @param delay_rtos   Delay asistido por rtos
+  * @return true 
+  * @return false 
+  */
+    bool simo_comm_init(print_out print_debug,delay_rtos delay_rtos);
 
     /**
      * @brief  Liberamos recursos asociados con la comunicaicon

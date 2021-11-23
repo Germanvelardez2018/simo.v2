@@ -19,6 +19,7 @@ add_executable(simo
 	core/src/simo/comm/interface.c
 	core/src/simo/comm/comm.c
 	core/src/simo/comm/device/SIM_device.c
+	core/src/simo/utils/json.c
 
 )
 

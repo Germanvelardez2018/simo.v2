@@ -17,11 +17,15 @@
 
 
     SIM_device_t* simo_sim_device_create(interface_t* interface)
+
     {
         if( interface == NULL) return NULL;
         SIM_device_t* sim = (SIM_device_t*) malloc(sizeof(SIM_device_t));
         if (sim == NULL) return NULL;
         sim->hardware = interface;
+
+
+
         
         return sim;
 
