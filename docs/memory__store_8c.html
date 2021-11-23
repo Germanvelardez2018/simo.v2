@@ -137,9 +137,9 @@ Funciones</h2></td></tr>
 <tr class="memitem:a86ac668802fc25b81c1867329271451f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a86ac668802fc25b81c1867329271451f">simo_memory_store_full_clear</a> ()</td></tr>
 <tr class="memdesc:a86ac668802fc25b81c1867329271451f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la secuenca de borrado de la memoria completa.  <a href="memory__store_8c.html#a86ac668802fc25b81c1867329271451f">Más...</a><br /></td></tr>
 <tr class="separator:a86ac668802fc25b81c1867329271451f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25be9c04b3d88e26e241db214c5490d0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a25be9c04b3d88e26e241db214c5490d0">simo_memory_read_all</a> (<a class="el" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a> print)</td></tr>
-<tr class="memdesc:a25be9c04b3d88e26e241db214c5490d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt.  <a href="memory__store_8c.html#a25be9c04b3d88e26e241db214c5490d0">Más...</a><br /></td></tr>
-<tr class="separator:a25be9c04b3d88e26e241db214c5490d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22eb0ff26cc7d00bd49d3901c25caa39"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#a22eb0ff26cc7d00bd49d3901c25caa39">simo_memory_read_all</a> (<a class="el" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a> print, <a class="el" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a> <a class="el" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a>)</td></tr>
+<tr class="memdesc:a22eb0ff26cc7d00bd49d3901c25caa39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt.  <a href="memory__store_8c.html#a22eb0ff26cc7d00bd49d3901c25caa39">Más...</a><br /></td></tr>
+<tr class="separator:a22eb0ff26cc7d00bd49d3901c25caa39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb3b2bc84af85e6d3e0f34d5f65bc1fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory__store_8c.html#aeb3b2bc84af85e6d3e0f34d5f65bc1fe">simo_memory_store_clear_counter</a> ()</td></tr>
 <tr class="memdesc:aeb3b2bc84af85e6d3e0f34d5f65bc1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ponemos a cero el contador de datos almacenados.  <a href="memory__store_8c.html#aeb3b2bc84af85e6d3e0f34d5f65bc1fe">Más...</a><br /></td></tr>
 <tr class="separator:aeb3b2bc84af85e6d3e0f34d5f65bc1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,8 +334,8 @@ Funciones</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentación de las funciones</h2>
-<a id="a25be9c04b3d88e26e241db214c5490d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25be9c04b3d88e26e241db214c5490d0">&#9670;&nbsp;</a></span>simo_memory_read_all()</h2>
+<a id="a22eb0ff26cc7d00bd49d3901c25caa39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22eb0ff26cc7d00bd49d3901c25caa39">&#9670;&nbsp;</a></span>simo_memory_read_all()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,8 +344,18 @@ Funciones</h2></td></tr>
           <td class="memname">uint16_t simo_memory_read_all </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f">print_funcion</a>&#160;</td>
-          <td class="paramname"><em>fun</em></td><td>)</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a>&#160;</td>
+          <td class="paramname"><em>delay_rtos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -353,7 +363,8 @@ Funciones</h2></td></tr>
 <p>Lee todos los datos de la memoria y los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fun</td><td>es un puntero a funcion que recibe char* como parametro y devuelve void. </td></tr>
+    <tr><td class="paramname">fun</td><td></td></tr>
+    <tr><td class="paramname">delay_rtos</td><td></td></tr>
   </table>
   </dd>
 </dl>

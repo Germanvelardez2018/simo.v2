@@ -201,7 +201,7 @@ void simo_memory_store_full_clear()
 }
 
 
-uint16_t simo_memory_read_all(print_funcion print)
+uint16_t simo_memory_read_all(print_funcion print,delay_rtos delay_rtos)
 {
     uint16_t counter = _get_counter();
     uint16_t count_msg = 0;
@@ -220,6 +220,7 @@ uint16_t simo_memory_read_all(print_funcion print)
             sprintf(buffer_print,"mem[%d]:: %s",index,buffer+ OFFSET_FORMAT);
             print(buffer_print);
             count_msg +=1;
+            delay_rtos(10);
 
        }
      

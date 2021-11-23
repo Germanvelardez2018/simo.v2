@@ -67,6 +67,8 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#typedef-members">typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia del Archivo core.h</div>  </div>
 </div><!--header-->
@@ -76,6 +78,11 @@ $(function() {
 <a href="#details">Más...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;FreeRTOS.h&quot;</code><br />
+<code>#include &quot;task.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Dependencia gráfica adjunta para core.h:</div>
 <div class="dyncontent">
@@ -90,13 +97,72 @@ Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</
 </div>
 </div>
 <p><a href="core_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a7cf2af9b38c4a634ccefd043e90e8259"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8h.html#a7cf2af9b38c4a634ccefd043e90e8259">print_out</a>) (char *)</td></tr>
+<tr class="separator:a7cf2af9b38c4a634ccefd043e90e8259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c41ef2500677ef242f82ad05eb17627"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8h.html#a0c41ef2500677ef242f82ad05eb17627">dbg_print</a>) (char *, uint32_t)</td></tr>
+<tr class="memdesc:a0c41ef2500677ef242f82ad05eb17627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion de objeto debug.  <a href="core_8h.html#a0c41ef2500677ef242f82ad05eb17627">Más...</a><br /></td></tr>
+<tr class="separator:a0c41ef2500677ef242f82ad05eb17627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d639e36e448cf69c60661bf079ccdf"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a>) (const TickType_t xTicksToDelay)</td></tr>
+<tr class="memdesc:af3d639e36e448cf69c60661bf079ccdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion delay rtos para inyectar a modulos con tiempos de respuesta altos.  <a href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">Más...</a><br /></td></tr>
+<tr class="separator:af3d639e36e448cf69c60661bf079ccdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Core de la aplicacion. En este archivo van elementos indispensables para la aplicacion. Se incluye en todos los modulos. </p>
 <dl class="section author"><dt>Autor</dt><dd>German Velardez (<a href="#" onclick="location.href='mai'+'lto:'+'gve'+'la'+'rde'+'z@'+'int'+'i.'+'gob'+'.a'+'r'; return false;">gvela<span style="display: none;">.nosp@m.</span>rdez<span style="display: none;">.nosp@m.</span>@inti<span style="display: none;">.nosp@m.</span>.gob<span style="display: none;">.nosp@m.</span>.ar</a>) </dd></dl>
 <dl class="section version"><dt>Versión</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Fecha</dt><dd>2021-11-15</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Documentación de los 'typedefs'</h2>
+<a id="a0c41ef2500677ef242f82ad05eb17627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c41ef2500677ef242f82ad05eb17627">&#9670;&nbsp;</a></span>dbg_print</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* dbg_print) (char *, uint32_t)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion de objeto debug. </p>
+
+</div>
+</div>
+<a id="af3d639e36e448cf69c60661bf079ccdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d639e36e448cf69c60661bf079ccdf">&#9670;&nbsp;</a></span>delay_rtos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* delay_rtos) (const TickType_t xTicksToDelay)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion delay rtos para inyectar a modulos con tiempos de respuesta altos. </p>
+
+</div>
+</div>
+<a id="a7cf2af9b38c4a634ccefd043e90e8259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf2af9b38c4a634ccefd043e90e8259">&#9670;&nbsp;</a></span>print_out</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* print_out) (char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado por &#160;<a href="http://www.doxygen.org/index.html">

@@ -86,35 +86,36 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_s_i_m__device__t.html#ac6fad55e7635247473c3fd7b5f76ae47">   23</a></span>&#160;        <span class="keywordtype">char</span>  buff_out[<a class="code" href="_s_i_m__device_8h.html#a3ed1646ee7ffaad3b1b5016ad119af45">SIM_BUFFER_SIZE</a>];</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_s_i_m__device__t.html#a5f16e0a700b048e47b1dc69c24df92d6">   25</a></span>&#160;        <span class="keywordtype">char</span>  buff_in[<a class="code" href="_s_i_m__device_8h.html#a3ed1646ee7ffaad3b1b5016ad119af45">SIM_BUFFER_SIZE</a>];</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_s_i_m__device__t.html#af63edf3e1a064d1af64c8d84d4adb81c">   28</a></span>&#160;        <a class="code" href="structinterface__t.html">interface_t</a>  <a class="code" href="struct_s_i_m__device__t.html#af63edf3e1a064d1af64c8d84d4adb81c">hardware</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    } </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_s_i_m__device__t.html#aa26ab17910ad98c5070e56a95bb5a54f">   28</a></span>&#160;        <a class="code" href="structinterface__t.html">interface_t</a>*  <a class="code" href="struct_s_i_m__device__t.html#aa26ab17910ad98c5070e56a95bb5a54f">hardware</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    } </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a>* <a class="code" href="_s_i_m__device_8h.html#a922175eb558b3f4a9084143018c52668">simo_sim_device_create</a>(<a class="code" href="structinterface__t.html">interface_t</a>* interface);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_s_i_m__device_8h.html#a6dc6ae4864c057c28d7346b8cee0f22b">simo_sim_device_delete</a>(<a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a>* sim);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_s_i_m__device_8h.html#a705eef3ae47a0d3c69df5c85320f8931">simo_sim_device_write</a>(<a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a> sim,<span class="keywordtype">char</span>* msg,uint32_t len);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    uint32_t <a class="code" href="_s_i_m__device_8h.html#a10fe740a7bfff07d279b538441e9c0f7">simo_sim_device_read</a>(<a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a> sim );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a>* <a class="code" href="_s_i_m__device_8h.html#a922175eb558b3f4a9084143018c52668">simo_sim_device_create</a>(<a class="code" href="structinterface__t.html">interface_t</a>* interface);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_s_i_m__device_8h.html#a6dc6ae4864c057c28d7346b8cee0f22b">simo_sim_device_delete</a>(<a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a>* sim);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_s_i_m__device_8h.html#a3802476f76297e943a6dabfd3bb5d5e2">simo_sim_device_write</a>(<a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a> *sim,<span class="keywordtype">char</span>* msg,uint32_t len);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    uint32_t <a class="code" href="_s_i_m__device_8h.html#a5a6fa0363e9c37294a0370c4f38c43c8">simo_sim_device_read</a>(<a class="code" href="struct_s_i_m__device__t.html">SIM_device_t</a> *sim );</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astruct_s_i_m__device__t_html"><div class="ttname"><a href="struct_s_i_m__device__t.html">SIM_device_t</a></div><div class="ttdef"><b>Definition:</b> SIM_device.h:21</div></div>
 <div class="ttc" id="ainterface_8h_html"><div class="ttname"><a href="interface_8h.html">interface.h</a></div><div class="ttdoc">Interfaz para manejar separar el hardware del los objetos comm.</div></div>
-<div class="ttc" id="a_s_i_m__device_8h_html_a705eef3ae47a0d3c69df5c85320f8931"><div class="ttname"><a href="_s_i_m__device_8h.html#a705eef3ae47a0d3c69df5c85320f8931">simo_sim_device_write</a></div><div class="ttdeci">void simo_sim_device_write(SIM_device_t sim, char *msg, uint32_t len)</div><div class="ttdef"><b>Definition:</b> SIM_device.c:34</div></div>
 <div class="ttc" id="a_s_i_m__device_8h_html_a3ed1646ee7ffaad3b1b5016ad119af45"><div class="ttname"><a href="_s_i_m__device_8h.html#a3ed1646ee7ffaad3b1b5016ad119af45">SIM_BUFFER_SIZE</a></div><div class="ttdeci">#define SIM_BUFFER_SIZE</div><div class="ttdef"><b>Definition:</b> SIM_device.h:13</div></div>
-<div class="ttc" id="a_s_i_m__device_8h_html_a10fe740a7bfff07d279b538441e9c0f7"><div class="ttname"><a href="_s_i_m__device_8h.html#a10fe740a7bfff07d279b538441e9c0f7">simo_sim_device_read</a></div><div class="ttdeci">uint32_t simo_sim_device_read(SIM_device_t sim)</div><div class="ttdef"><b>Definition:</b> SIM_device.c:40</div></div>
 <div class="ttc" id="a_s_i_m__device_8h_html_a922175eb558b3f4a9084143018c52668"><div class="ttname"><a href="_s_i_m__device_8h.html#a922175eb558b3f4a9084143018c52668">simo_sim_device_create</a></div><div class="ttdeci">SIM_device_t * simo_sim_device_create(interface_t *interface)</div><div class="ttdoc">Creamos un objeto SIM_device.</div><div class="ttdef"><b>Definition:</b> SIM_device.c:19</div></div>
+<div class="ttc" id="a_s_i_m__device_8h_html_a3802476f76297e943a6dabfd3bb5d5e2"><div class="ttname"><a href="_s_i_m__device_8h.html#a3802476f76297e943a6dabfd3bb5d5e2">simo_sim_device_write</a></div><div class="ttdeci">void simo_sim_device_write(SIM_device_t *sim, char *msg, uint32_t len)</div><div class="ttdef"><b>Definition:</b> SIM_device.c:48</div></div>
+<div class="ttc" id="a_s_i_m__device_8h_html_a5a6fa0363e9c37294a0370c4f38c43c8"><div class="ttname"><a href="_s_i_m__device_8h.html#a5a6fa0363e9c37294a0370c4f38c43c8">simo_sim_device_read</a></div><div class="ttdeci">uint32_t simo_sim_device_read(SIM_device_t *sim)</div><div class="ttdef"><b>Definition:</b> SIM_device.c:54</div></div>
 <div class="ttc" id="astructinterface__t_html"><div class="ttname"><a href="structinterface__t.html">interface_t</a></div><div class="ttdef"><b>Definition:</b> interface.h:33</div></div>
-<div class="ttc" id="a_s_i_m__device_8h_html_a6dc6ae4864c057c28d7346b8cee0f22b"><div class="ttname"><a href="_s_i_m__device_8h.html#a6dc6ae4864c057c28d7346b8cee0f22b">simo_sim_device_delete</a></div><div class="ttdeci">void simo_sim_device_delete(SIM_device_t *sim)</div><div class="ttdoc">Liberamos la memoria asociada a un objeto sim Device.</div><div class="ttdef"><b>Definition:</b> SIM_device.c:25</div></div>
-<div class="ttc" id="astruct_s_i_m__device__t_html_af63edf3e1a064d1af64c8d84d4adb81c"><div class="ttname"><a href="struct_s_i_m__device__t.html#af63edf3e1a064d1af64c8d84d4adb81c">SIM_device_t::hardware</a></div><div class="ttdeci">interface_t hardware</div><div class="ttdoc">Interfaz de hardware asociada.</div><div class="ttdef"><b>Definition:</b> SIM_device.h:28</div></div>
+<div class="ttc" id="a_s_i_m__device_8h_html_a6dc6ae4864c057c28d7346b8cee0f22b"><div class="ttname"><a href="_s_i_m__device_8h.html#a6dc6ae4864c057c28d7346b8cee0f22b">simo_sim_device_delete</a></div><div class="ttdeci">void simo_sim_device_delete(SIM_device_t *sim)</div><div class="ttdoc">Liberamos la memoria asociada a un objeto sim Device.</div><div class="ttdef"><b>Definition:</b> SIM_device.c:35</div></div>
+<div class="ttc" id="astruct_s_i_m__device__t_html_aa26ab17910ad98c5070e56a95bb5a54f"><div class="ttname"><a href="struct_s_i_m__device__t.html#aa26ab17910ad98c5070e56a95bb5a54f">SIM_device_t::hardware</a></div><div class="ttdeci">interface_t * hardware</div><div class="ttdoc">Interfaz de hardware asociada.</div><div class="ttdef"><b>Definition:</b> SIM_device.h:28</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado por &#160;<a href="http://www.doxygen.org/index.html">

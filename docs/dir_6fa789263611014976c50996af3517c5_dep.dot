@@ -11,6 +11,6 @@ digraph "core/src/simo/comm" {
   }
   }
   dir_24d671cfcbc5d5238a6bd565a49d198f [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_24d671cfcbc5d5238a6bd565a49d198f.html"];
-  dir_6fa789263611014976c50996af3517c5->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="4", labeldistance=1.5 headhref="dir_000011_000001.html"];
-  dir_4f61a81cabd15284c987ee1ae784803e->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="1", labeldistance=1.5 headhref="dir_000012_000001.html"];
+  dir_6fa789263611014976c50996af3517c5->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="6", labeldistance=1.5 headhref="dir_000013_000001.html"];
+  dir_4f61a81cabd15284c987ee1ae784803e->dir_24d671cfcbc5d5238a6bd565a49d198f [headlabel="1", labeldistance=1.5 headhref="dir_000014_000001.html"];
 }

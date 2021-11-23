@@ -69,14 +69,16 @@ bool simo_memory_store_read_page(uint8_t* buffer,uint8_t len,uint16_t index);
 void simo_memory_store_full_clear();
 
 
+
 /**
- * @brief  Lee todos los datos de la memoria y 
- * los imprime con la funcion de impresion que se pasa por parametros. Esta funcion podria ser una funcion que envie los datos por mqtt
- * 
- * @param fun  es un puntero a funcion que recibe char* como parametro y devuelve void.
+ * @brief Lee todos los datos de la memoria y 
+ * los imprime con la funcion de impresion que se pasa por parametros. 
+ * Esta funcion podria ser una funcion que envie los datos por mqtt
+ * @param fun 
+ * @param delay_rtos 
  * @return ** uint16_t 
  */
-uint16_t simo_memory_read_all(print_funcion fun);
+uint16_t simo_memory_read_all(print_funcion fun,delay_rtos delay_rtos );
 
 
 

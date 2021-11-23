@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SIMO: Fichero Fuente core/include/simo/utiles/cmd_request.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SIMO
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de monitoreo remoto basado en Rapsberry PI PICO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_24d671cfcbc5d5238a6bd565a49d198f.html">include</a></li><li class="navelem"><a class="el" href="dir_eb293059644a82a490cf75e36ed4597e.html">simo</a></li><li class="navelem"><a class="el" href="dir_2688bbf1abeb1f2f726826b473f24f65.html">utiles</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">cmd_request.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cmd__request_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef  _SIMO_UTILS_CMD_REQUEST</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define  _SIMO_UTILS_CMD_REQUEST</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    #include &quot;<a class="code" href="core_8h.html">simo/core.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcmd__request__t.html">   18</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structcmd__request__t.html#a32c6011f864fa83e801f7f7c7ad111dd">   21</a></span>&#160;        <span class="keywordtype">char</span>* <a class="code" href="structcmd__request__t.html#a32c6011f864fa83e801f7f7c7ad111dd">p_cmd</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structcmd__request__t.html#a3eff7930bebf214ef0deab5aafc0eb0d">   23</a></span>&#160;        <span class="keywordtype">char</span>* <a class="code" href="structcmd__request__t.html#a3eff7930bebf214ef0deab5aafc0eb0d">p_expected_resp</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structcmd__request__t.html#aae5dede55e433f8480361883afd1d71a">   25</a></span>&#160;        uint32_t <a class="code" href="structcmd__request__t.html#aae5dede55e433f8480361883afd1d71a">timeout_us</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="structcmd__request__t.html">cmd_request_t</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructcmd__request__t_html_a3eff7930bebf214ef0deab5aafc0eb0d"><div class="ttname"><a href="structcmd__request__t.html#a3eff7930bebf214ef0deab5aafc0eb0d">cmd_request_t::p_expected_resp</a></div><div class="ttdeci">char * p_expected_resp</div><div class="ttdoc">respuesta esperada</div><div class="ttdef"><b>Definition:</b> cmd_request.h:23</div></div>
+<div class="ttc" id="astructcmd__request__t_html_a32c6011f864fa83e801f7f7c7ad111dd"><div class="ttname"><a href="structcmd__request__t.html#a32c6011f864fa83e801f7f7c7ad111dd">cmd_request_t::p_cmd</a></div><div class="ttdeci">char * p_cmd</div><div class="ttdoc">comando</div><div class="ttdef"><b>Definition:</b> cmd_request.h:21</div></div>
+<div class="ttc" id="astructcmd__request__t_html"><div class="ttname"><a href="structcmd__request__t.html">cmd_request_t</a></div><div class="ttdef"><b>Definition:</b> cmd_request.h:18</div></div>
+<div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">Core de la aplicacion. En este archivo van elementos indispensables para la aplicacion....</div></div>
+<div class="ttc" id="astructcmd__request__t_html_aae5dede55e433f8480361883afd1d71a"><div class="ttname"><a href="structcmd__request__t.html#aae5dede55e433f8480361883afd1d71a">cmd_request_t::timeout_us</a></div><div class="ttdeci">uint32_t timeout_us</div><div class="ttdoc">tiempo maximo de respuesta</div><div class="ttdef"><b>Definition:</b> cmd_request.h:25</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

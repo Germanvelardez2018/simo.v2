@@ -10,4 +10,6 @@ digraph "core/include/simo/comm" {
     dir_f174e91673c4a130c0e8bd336bd701db [shape=box label="device" color="black" fillcolor="white" style="filled" URL="dir_f174e91673c4a130c0e8bd336bd701db.html"];
   }
   }
+  dir_2688bbf1abeb1f2f726826b473f24f65 [shape=box label="utiles" URL="dir_2688bbf1abeb1f2f726826b473f24f65.html"];
+  dir_7be650b33193ecdab0ba581ffef38697->dir_2688bbf1abeb1f2f726826b473f24f65 [headlabel="1", labeldistance=1.5 headhref="dir_000003_000010.html"];
 }

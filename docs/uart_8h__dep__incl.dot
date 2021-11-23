@@ -12,5 +12,7 @@ digraph "core/include/simo/hardware/uart.h"
   Node4 [label="core/src/simo/debug\l/debug.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$debug_8c.html",tooltip="Funciones para configurar puerto de debug."];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="core/src/simo/hardware\l/uart.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart_8c.html",tooltip="Implementacion de capa para manejor del hardware UART (NIVEL 0)"];
+  Node5 [label="core/src/simo/comm\l/comm.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$comm_8c.html",tooltip="API para la comunicacion del sistema."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="core/src/simo/hardware\l/uart.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart_8c.html",tooltip="Implementacion de capa para manejor del hardware UART (NIVEL 0)"];
 }

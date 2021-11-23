@@ -76,29 +76,37 @@ $(function() {
 
 <p>Modulo de capa 2 que sirve para gestionar comunicacion mediante hardware externo.  
 <a href="#details">Más...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &quot;<a class="el" href="core_8h_source.html">simo/core.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cmd__request_8h_source.html">simo/utiles/cmd_request.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para comm.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="comm_8h__incl.png" border="0" usemap="#core_2include_2simo_2comm_2comm_8h" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
 Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</div>
 <div class="dyncontent">
 <div class="center"><img src="comm_8h__dep__incl.png" border="0" usemap="#core_2include_2simo_2comm_2comm_8hdep" alt=""/></div>
-<!-- MAP 0 -->
+<!-- MAP 1 -->
 </div>
 </div>
 <p><a href="comm_8h_source.html">Ir al código fuente de este archivo.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:a68fd3b5c6f0cd7ba950ec5fa65354c9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#a68fd3b5c6f0cd7ba950ec5fa65354c9b">simo_comm_create</a> (void)</td></tr>
-<tr class="memdesc:a68fd3b5c6f0cd7ba950ec5fa65354c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creamos un objeto modulo de comunicacion (comm)  <a href="comm_8h.html#a68fd3b5c6f0cd7ba950ec5fa65354c9b">Más...</a><br /></td></tr>
-<tr class="separator:a68fd3b5c6f0cd7ba950ec5fa65354c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349d1336cfa6072ad7f1dffd97074ea7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#a349d1336cfa6072ad7f1dffd97074ea7">simo_comm_init</a> (<a class="el" href="core_8h.html#a7cf2af9b38c4a634ccefd043e90e8259">print_out</a> print_debug, <a class="el" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a> <a class="el" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a>)</td></tr>
+<tr class="memdesc:a349d1336cfa6072ad7f1dffd97074ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iniciamos modulo de comunicacion.  <a href="comm_8h.html#a349d1336cfa6072ad7f1dffd97074ea7">Más...</a><br /></td></tr>
+<tr class="separator:a349d1336cfa6072ad7f1dffd97074ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e423c3490ee462ae651c50b94d9a0b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#a3e423c3490ee462ae651c50b94d9a0b1">simo_comm_delete</a> (void)</td></tr>
 <tr class="memdesc:a3e423c3490ee462ae651c50b94d9a0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liberamos recursos asociados con la comunicaicon.  <a href="comm_8h.html#a3e423c3490ee462ae651c50b94d9a0b1">Más...</a><br /></td></tr>
 <tr class="separator:a3e423c3490ee462ae651c50b94d9a0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a141cfce3e8029ef0a257c2496e13cf56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#a141cfce3e8029ef0a257c2496e13cf56">simo_comm_init</a> (void)</td></tr>
-<tr class="memdesc:a141cfce3e8029ef0a257c2496e13cf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iniciamos el modulos de comunicacion.  <a href="comm_8h.html#a141cfce3e8029ef0a257c2496e13cf56">Más...</a><br /></td></tr>
-<tr class="separator:a141cfce3e8029ef0a257c2496e13cf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e05a9f0c051e7e987b0573c95a8868"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#ae0e05a9f0c051e7e987b0573c95a8868">simo_send_message</a> (char *msg)</td></tr>
-<tr class="memdesc:ae0e05a9f0c051e7e987b0573c95a8868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enviamos datos mediante el objeto modulo de comunicacion.  <a href="comm_8h.html#ae0e05a9f0c051e7e987b0573c95a8868">Más...</a><br /></td></tr>
-<tr class="separator:ae0e05a9f0c051e7e987b0573c95a8868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6e0bb0cde3ad611c5cbe11cd5fb075"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#a2b6e0bb0cde3ad611c5cbe11cd5fb075">simo_comm_send_message</a> (char *msg)</td></tr>
+<tr class="memdesc:a2b6e0bb0cde3ad611c5cbe11cd5fb075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enviamos datos mediante el objeto modulo de comunicacion.  <a href="comm_8h.html#a2b6e0bb0cde3ad611c5cbe11cd5fb075">Más...</a><br /></td></tr>
+<tr class="separator:a2b6e0bb0cde3ad611c5cbe11cd5fb075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39cfab9925797259b4686a7879e7882"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="comm_8h.html#aa39cfab9925797259b4686a7879e7882">simo_comm_send_request</a> (<a class="el" href="structcmd__request__t.html">cmd_request_t</a> *req)</td></tr>
+<tr class="memdesc:aa39cfab9925797259b4686a7879e7882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia una peticion desde el modulo comm.  <a href="comm_8h.html#aa39cfab9925797259b4686a7879e7882">Más...</a><br /></td></tr>
+<tr class="separator:aa39cfab9925797259b4686a7879e7882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Modulo de capa 2 que sirve para gestionar comunicacion mediante hardware externo. </p>
@@ -107,27 +115,6 @@ Funciones</h2></td></tr>
 <dl class="section date"><dt>Fecha</dt><dd>2021-11-18</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
 </div><h2 class="groupheader">Documentación de las funciones</h2>
-<a id="a68fd3b5c6f0cd7ba950ec5fa65354c9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68fd3b5c6f0cd7ba950ec5fa65354c9b">&#9670;&nbsp;</a></span>simo_comm_create()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void simo_comm_create </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creamos un objeto modulo de comunicacion (comm) </p>
-<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
-
-</div>
-</div>
 <a id="a3e423c3490ee462ae651c50b94d9a0b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e423c3490ee462ae651c50b94d9a0b1">&#9670;&nbsp;</a></span>simo_comm_delete()</h2>
 
@@ -149,35 +136,54 @@ Funciones</h2></td></tr>
 
 </div>
 </div>
-<a id="a141cfce3e8029ef0a257c2496e13cf56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a141cfce3e8029ef0a257c2496e13cf56">&#9670;&nbsp;</a></span>simo_comm_init()</h2>
+<a id="a349d1336cfa6072ad7f1dffd97074ea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349d1336cfa6072ad7f1dffd97074ea7">&#9670;&nbsp;</a></span>simo_comm_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void simo_comm_init </td>
+          <td class="memname">bool simo_comm_init </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a7cf2af9b38c4a634ccefd043e90e8259">print_out</a>&#160;</td>
+          <td class="paramname"><em>print_debug</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a>&#160;</td>
+          <td class="paramname"><em>delay_rtos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Iniciamos el modulos de comunicacion. </p>
-<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+<p>Iniciamos modulo de comunicacion. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">print_debug</td><td>Funcion de salida debug </td></tr>
+    <tr><td class="paramname">delay_rtos</td><td>Delay asistido por rtos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>
-<a id="ae0e05a9f0c051e7e987b0573c95a8868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0e05a9f0c051e7e987b0573c95a8868">&#9670;&nbsp;</a></span>simo_send_message()</h2>
+<a id="a2b6e0bb0cde3ad611c5cbe11cd5fb075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6e0bb0cde3ad611c5cbe11cd5fb075">&#9670;&nbsp;</a></span>simo_comm_send_message()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool simo_send_message </td>
+          <td class="memname">bool simo_comm_send_message </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
@@ -194,6 +200,36 @@ Funciones</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>** bool , mensaje enviado correctamente </dd></dl>
+
+</div>
+</div>
+<a id="aa39cfab9925797259b4686a7879e7882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39cfab9925797259b4686a7879e7882">&#9670;&nbsp;</a></span>simo_comm_send_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool simo_comm_send_request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcmd__request__t.html">cmd_request_t</a> *&#160;</td>
+          <td class="paramname"><em>req</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia una peticion desde el modulo comm. </p>
+<dl class="section note"><dt>Nota</dt><dd>las peticiones cmd_request tiene 3 elemento, el commando, la respuesta esperada y el timeout en us </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si respuesta esperada coinciden con respuesta coinciden </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>

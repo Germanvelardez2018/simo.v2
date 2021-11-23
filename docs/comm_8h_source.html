@@ -75,23 +75,32 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef   _SIMO_COMM_COMM_H</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define   _SIMO_COMM_COMM_H</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="comm_8h.html#a68fd3b5c6f0cd7ba950ec5fa65354c9b">simo_comm_create</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="comm_8h.html#a3e423c3490ee462ae651c50b94d9a0b1">simo_comm_delete</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="comm_8h.html#a141cfce3e8029ef0a257c2496e13cf56">simo_comm_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    #include &quot;<a class="code" href="core_8h.html">simo/core.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    #include &quot;<a class="code" href="cmd__request_8h.html">simo/utiles/cmd_request.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="comm_8h.html#a349d1336cfa6072ad7f1dffd97074ea7">simo_comm_init</a>(<a class="code" href="core_8h.html#a7cf2af9b38c4a634ccefd043e90e8259">print_out</a> print_debug,<a class="code" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a> <a class="code" href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="comm_8h.html#a3e423c3490ee462ae651c50b94d9a0b1">simo_comm_delete</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="comm_8h.html#ae0e05a9f0c051e7e987b0573c95a8868">simo_send_message</a>(<span class="keywordtype">char</span>* msg);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="comm_8h.html#a2b6e0bb0cde3ad611c5cbe11cd5fb075">simo_comm_send_message</a>(<span class="keywordtype">char</span>* msg);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="comm_8h.html#aa39cfab9925797259b4686a7879e7882">simo_comm_send_request</a>(<a class="code" href="structcmd__request__t.html">cmd_request_t</a>* req);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acomm_8h_html_a141cfce3e8029ef0a257c2496e13cf56"><div class="ttname"><a href="comm_8h.html#a141cfce3e8029ef0a257c2496e13cf56">simo_comm_init</a></div><div class="ttdeci">void simo_comm_init(void)</div><div class="ttdoc">Iniciamos el modulos de comunicacion.</div><div class="ttdef"><b>Definition:</b> comm.c:27</div></div>
-<div class="ttc" id="acomm_8h_html_a3e423c3490ee462ae651c50b94d9a0b1"><div class="ttname"><a href="comm_8h.html#a3e423c3490ee462ae651c50b94d9a0b1">simo_comm_delete</a></div><div class="ttdeci">void simo_comm_delete(void)</div><div class="ttdoc">Liberamos recursos asociados con la comunicaicon.</div><div class="ttdef"><b>Definition:</b> comm.c:21</div></div>
-<div class="ttc" id="acomm_8h_html_ae0e05a9f0c051e7e987b0573c95a8868"><div class="ttname"><a href="comm_8h.html#ae0e05a9f0c051e7e987b0573c95a8868">simo_send_message</a></div><div class="ttdeci">bool simo_send_message(char *msg)</div><div class="ttdoc">Enviamos datos mediante el objeto modulo de comunicacion.</div><div class="ttdef"><b>Definition:</b> comm.c:34</div></div>
-<div class="ttc" id="acomm_8h_html_a68fd3b5c6f0cd7ba950ec5fa65354c9b"><div class="ttname"><a href="comm_8h.html#a68fd3b5c6f0cd7ba950ec5fa65354c9b">simo_comm_create</a></div><div class="ttdeci">void simo_comm_create(void)</div><div class="ttdoc">Creamos un objeto modulo de comunicacion (comm)</div><div class="ttdef"><b>Definition:</b> comm.c:15</div></div>
+<div class="ttc" id="acomm_8h_html_a3e423c3490ee462ae651c50b94d9a0b1"><div class="ttname"><a href="comm_8h.html#a3e423c3490ee462ae651c50b94d9a0b1">simo_comm_delete</a></div><div class="ttdeci">void simo_comm_delete(void)</div><div class="ttdoc">Liberamos recursos asociados con la comunicaicon.</div><div class="ttdef"><b>Definition:</b> comm.c:164</div></div>
+<div class="ttc" id="acore_8h_html_a7cf2af9b38c4a634ccefd043e90e8259"><div class="ttname"><a href="core_8h.html#a7cf2af9b38c4a634ccefd043e90e8259">print_out</a></div><div class="ttdeci">void(* print_out)(char *)</div><div class="ttdef"><b>Definition:</b> core.h:30</div></div>
+<div class="ttc" id="acomm_8h_html_aa39cfab9925797259b4686a7879e7882"><div class="ttname"><a href="comm_8h.html#aa39cfab9925797259b4686a7879e7882">simo_comm_send_request</a></div><div class="ttdeci">bool simo_comm_send_request(cmd_request_t *req)</div><div class="ttdoc">Envia una peticion desde el modulo comm.</div><div class="ttdef"><b>Definition:</b> comm.c:181</div></div>
+<div class="ttc" id="astructcmd__request__t_html"><div class="ttname"><a href="structcmd__request__t.html">cmd_request_t</a></div><div class="ttdef"><b>Definition:</b> cmd_request.h:18</div></div>
+<div class="ttc" id="acomm_8h_html_a2b6e0bb0cde3ad611c5cbe11cd5fb075"><div class="ttname"><a href="comm_8h.html#a2b6e0bb0cde3ad611c5cbe11cd5fb075">simo_comm_send_message</a></div><div class="ttdeci">bool simo_comm_send_message(char *msg)</div><div class="ttdoc">Enviamos datos mediante el objeto modulo de comunicacion.</div><div class="ttdef"><b>Definition:</b> comm.c:172</div></div>
+<div class="ttc" id="acore_8h_html_af3d639e36e448cf69c60661bf079ccdf"><div class="ttname"><a href="core_8h.html#af3d639e36e448cf69c60661bf079ccdf">delay_rtos</a></div><div class="ttdeci">void(* delay_rtos)(const TickType_t xTicksToDelay)</div><div class="ttdoc">Funcion delay rtos para inyectar a modulos con tiempos de respuesta altos.</div><div class="ttdef"><b>Definition:</b> core.h:39</div></div>
+<div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">Core de la aplicacion. En este archivo van elementos indispensables para la aplicacion....</div></div>
+<div class="ttc" id="acomm_8h_html_a349d1336cfa6072ad7f1dffd97074ea7"><div class="ttname"><a href="comm_8h.html#a349d1336cfa6072ad7f1dffd97074ea7">simo_comm_init</a></div><div class="ttdeci">bool simo_comm_init(print_out print_debug, delay_rtos delay_rtos)</div><div class="ttdoc">Iniciamos modulo de comunicacion.</div><div class="ttdef"><b>Definition:</b> comm.c:134</div></div>
+<div class="ttc" id="acmd__request_8h_html"><div class="ttname"><a href="cmd__request_8h.html">cmd_request.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado por &#160;<a href="http://www.doxygen.org/index.html">

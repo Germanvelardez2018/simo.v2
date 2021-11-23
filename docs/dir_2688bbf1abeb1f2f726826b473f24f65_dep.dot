@@ -1,0 +1,9 @@
+digraph "core/include/simo/utiles" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_eb293059644a82a490cf75e36ed4597e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="simo" fontname="Helvetica", fontsize="10", URL="dir_eb293059644a82a490cf75e36ed4597e.html"]
+  dir_2688bbf1abeb1f2f726826b473f24f65 [shape=box, label="utiles", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2688bbf1abeb1f2f726826b473f24f65.html"];
+  }
+}

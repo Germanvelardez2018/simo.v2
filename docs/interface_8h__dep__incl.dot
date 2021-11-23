@@ -7,7 +7,9 @@ digraph "core/include/simo/comm/interface.h"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="core/include/simo/comm\l/device/SIM_device.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_i_m__device_8h.html",tooltip="Driver para el manejo de modulos SIM7000G(NIVEL 1). Depende de SIMO UART."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="core/src/simo/comm\l/device/SIM_device.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_i_m__device_8c.html",tooltip=" "];
-  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="core/src/simo/comm\l/interface.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_8c.html",tooltip="Implementacion del interfacez para abstraer hardware."];
+  Node3 [label="core/src/simo/comm\l/comm.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$comm_8c.html",tooltip="API para la comunicacion del sistema."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="core/src/simo/comm\l/device/SIM_device.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_i_m__device_8c.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="core/src/simo/comm\l/interface.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_8c.html",tooltip="Implementacion del interfacez para abstraer hardware."];
 }

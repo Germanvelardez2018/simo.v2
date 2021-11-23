@@ -90,10 +90,10 @@ Funciones</h2></td></tr>
 <tr class="memitem:a6dc6ae4864c057c28d7346b8cee0f22b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_i_m__device_8c.html#a6dc6ae4864c057c28d7346b8cee0f22b">simo_sim_device_delete</a> (<a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a> *sim)</td></tr>
 <tr class="memdesc:a6dc6ae4864c057c28d7346b8cee0f22b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liberamos la memoria asociada a un objeto sim Device.  <a href="_s_i_m__device_8c.html#a6dc6ae4864c057c28d7346b8cee0f22b">Más...</a><br /></td></tr>
 <tr class="separator:a6dc6ae4864c057c28d7346b8cee0f22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a705eef3ae47a0d3c69df5c85320f8931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_i_m__device_8c.html#a705eef3ae47a0d3c69df5c85320f8931">simo_sim_device_write</a> (<a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a> sim, char *msg, uint32_t len)</td></tr>
-<tr class="separator:a705eef3ae47a0d3c69df5c85320f8931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10fe740a7bfff07d279b538441e9c0f7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_i_m__device_8c.html#a10fe740a7bfff07d279b538441e9c0f7">simo_sim_device_read</a> (<a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a> sim)</td></tr>
-<tr class="separator:a10fe740a7bfff07d279b538441e9c0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3802476f76297e943a6dabfd3bb5d5e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_i_m__device_8c.html#a3802476f76297e943a6dabfd3bb5d5e2">simo_sim_device_write</a> (<a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a> *sim, char *msg, uint32_t len)</td></tr>
+<tr class="separator:a3802476f76297e943a6dabfd3bb5d5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6fa0363e9c37294a0370c4f38c43c8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_i_m__device_8c.html#a5a6fa0363e9c37294a0370c4f38c43c8">simo_sim_device_read</a> (<a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a> *sim)</td></tr>
+<tr class="separator:a5a6fa0363e9c37294a0370c4f38c43c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentación de las funciones</h2>
 <a id="a922175eb558b3f4a9084143018c52668"></a>
@@ -150,8 +150,8 @@ Funciones</h2></td></tr>
 
 </div>
 </div>
-<a id="a10fe740a7bfff07d279b538441e9c0f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10fe740a7bfff07d279b538441e9c0f7">&#9670;&nbsp;</a></span>simo_sim_device_read()</h2>
+<a id="a5a6fa0363e9c37294a0370c4f38c43c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6fa0363e9c37294a0370c4f38c43c8">&#9670;&nbsp;</a></span>simo_sim_device_read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,7 +159,7 @@ Funciones</h2></td></tr>
         <tr>
           <td class="memname">uint32_t simo_sim_device_read </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a> *&#160;</td>
           <td class="paramname"><em>sim</em></td><td>)</td>
           <td></td>
         </tr>
@@ -175,8 +175,8 @@ Funciones</h2></td></tr>
 
 </div>
 </div>
-<a id="a705eef3ae47a0d3c69df5c85320f8931"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a705eef3ae47a0d3c69df5c85320f8931">&#9670;&nbsp;</a></span>simo_sim_device_write()</h2>
+<a id="a3802476f76297e943a6dabfd3bb5d5e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3802476f76297e943a6dabfd3bb5d5e2">&#9670;&nbsp;</a></span>simo_sim_device_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +184,7 @@ Funciones</h2></td></tr>
         <tr>
           <td class="memname">void simo_sim_device_write </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_s_i_m__device__t.html">SIM_device_t</a> *&#160;</td>
           <td class="paramname"><em>sim</em>, </td>
         </tr>
         <tr>

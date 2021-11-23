@@ -32,9 +32,14 @@ typedef void (*print_out)(char*);
 typedef void (*dbg_print)(char*,uint32_t);
 
 
+
+
 //! Funcion delay rtos para inyectar a  modulos con tiempos de respuesta altos
 
 typedef void (*delay_rtos)(const TickType_t xTicksToDelay);
+
+
+
 
 
 #endif

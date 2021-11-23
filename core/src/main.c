@@ -18,16 +18,21 @@
 #include "simo/storage/memory_store.h"
 #include "simo/debug/debug.h"  //! probemos el simo debug
 #include "simo/comm/comm.h"
+#include "simo/utiles/cjson.h"       // para el manejor del formato json
+#include "simo/timer/timer.h"      // llamado de funciones de manera periodica
 #include <string.h>
 #include <stdio.h>
 
 
 
+#include "hardware/gpio.h"
+#include "pico/stdlib.h"
+
 
 #define MENSAJE_SERIAL  "hola mundo \r\n"
 #define COUNTER_MSG     "contador = %d\r\n"
 
-
+#define PIN_LED 25
 
 static void debug_print(char* msg)
 {
@@ -76,51 +81,49 @@ void flash_task(void* params)
        
     }
     else
-    {   sprintf(buffer,"Erro al iniciar memoriar \r\n");
+    {   sprintf(buffer,"Error al iniciar memoriar \r\n");
         //simo_uart_write_buffer(SIMO_UART0,buffer,strlen(buffer));
     }
     #define MSG_SIZE    100
     char mensaje_guardado[MSG_SIZE];
-    char mensaje_escrito[MSG_SIZE] ;
+   
     uint16_t counter= 0;
     
+
+
+    // creo un json
+    #define CANTIDAD_DE_ELEMENTOS 5
+    cjson_t* json = simo_cjson_create(200);
+
+    if (json != NULL)
+    {
+        //cargo el json con elementos
+      simo_cjson_add_int(json,"posX",1700);   // add element with type INT
+      simo_cjson_add_int(json,"posY",1987);
+      simo_cjson_add_int(json,"numero entero ",235);
+      simo_cjson_add_float(json,"numero real",25.5);   // add element with type float
+      simo_cjson_add_string(json,"informacion",
+                                "Esta es una cadena con mensaje para el simo");  // add element with type char* (string)
+      #define BUFFER_JSON   200
+      char* b_json;
+       b_json = simo_cjson_get_string(json);
+       if( b_json != NULL)
+       {
+        uint16_t pos = simo_memory_store_add_page(b_json,strlen(b_json)+1);
+       
+
+        uint16_t datos_validos= simo_memory_read_all(debug_print,vTaskDelay);
+
+        
+      simo_cjson_delete(json);
+
+       }
+        
+    }
     while(1)
     {
-     
-     
-        
-        sprintf(mensaje_escrito,"{Este es un json }");
-        uint16_t pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        sprintf(mensaje_escrito,"{datos de configuracion}");
-         pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        sprintf(mensaje_escrito,"{Mqtt servidor: kkkx.mqtt}");
-         pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        sprintf(mensaje_escrito,"1234mrk");
-         pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        sprintf(mensaje_escrito,"mensaje de alerta");
-         pos = simo_memory_store_add_page(mensaje_escrito,strlen(mensaje_escrito)+1);
-        char b[100];
-        sprintf(b,"posicion escritas:%d\r\n",pos);
-        //simo_uart_write_buffer(SIMO_UART0,b,strlen(b)+1);
 
-    
-   
- 
-        
-        
-         
-
-   
-        uint16_t datos_validos= simo_memory_read_all(debug_print);
-        sprintf(b,"cantidad de datos validos:%d\r\n",datos_validos);
-        //simo_uart_write_buffer(SIMO_UART0,b,strlen(b)+1);
-
-        while(1)
-        {
-            vTaskDelay(1000);
-        }
-        
-
+            vTaskDelay(1500);
        
     }
 }
@@ -148,7 +151,7 @@ static void comm_task(void* params)
     {
         .p_cmd = "AT\r\n",
         .p_expected_resp="OK\r\n",
-        .timeout_us = 1000
+        .timeout_us = 1000   // 10 ms tiempo maximo.
     };
     vTaskDelay(5000);
     vTaskDelay(2000);
@@ -175,13 +178,50 @@ static void comm_task(void* params)
     }
 }
 
-int main(void)
+
+
+static void get_sensor(void)
 {
    
+    gpio_put(PIN_LED, 1);
+    vTaskDelay(100);
+    gpio_put(PIN_LED, 0);
+    vTaskDelay(100);
+}
+
+
+static void get_print(void)
+{
+            simo_debug_print("estamos en timer_print","get print");
+
+}
+
+
+int main(void)
+{
+  
+ 
+     gpio_init(PIN_LED);
+    gpio_set_dir(PIN_LED, 1);
     bool debug =  simo_debug_init(300);
     BaseType_t ret;
-    // ret =   xTaskCreate(flash_task,"flash test",10000,0,3,0);
-    ret =   xTaskCreate(comm_task,"sim device test",10000,0,3,0);
+    ret =   xTaskCreate(flash_task,"flash test",10000,0,3,0);
+  //  ret =   xTaskCreate(comm_task,"sim device test",10000,0,3,0);
+
+    //creo un timer
+
+    soft_timer_t timer_sensor  ;
+    soft_timer_t timer_print  ;
+
+    uint8_t success  =  simo_timer_create(&timer_sensor,get_sensor,2000,1);
+
+
+     success  =  simo_timer_create(&timer_print,get_print,6000,1);
+
+    simo_timer_start(&timer_sensor);
+    simo_timer_start(&timer_print);
+
+   
 
    
     vTaskStartScheduler();

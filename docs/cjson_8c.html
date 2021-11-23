@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SIMO: Referencia del Archivo core/src/simo/utils/cjson.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SIMO
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de monitoreo remoto basado en Rapsberry PI PICO</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_c4acac0979fb7e09bcb67a660e699ac3.html">simo</a></li><li class="navelem"><a class="el" href="dir_cc1ef491f4ee25ce6a4384d08b89957a.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo cjson.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Nueva implementacion del json para microcontroladores.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="core_8h_source.html">simo/core.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cjson_8h_source.html">simo/utiles/cjson.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para cjson.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="cjson_8c__incl.png" border="0" usemap="#core_2src_2simo_2utils_2cjson_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:acb7acd8907b9df79a10592aec35895cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#acb7acd8907b9df79a10592aec35895cd">ADD_CJSON_UINT</a>&#160;&#160;&#160;&quot;%c %s : %u \r\n &quot;</td></tr>
+<tr class="separator:acb7acd8907b9df79a10592aec35895cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f94289927832f18c0030ce7870c262e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a3f94289927832f18c0030ce7870c262e">ADD_CJSON_INT</a>&#160;&#160;&#160;&quot;%c %s : %d \r\n &quot;</td></tr>
+<tr class="separator:a3f94289927832f18c0030ce7870c262e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2afd98cb03ca4e976183a02a6636e5e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#ac2afd98cb03ca4e976183a02a6636e5e">ADD_CJSON_FLOAT</a>&#160;&#160;&#160;&quot;%c %s : %.2f \r\n &quot;</td></tr>
+<tr class="separator:ac2afd98cb03ca4e976183a02a6636e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ddb0ba237a19b2d0b75b9f66b650ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#ad8ddb0ba237a19b2d0b75b9f66b650ad">ADD_CJSON_STRING</a>&#160;&#160;&#160;&quot;%c %s : %s \r\n &quot;</td></tr>
+<tr class="separator:ad8ddb0ba237a19b2d0b75b9f66b650ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ff45f28e4d313a7664fa61cecf8c70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a24ff45f28e4d313a7664fa61cecf8c70">INIT_CONTENT</a>&#160;&#160;&#160;&quot;\r\n{ }&quot;</td></tr>
+<tr class="separator:a24ff45f28e4d313a7664fa61cecf8c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d06d3b968a3a4fae71db64cf56007de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a9d06d3b968a3a4fae71db64cf56007de">INIT_LEN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a9d06d3b968a3a4fae71db64cf56007de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a8f8686cbb364330b636ddb2ad61af4a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcjson__t.html">cjson_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a8f8686cbb364330b636ddb2ad61af4a2">simo_cjson_create</a> (uint32_t len)</td></tr>
+<tr class="memdesc:a8f8686cbb364330b636ddb2ad61af4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un objeto json con un array de char (string)  <a href="cjson_8c.html#a8f8686cbb364330b636ddb2ad61af4a2">Más...</a><br /></td></tr>
+<tr class="separator:a8f8686cbb364330b636ddb2ad61af4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53312370731213109100b5cc869630d5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a53312370731213109100b5cc869630d5">simo_cjson_add_int</a> (<a class="el" href="structcjson__t.html">cjson_t</a> *cjson, char *key, uint32_t element)</td></tr>
+<tr class="separator:a53312370731213109100b5cc869630d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193649da88c49ca9c83bb084de63289c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a193649da88c49ca9c83bb084de63289c">simo_cjson_add_float</a> (<a class="el" href="structcjson__t.html">cjson_t</a> *cjson, char *key, float element)</td></tr>
+<tr class="memdesc:a193649da88c49ca9c83bb084de63289c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agregamos un elemento al json.  <a href="cjson_8c.html#a193649da88c49ca9c83bb084de63289c">Más...</a><br /></td></tr>
+<tr class="separator:a193649da88c49ca9c83bb084de63289c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1f8dc978a57a869970d650570bc261"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a2e1f8dc978a57a869970d650570bc261">simo_cjson_add_string</a> (<a class="el" href="structcjson__t.html">cjson_t</a> *cjson, char *key, char *element)</td></tr>
+<tr class="memdesc:a2e1f8dc978a57a869970d650570bc261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agregamos un elemento al json.  <a href="cjson_8c.html#a2e1f8dc978a57a869970d650570bc261">Más...</a><br /></td></tr>
+<tr class="separator:a2e1f8dc978a57a869970d650570bc261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926b75c8b10f673ba51bcbf6857ee6c5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a926b75c8b10f673ba51bcbf6857ee6c5">simo_cjson_get_string</a> (<a class="el" href="structcjson__t.html">cjson_t</a> *cjson)</td></tr>
+<tr class="memdesc:a926b75c8b10f673ba51bcbf6857ee6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objetemos el array con los datos del json.  <a href="cjson_8c.html#a926b75c8b10f673ba51bcbf6857ee6c5">Más...</a><br /></td></tr>
+<tr class="separator:a926b75c8b10f673ba51bcbf6857ee6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c777a3b265b477f037b920180d346c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cjson_8c.html#a93c777a3b265b477f037b920180d346c">simo_cjson_delete</a> (<a class="el" href="structcjson__t.html">cjson_t</a> *cjson)</td></tr>
+<tr class="memdesc:a93c777a3b265b477f037b920180d346c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agregamos un elemento al json.  <a href="cjson_8c.html#a93c777a3b265b477f037b920180d346c">Más...</a><br /></td></tr>
+<tr class="separator:a93c777a3b265b477f037b920180d346c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Nueva implementacion del json para microcontroladores. </p>
+<dl class="section author"><dt>Autor</dt><dd>your name (<a href="#" onclick="location.href='mai'+'lto:'+'you'+'@d'+'oma'+'in'+'.co'+'m'; return false;">you@d<span style="display: none;">.nosp@m.</span>omai<span style="display: none;">.nosp@m.</span>n.com</a>) </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2021-11-23</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 </dd></dl>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="ac2afd98cb03ca4e976183a02a6636e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2afd98cb03ca4e976183a02a6636e5e">&#9670;&nbsp;</a></span>ADD_CJSON_FLOAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADD_CJSON_FLOAT&#160;&#160;&#160;&quot;%c %s : %.2f \r\n &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f94289927832f18c0030ce7870c262e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f94289927832f18c0030ce7870c262e">&#9670;&nbsp;</a></span>ADD_CJSON_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADD_CJSON_INT&#160;&#160;&#160;&quot;%c %s : %d \r\n &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8ddb0ba237a19b2d0b75b9f66b650ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ddb0ba237a19b2d0b75b9f66b650ad">&#9670;&nbsp;</a></span>ADD_CJSON_STRING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADD_CJSON_STRING&#160;&#160;&#160;&quot;%c %s : %s \r\n &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb7acd8907b9df79a10592aec35895cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb7acd8907b9df79a10592aec35895cd">&#9670;&nbsp;</a></span>ADD_CJSON_UINT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADD_CJSON_UINT&#160;&#160;&#160;&quot;%c %s : %u \r\n &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24ff45f28e4d313a7664fa61cecf8c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24ff45f28e4d313a7664fa61cecf8c70">&#9670;&nbsp;</a></span>INIT_CONTENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_CONTENT&#160;&#160;&#160;&quot;\r\n{ }&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d06d3b968a3a4fae71db64cf56007de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d06d3b968a3a4fae71db64cf56007de">&#9670;&nbsp;</a></span>INIT_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_LEN&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a193649da88c49ca9c83bb084de63289c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193649da88c49ca9c83bb084de63289c">&#9670;&nbsp;</a></span>simo_cjson_add_float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t simo_cjson_add_float </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcjson__t.html">cjson_t</a> *&#160;</td>
+          <td class="paramname"><em>cjson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>element</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Agregamos un elemento al json. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cjson</td><td></td></tr>
+    <tr><td class="paramname">key</td><td></td></tr>
+    <tr><td class="paramname">element</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** uint8_t </dd></dl>
+
+</div>
+</div>
+<a id="a53312370731213109100b5cc869630d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53312370731213109100b5cc869630d5">&#9670;&nbsp;</a></span>simo_cjson_add_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t simo_cjson_add_int </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcjson__t.html">cjson_t</a> *&#160;</td>
+          <td class="paramname"><em>cjson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>element</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cjson</td><td></td></tr>
+    <tr><td class="paramname">key</td><td></td></tr>
+    <tr><td class="paramname">element</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** uint8_t </dd></dl>
+
+</div>
+</div>
+<a id="a2e1f8dc978a57a869970d650570bc261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1f8dc978a57a869970d650570bc261">&#9670;&nbsp;</a></span>simo_cjson_add_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t simo_cjson_add_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcjson__t.html">cjson_t</a> *&#160;</td>
+          <td class="paramname"><em>cjson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>element</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Agregamos un elemento al json. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cjson</td><td></td></tr>
+    <tr><td class="paramname">key</td><td></td></tr>
+    <tr><td class="paramname">element</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** uint8_t </dd></dl>
+
+</div>
+</div>
+<a id="a8f8686cbb364330b636ddb2ad61af4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f8686cbb364330b636ddb2ad61af4a2">&#9670;&nbsp;</a></span>simo_cjson_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcjson__t.html">cjson_t</a>* simo_cjson_create </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un objeto json con un array de char (string) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>tamanio del array asociado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** cjson_t* </dd></dl>
+
+</div>
+</div>
+<a id="a93c777a3b265b477f037b920180d346c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c777a3b265b477f037b920180d346c">&#9670;&nbsp;</a></span>simo_cjson_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simo_cjson_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcjson__t.html">cjson_t</a> *&#160;</td>
+          <td class="paramname"><em>cjson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Agregamos un elemento al json. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cjson</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** void </dd></dl>
+
+</div>
+</div>
+<a id="a926b75c8b10f673ba51bcbf6857ee6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a926b75c8b10f673ba51bcbf6857ee6c5">&#9670;&nbsp;</a></span>simo_cjson_get_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* simo_cjson_get_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcjson__t.html">cjson_t</a> *&#160;</td>
+          <td class="paramname"><em>cjson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Objetemos el array con los datos del json. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cjson</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>** char* </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

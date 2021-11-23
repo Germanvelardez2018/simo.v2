@@ -5,5 +5,7 @@ digraph "core/include/simo/comm/device/SIM_device.h"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="core/include/simo/comm\l/device/SIM_device.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Driver para el manejo de modulos SIM7000G(NIVEL 1). Depende de SIMO UART."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="core/src/simo/comm\l/device/SIM_device.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_i_m__device_8c.html",tooltip=" "];
+  Node2 [label="core/src/simo/comm\l/comm.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$comm_8c.html",tooltip="API para la comunicacion del sistema."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="core/src/simo/comm\l/device/SIM_device.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_i_m__device_8c.html",tooltip=" "];
 }

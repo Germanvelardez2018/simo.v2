@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['read_5ffunction_346',['read_function',['../interface_8h.html#a922def74c11f943a1ee242e72b3ff210',1,'interface.h']]]
+  ['print_5ffuncion_412',['print_funcion',['../memory__store_8h.html#a8295f66b6d45f42c394c786a6817e97f',1,'memory_store.h']]],
+  ['print_5fout_413',['print_out',['../core_8h.html#a7cf2af9b38c4a634ccefd043e90e8259',1,'core.h']]]
 ];

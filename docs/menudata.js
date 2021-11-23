@@ -53,6 +53,7 @@ var menudata={children:[
 {text:"w",url:"globals_w.html#index_w"},
 {text:"x",url:"globals_x.html#index_x"}]},
 {text:"Funciones",url:"globals_func.html",children:[
+{text:"f",url:"globals_func.html#index_f"},
 {text:"m",url:"globals_func.html#index_m"},
 {text:"s",url:"globals_func.html#index_s"}]},
 {text:"typedefs",url:"globals_type.html"},
