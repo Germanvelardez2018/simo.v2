@@ -41,7 +41,7 @@ cjson_t* simo_cjson_create(uint32_t len);
  * @param element 
  * @return ** uint8_t 
  */
-uint8_t simo_cjson_add_int(cjson_t* cjson,char* key, uint32_t element);
+uint8_t simo_cjson_add_int(cjson_t* cjson,char* key, int32_t element);
 /**
  * @brief  Agregamos un elemento al json
  * 
@@ -78,6 +78,19 @@ void simo_cjson_delete(cjson_t* cjson);
  * @param cjson 
  * @return ** char* 
  */
+
+
+
+
+/**
+ * @brief 
+ * 
+ * @param cjson 
+ * @param key 
+ * @param element 
+ * @return ** uint8_t 
+ */
+uint8_t simo_cjson_add_uint(cjson_t* cjson,char* key, uint32_t element);
 
 
 char* simo_cjson_get_string(cjson_t* cjson);

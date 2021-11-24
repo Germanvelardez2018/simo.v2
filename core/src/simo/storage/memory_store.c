@@ -113,6 +113,11 @@ static void _set_counter(uint16_t count)
     simo_AT45DB041E_save_data(_memory_app,(uint8_t*)buffer,2,ADDRES_COUNTER,0);
 }
 
+
+
+
+
+
 bool simo_memory_store_init(void)
 {
     bool ret = false;
@@ -125,6 +130,9 @@ bool simo_memory_store_init(void)
     
     return ret;
 }
+
+
+
 
 
 void simo_memory_store_deinit(void)
@@ -194,10 +202,15 @@ bool simo_memory_store_read_page(uint8_t* buffer,uint8_t len,uint16_t index)
   
 }
 
-void simo_memory_store_full_clear()
+void simo_memory_store_full_clear(delay_rtos delay_rtos)
 {
-    simo_AT45DB041E_full_erase(_memory_app);
    
+       // simo_AT45DB041E_full_erase(_memory_app);
+        delay_rtos(1000);
+        _set_counter(0);
+
+    
+
 }
 
 
@@ -205,15 +218,18 @@ uint16_t simo_memory_read_all(print_funcion print,delay_rtos delay_rtos)
 {
     uint16_t counter = _get_counter();
     uint16_t count_msg = 0;
-    char buffer_print[250];
-    char buffer[200];
+     #define BUFFER_PAGE   254
+    char buffer_print[BUFFER_PAGE];
+   
+    char buffer[BUFFER_PAGE];
+    delay_rtos(100);
     sprintf(buffer_print,"\n\n\nDatos almacenados: %d",counter);
     print(buffer_print);
     bool msg_valid= false;
     
     for(uint16_t index=0 ; index< counter; index+=1)
     {
-       msg_valid =  simo_memory_store_read_page(buffer,200,index);
+       msg_valid =  simo_memory_store_read_page(buffer,BUFFER_PAGE,index);
        if(true)
        {
            #define OFFSET_FORMAT 2
@@ -221,9 +237,10 @@ uint16_t simo_memory_read_all(print_funcion print,delay_rtos delay_rtos)
             print(buffer_print);
             count_msg +=1;
             delay_rtos(10);
+            
 
        }
-     
+         delay_rtos(1);
 
       
         

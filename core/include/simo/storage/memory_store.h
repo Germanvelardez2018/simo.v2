@@ -62,11 +62,12 @@ bool simo_memory_store_read_page(uint8_t* buffer,uint8_t len,uint16_t index);
 
 
 /**
- * @brief  Ejecuta la secuenca de borrado de la memoria completa
+ * @brief Ejecuta la secuencia de borrado de la memoria
  * 
+ * @param delay_rtos funcion para retardos de rtos. Necesaria porque el borrado lleva bastante tiempo
  * @return ** void 
  */
-void simo_memory_store_full_clear();
+void simo_memory_store_full_clear(delay_rtos delay_rtos);
 
 
 

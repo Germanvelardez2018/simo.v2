@@ -34,6 +34,7 @@ cjson_t* simo_cjson_create(uint32_t len)
    
     cjson->p_string = (char*) malloc(sizeof(char)*len);
     if (cjson->p_string == NULL) return NULL;
+    cjson->len = len;
     cjson->index=0;
     strcpy(cjson->p_string,INIT_CONTENT);   //INIT_LEN
     cjson->index = strlen(cjson->p_string);
@@ -41,33 +42,97 @@ cjson_t* simo_cjson_create(uint32_t len)
 }
 
 
-uint8_t simo_cjson_add_int(cjson_t* cjson,char* key, uint32_t element)
+uint8_t simo_cjson_add_int(cjson_t* cjson,char* key, int32_t element)
 {
+    uint8_t ret = 0;
     uint32_t index = cjson->index;
-    sprintf(&(cjson->p_string[index-1]), ADD_CJSON_FLOAT,((cjson->index<INIT_LEN)?'\n':','),key,element);
-    cjson->index = strlen(cjson->p_string);
 
-    
+    char b_element[50];
 
-    return 1;
+    sprintf(b_element,ADD_CJSON_INT,((cjson->index<INIT_LEN)?'\n':','),key,element);
+    uint32_t len_element = strlen(b_element);
+    // si el tamanio del buffer puede contener el nuevo elemento, lo agrego
+
+    if ((index + len_element) <= (cjson->len))   
+    {
+        sprintf(&(cjson->p_string[index-1])," %s",b_element); // agrego el nuevo elemento
+        cjson->index = strlen(cjson->p_string);
+        ret = 1;
+    }
+
+    return ret;
+}
+
+
+
+uint8_t simo_cjson_add_uint(cjson_t* cjson,char* key, uint32_t element)
+{
+    uint8_t ret = 0;
+    uint32_t index = cjson->index;
+
+    char b_element[50];
+
+    sprintf(b_element,ADD_CJSON_UINT,((cjson->index<INIT_LEN)?'\n':','),key,element);
+    uint32_t len_element = strlen(b_element);
+    // si el tamanio del buffer puede contener el nuevo elemento, lo agrego
+
+    if ((index + len_element) <= (cjson->len))   
+    {
+        sprintf(&(cjson->p_string[index-1])," %s",b_element); // agrego el nuevo elemento
+        cjson->index = strlen(cjson->p_string);
+        ret = 1;
+    }
+
+    return ret;
 }
 
 uint8_t simo_cjson_add_float(cjson_t* cjson,char* key, float element)
 {
+   
+    uint8_t ret = 0;
     uint32_t index = cjson->index;
-    sprintf(&(cjson->p_string[index-1]), ADD_CJSON_FLOAT,((cjson->index<5)?'\n':','),key,element);
-    cjson->index = strlen(cjson->p_string);
 
-    return 1;
+    char b_element[100];
+
+    sprintf(b_element, ADD_CJSON_FLOAT,((cjson->index<INIT_LEN)?'\n':','),key,element);
+    uint32_t len_element = strlen(b_element);
+    // si el tamanio del buffer puede contener el nuevo elemento, lo agrego
+
+    if ((index + len_element) <= (cjson->len))   
+    {
+        sprintf(&(cjson->p_string[index-1])," %s",b_element); // agrego el nuevo elemento
+        cjson->index = strlen(cjson->p_string);
+        ret = 1;
+    }
+
+    return ret;
+
+
+
 }
 
 uint8_t simo_cjson_add_string(cjson_t* cjson,char* key, char* element)
 {
-    uint32_t index = cjson->index;
-    sprintf(&(cjson->p_string[index-1]), ADD_CJSON_STRING,((cjson->index<5)?'\n':','),key,element);
-    cjson->index = strlen(cjson->p_string);
 
-    return 1;
+    uint8_t ret = 0;
+    uint32_t index = cjson->index;
+
+    char b_element[100];
+
+    sprintf(b_element, ADD_CJSON_STRING,(((cjson->index)<INIT_LEN)?'\n':','),key,element);
+    uint32_t len_element = strlen(b_element);
+    // si el tamanio del buffer puede contener el nuevo elemento, lo agrego
+
+    if ((index + len_element) <= (cjson->len))   
+    {
+        sprintf(&(cjson->p_string[index-1])," %s",b_element); // agrego el nuevo elemento
+        cjson->index = strlen(cjson->p_string);
+        ret = 1;
+    }
+
+    return ret;
+
+
 }
 
 
