@@ -27,7 +27,7 @@
             pico-sdk: <A HREF="https://github.com/FreeRTOS/FreeRTOS-Kernel">repo</A>
     </li> 
     <li>
-      Freertos: <a HREF="https://germanvelardez2018.github.io/simo.v2/">documentacion</a>
+      Freertos: <a HREF="https://github.com/FreeRTOS/FreeRTOS-Kernel">link</a>
     </li> 
 </lu>
 
