@@ -58,7 +58,7 @@ Luego de ejecutado con exito el primer comando se creara una carpeta llamada bui
  ### Documentacion del proyecto.
  <lu>
     <li>
-            Freertos: <a HREF="https://germanvelardez2018.github.io/simo.v2/">documentacion</a>
+            Documentacion <a HREF="https://germanvelardez2018.github.io/simo.v2/">gitpages</a>
     </li> 
 </lu>
 
