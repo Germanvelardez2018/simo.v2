@@ -17,8 +17,7 @@
 #ifndef   SIMO_SPI_H
     
     #define SIMO_SPI_H
-    #include <stdint.h>
-    #include <stdbool.h>
+    #include "simo/core.h"
 
 
     typedef enum {

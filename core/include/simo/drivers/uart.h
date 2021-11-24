@@ -15,7 +15,7 @@
 
   #include "simo/core.h"
   #include "simo/config.h"
-  #include <stdbool.h>
+  
   /**
    * @brief Enumeracion de las interfaces uart disponibles en el micro
    * 

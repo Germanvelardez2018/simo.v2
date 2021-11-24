@@ -11,7 +11,7 @@
 
 
 //!Libreria simo
-#include "simo/hardware/uart.h"
+#include "simo/drivers/uart.h"
 
 //!librerias del fabricante
 #include "hardware/uart.h"

@@ -16,7 +16,7 @@
 
 
 
-#include "simo/hardware/spi.h"   //! Necesario libreria SIMO
+#include "simo/drivers/spi.h"   //! Necesario libreria SIMO
 
 
 /**

@@ -12,7 +12,7 @@
 #include "simo/comm/comm.h"
 #include "simo/comm/device/SIM_device.h"
 #include "simo/core.h"
-#include "simo/hardware/uart.h"
+#include "simo/drivers/uart.h"
 #include "simo/comm/comm.h"
 #include "pico/time.h"
 

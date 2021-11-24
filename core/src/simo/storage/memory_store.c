@@ -10,11 +10,9 @@
  */
 #include "simo/storage/memory_store.h"
 #include "simo/storage/memory/AT45DB041E.h"
-#include "simo/hardware/spi.h"
+
 #include "pico/time.h"
-#include  <stdio.h>
-#include <string.h>
-#include <stdlib.h> 
+#include "simo/core.h"
 /*
  *  Memoria utilizada: at45db041E
  * PAGINAS: 2048        DIRECCION DE 11 BITS

@@ -9,10 +9,9 @@
  * 
  */
 
-
+#include "simo/core.h"
 #include "simo/comm/interface.h"
-#include <stddef.h>
-#include <stdlib.h>
+
 
 
 

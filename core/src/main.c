@@ -14,7 +14,7 @@
 #include "task.h"
 #include "queue.h"
 
-#include "simo/hardware/uart.h"
+#include "simo/drivers/uart.h"
 #include "simo/storage/memory_store.h"
 #include "simo/debug/debug.h"  //! probemos el simo debug
 #include "simo/comm/comm.h"

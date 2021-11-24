@@ -79,7 +79,7 @@ void simo_cjson_delete(cjson_t* cjson);
  * @return ** char* 
  */
 
-
+char* simo_cjson_get_string(cjson_t* cjson);
 
 
 /**
@@ -93,4 +93,3 @@ void simo_cjson_delete(cjson_t* cjson);
 uint8_t simo_cjson_add_uint(cjson_t* cjson,char* key, uint32_t element);
 
 
-char* simo_cjson_get_string(cjson_t* cjson);

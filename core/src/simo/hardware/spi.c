@@ -12,12 +12,10 @@
 
 
 
-#include <stdint.h>
-#include <stdio.h>
-#include <stdbool.h>
+#include "simo/core.h"
 
 
-#include "simo/hardware/spi.h"
+#include "simo/drivers/spi.h"
 #include "hardware/spi.h"
 #include "hardware/gpio.h"
 

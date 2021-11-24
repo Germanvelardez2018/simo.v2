@@ -11,7 +11,7 @@
 
 
 #include "hardware/gpio.h"  // ! Libreria del fabricante
-#include "simo/hardware/gpio.h" 
+#include "simo/drivers/gpio.h" 
 
 
 
