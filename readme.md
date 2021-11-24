@@ -27,7 +27,7 @@
             pico-sdk: <A HREF="https://github.com/FreeRTOS/FreeRTOS-Kernel">repo</A>
     </li> 
     <li>
-            Freertos: <A HREF="https://github.com/raspberrypi/pico-sdk">repo</A>
+            Documentacion: <A HREF="https://github.com/raspberrypi/pico-sdk">gitpages</A>
     </li> 
 </lu>
 
@@ -55,5 +55,12 @@ Luego de ejecutado con exito el primer comando se creara una carpeta llamada bui
 ```
     doxygen doc_config
  ```
+ ### Documentacion del proyecto.
+ <lu>
+    <li>
+            Freertos: <a HREF="https://germanvelardez2018.github.io/simo.v2/">documentacion</a>
+    </li> 
+</lu>
+
 
 
