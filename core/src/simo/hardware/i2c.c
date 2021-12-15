@@ -14,6 +14,7 @@
 #include "hardware/gpio.h" //!Librerias del fabricante
 
 #include "simo/drivers/i2c.h"
+#include "simo/drivers/gpio.h"
 
 
 
@@ -62,10 +63,16 @@ static void _get_pins(i2c_t i2c)
     pin_sda = I2C0_SDA;
     pin_scl = I2C0_SCL;
     break;
-    gpio_set_function(pin_sda, GPIO_FUNC_I2C);
-    gpio_set_function(pin_scl, GPIO_FUNC_I2C);
-    gpio_pull_up(pin_sda);
-    gpio_pull_up(pin_scl);
+
+    
+    simo_gpio_set_i2c(pin_sda);
+    simo_gpio_set_i2c(pin_scl);
+    simo_gpio_set_pullup(pin_sda,true);
+    simo_gpio_set_pullup(pin_scl,true);
+    //gpio_set_function(pin_sda, GPIO_FUNC_I2C);
+    //gpio_set_function(pin_scl, GPIO_FUNC_I2C);
+    //gpio_pull_up(pin_sda);
+    //gpio_pull_up(pin_scl);
   }
 }
 

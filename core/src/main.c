@@ -56,7 +56,7 @@ void flash_task(void* params)
 {
 
     vTaskDelay(5000);
-    simo_debug_print("comenzamos el programa","serial task");
+    simo_debug_print("iniciamos flash task","serial task");
     char buffer[200];
     
     //creo una memoria
@@ -66,7 +66,7 @@ void flash_task(void* params)
     if (ret )
     {
         
-          simo_debug_print("Memoria iniciada","serial task");
+        simo_debug_print("__Memoria iniciada__","serial task");
         //Para borra memoria,compilar e  implementar y luego comentar y volver a compilar
         //simo_memory_store_full_clear(vTaskDelay);    
         //vTaskDelay(5000);

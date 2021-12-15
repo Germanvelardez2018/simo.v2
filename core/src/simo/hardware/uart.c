@@ -12,11 +12,11 @@
 
 //!Libreria simo
 #include "simo/drivers/uart.h"
-
+#include "simo/drivers/gpio.h"
 //!librerias del fabricante
 #include "hardware/uart.h"
 #include "hardware/irq.h"
-#include "hardware/gpio.h"
+
 
 //definiciones asociadas al hardware espeficico asociado
 
@@ -91,9 +91,10 @@ static void  _set_pins(uart_t uart)
         pin_rx = UART0_RX;
         break;
     }
-
-    gpio_set_function(pin_rx,GPIO_FUNC_UART);
-    gpio_set_function(pin_tx,GPIO_FUNC_UART);  
+       simo_gpio_set_uart(pin_rx);
+       simo_gpio_set_uart(pin_tx);
+//    gpio_set_function(pin_rx,GPIO_FUNC_UART);
+//    gpio_set_function(pin_tx,GPIO_FUNC_UART);  
 }
 
 

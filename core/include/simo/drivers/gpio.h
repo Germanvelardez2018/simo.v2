@@ -9,10 +9,6 @@
  * 
  */
 
-
-
-
-
 #ifndef   SIMO_GPIO_H
     
     #define SIMO_GPIO_H
@@ -23,8 +19,17 @@
 
 
 
+      /**
+       * @brief Configuro el pin seleccionado como  I2C
+       * 
+       * @param gpio_pin  gpio_pin seleccionado
+       * @return ** void 
+       */
+       void simo_gpio_set_i2c(uint8_t gpio_pin);
+
+
     /**
-     * @brief 
+     * @brief Configuro el pin seleccionado como SPI
      * 
      * @param gpio_pin gpio_pin seleccionado 
      * @return ** void 
@@ -32,7 +37,7 @@
     void simo_gpio_set_spi(uint8_t gpio_pin );
     
     /**
-     * @brief 
+     * @brief Configuro el pin seleccionado como UART
      * 
      * @param gpio_pin gpio_pin seleccionado 
      * @return ** void 
@@ -91,6 +96,30 @@
      * @return ** void 
      */
    void simo_gpio_set_callback_irq(uint8_t gpio_pin, uint32_t event, gpio_irq_callback_t funct_callback,bool enable);
+
+
+
+
+   /**
+    * @brief Configuro el valor de pull up del pin
+    * 
+    * @param gpio_pin Numero de pin a configurar 
+    * @param value  Valor del pin a ser configurado
+    * @return ** void 
+    */
+   void simo_gpio_set_pullup(uint8_t gpio_pin,bool value);
+
+   /**
+    * @brief Configuro el valor de pull down del pin
+    * 
+    * @param gpio_pin Numero de pin a configurar 
+    * @param value  Valor del pin a ser configurado
+    * @return ** void 
+    */
+
+    void simo_gpio_set_pulldown(uint8_t gpio_pin, bool value);
+
+
 
 
 #endif

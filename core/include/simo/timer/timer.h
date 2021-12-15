@@ -26,8 +26,6 @@
 
 
 
-
-
     typedef void (*callback_function)(void);
     /**< Puntero a funcion callback para asociar a timer por software */
 

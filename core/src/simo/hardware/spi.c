@@ -16,8 +16,8 @@
 
 
 #include "simo/drivers/spi.h"
-#include "hardware/spi.h"
-#include "hardware/gpio.h"
+#include "simo/drivers/gpio.h"
+#include "hardware/spi.h"     //! Librerias del fabricante
 
 
 
@@ -116,10 +116,11 @@ static void _set_pins(spi_t spi)
         break;
     }
     // configuro pins
-    gpio_set_function(clk_pin,GPIO_FUNC_SPI);
-    gpio_set_function(miso_pin,GPIO_FUNC_SPI);  
-    gpio_set_function(mosi_pin,GPIO_FUNC_SPI);
-    gpio_set_function(cs_pin,GPIO_FUNC_SPI);  
+    simo_gpio_set_spi(clk_pin);
+    simo_gpio_set_spi(miso_pin);
+    simo_gpio_set_spi(mosi_pin);
+    simo_gpio_set_spi(cs_pin);
+  
 
   
 }

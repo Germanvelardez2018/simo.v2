@@ -42,6 +42,7 @@ static TaskHandle_t _WDT_TASK_HANDLER;  /**< Referencia a la tarea encargada de 
 
 /**
   * @brief Tarea que se encarga de reinicia el contador de wdt. Se llama en simo_wdt_init
+  * @note Esta tarea deberia tener la prioridad mas alta de la aplicacion
   * @param  None
   * @retval None:
   */
@@ -59,7 +60,8 @@ static void task_watching_simo(void *params)
         gpio_put(LED_PIN, GPIO_ON);
         vTaskDelay(TIME_BLINK);
         gpio_put(LED_PIN, GPIO_OFF);
-        vTaskDelay(TIME_WDT / TIMER_DIVIDER);
+        vTaskDelay(TIME_WDT / TIMER_DIVIDER);  // El wdt desborda cada T tiempo, la tarea se llama cada T/4.
+                                              // Podria ser mayor el tiempo en que se llama a la tarea. T/2 o T/3?
     }
 }
 
